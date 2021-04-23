@@ -28,7 +28,7 @@
 - Anti FreeCam (Fallout or similars)
 - Anti Menyoo
 - Anti Ped Revives
-- Anti Suicide using Mod Men´´us
+- Anti Suicide using Mod Menús
 - Anti Give Armor
 - Anti Vehicle Spawn
 - Anti Blacklisted Explosions
