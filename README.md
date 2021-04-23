@@ -1,4 +1,4 @@
-# VB-AC
+# VB-AC by VisiBait#0712
 
 ## Features
  Este Anticheat parchea la mayoría de menús para FiveM.
