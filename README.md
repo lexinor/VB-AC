@@ -1,4 +1,4 @@
-# VB-AC (Public Version) by VisiBait#0712
+# FiveM AntiCheat VB-AC (Public Version) by VisiBait#0712
 
 ## Features
 
