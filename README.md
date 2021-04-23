@@ -66,9 +66,9 @@ Atención: este script ha sido desarrollado exclusivamente para uso no comercial
 
 **Recomiendo leer el README, ya que se necesita SQL para hacer que el script funcione!**
 
-## Contribuciones
+## Encriptado
 
-Toda contribución al proyecto es **muy apreciada**.
+Este proyecto está **ofuscado** para evitar robos de código.
 
 ## Licencia
 
