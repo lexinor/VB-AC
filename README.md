@@ -43,6 +43,7 @@
 - Anti Blocked Words
 - Anti Blacklisted Triggers
 - Anti VPN
+- Anti NUI_DevTools
 
 Optimización: ~0.03 ms.
 
