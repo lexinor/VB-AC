@@ -43,7 +43,7 @@
 - Anti Particles
 - Anti Blocked Words
 - Anti Blacklisted Triggers
-- 
+
 Optimización: ~0.03 ms.
 
 Codeado en LUA, HTML y JS
