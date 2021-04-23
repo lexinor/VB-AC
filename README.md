@@ -1,7 +1,7 @@
 # VB-AC
 
 ## Features
- Este Anticheat parchea la mayoría de menús como Fallout, Brutan...
+ Este Anticheat parchea la mayoría de menús para FiveM.
 
 - Anti GodMode
 - Anti Spectate
