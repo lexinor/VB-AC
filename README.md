@@ -43,6 +43,7 @@
 - Anti Particles
 - Anti Blocked Words
 - Anti Blacklisted Triggers
+- Anti VPN
 
 Optimización: ~0.03 ms.
 
