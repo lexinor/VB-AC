@@ -1,4 +1,4 @@
-# VB-AC by VisiBait#0712
+# VB-AC (Public Version) by VisiBait#0712
 
 ## Features
 
