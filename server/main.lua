@@ -12,7 +12,7 @@ if VB_AC.UseESX then
     TriggerEvent(VB_AC.ESXTrigger, function(obj) ESX = obj end)
 end
 
--- Threads
+-- Threads 
 
 Citizen.CreateThread(function()
     Citizen.Wait(3000)
