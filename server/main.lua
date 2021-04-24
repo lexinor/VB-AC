@@ -519,7 +519,7 @@ kickandbanuser = function(reason, servertarget)
             ['@permanent']        = permanent,
             }, function ()
         end)
-    en
+    end
 
     Citizen.Wait(500)
 
