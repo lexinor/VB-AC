@@ -459,62 +459,64 @@ end)
 -- FUNCS
 
 kickandbanuser = function(reason, servertarget)
-    local target
-    local duration     = 0
-    local reason    = reason
+    if not IsPlayerAceAllowed(servertarget, "vbacbypass") then
+        local target
+        local duration     = 0
+        local reason    = reason
 
-    if not reason then reason = "Not Specified" end
+        if not reason then reason = "Not Specified" end
 
-    if tostring(source) == "" then
-        target = tonumber(servertarget)
-    else
-        target = source
-    end
+        if tostring(source) == "" then
+            target = tonumber(servertarget)
+        else
+            target = source
+        end
 
-    if target and target > 0 then
-        local ping = GetPlayerPing(target)
+        if target and target > 0 then
+            local ping = GetPlayerPing(target)
 
-        if ping and ping > 0 then
-            if duration and duration < 365 then
-                local sourceplayername = "VB-AC"
-                local targetplayername = GetPlayerName(target)
-                local identifier, license, xblid, playerip, discord, liveid = getidentifiers(target)
+            if ping and ping > 0 then
+                if duration and duration < 365 then
+                    local sourceplayername = "VB-AC"
+                    local targetplayername = GetPlayerName(target)
+                    local identifier, license, xblid, playerip, discord, liveid = getidentifiers(target)
 
-                if duration > 0 then
-                    ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,0)
-                    DropPlayer(target, "[VB-AC]: " .. reason)
-                else
-                    ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,1)
-                    DropPlayer(target, "[VB-AC]:" .. reason)
+                    if duration > 0 then
+                        ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,0)
+                        DropPlayer(target, "[VB-AC]: " .. reason)
+                    else
+                        ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,1)
+                        DropPlayer(target, "[VB-AC]:" .. reason)
+                    end
                 end
             end
         end
     end
-end
 
-ban_user = function(source,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,permanent)
-    local expiration = duration * 86400
-    local timeat     = os.time()
+    ban_user = function(source,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,permanent)
+        local expiration = duration * 86400
+        local timeat     = os.time()
 
-    if expiration < os.time() then
-        expiration = os.time()+expiration
-    end
+        if expiration < os.time() then
+            expiration = os.time()+expiration
+        end
 
-    MySQL.Async.execute('INSERT INTO VB_AC (license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,reason,expiration,timeat,permanent) VALUES (@license,@identifier,@liveid,@xblid,@discord,@playerip,@targetplayername,@sourceplayername,@reason,@expiration,@timeat,@permanent)',{
-        ['@license']          = license,
-        ['@identifier']       = identifier,
-        ['@liveid']           = liveid,
-        ['@xblid']            = xblid,
-        ['@discord']          = discord,
-        ['@playerip']         = playerip,
-        ['@targetplayername'] = targetplayername,
-        ['@sourceplayername'] = sourceplayername,
-        ['@reason']           = reason,
-        ['@expiration']       = expiration,
-        ['@timeat']           = timeat,
-        ['@permanent']        = permanent,
-        }, function ()
-    end)
+        MySQL.Async.execute('INSERT INTO VB_AC (license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,reason,expiration,timeat,permanent) VALUES (@license,@identifier,@liveid,@xblid,@discord,@playerip,@targetplayername,@sourceplayername,@reason,@expiration,@timeat,@permanent)',{
+            ['@license']          = license,
+            ['@identifier']       = identifier,
+            ['@liveid']           = liveid,
+            ['@xblid']            = xblid,
+            ['@discord']          = discord,
+            ['@playerip']         = playerip,
+            ['@targetplayername'] = targetplayername,
+            ['@sourceplayername'] = sourceplayername,
+            ['@reason']           = reason,
+            ['@expiration']       = expiration,
+            ['@timeat']           = timeat,
+            ['@permanent']        = permanent,
+            }, function ()
+        end)
+    en
 
     Citizen.Wait(500)
 
