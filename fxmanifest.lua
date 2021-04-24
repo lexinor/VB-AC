@@ -18,4 +18,4 @@ server_scripts {
 files {
     'html/*.html',
     'html/*.js',
-}
+} 
