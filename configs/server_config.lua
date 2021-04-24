@@ -1,4 +1,4 @@
---[[
+--[[ 
 	ENGLISH:
 	Welcome to the VB-AC config file. Remember that this script could have, a few bugs, as it's new and I've never tested it in other servers.
 	If you find something that isn't working, feel free to open a Issue ticket on my GitHub.
