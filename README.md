@@ -1,4 +1,4 @@
-# FiveM AntiCheat VB-AC (Public Version) by VisiBait#0712
+# FiveM AntiCheat VB-AC by VisiBait#0712
 
 ## Features
 
@@ -45,38 +45,41 @@
 - Anti VPN
 - Anti NUI_DevTools
 
-Optimización: ~0.03 ms.
+Optimized: ~0.02ms
 
-Codeado en LUA, HTML y JS
-
-Atención: este script ha sido desarrollado exclusivamente para uso no comercial, esto implica que este proyecto no se puede vender bajo ningún concepto.
+Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
 
 ©VisiBait 2021
 
-### Programado con:
+### Coded using:
 
 * [LUA](https://www.lua.org/)
 * [HTML](https://html.spec.whatwg.org/)
 * [JS](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
-### Dependencias:
+### Requirements:
 
-* [ESX] No es necesario tener ESX, pero hay algunas cosas que lo requieren, puedes desactivarlas y seguirá funcionando correctamente.
+* [ESX] You don't need to have ESX, but there are some things that require it, you can disable them and the anticheat will still work properly.
 
-### Instalación
+### Installation
 
-**Recomiendo leer el README, ya que se necesita SQL para hacer que el script funcione!**
+**I recommend reading the README as SQL is needed to make the script work!**
 
-## Encriptado
+## Contributions
 
-Este proyecto está **ofuscado** para evitar robos de código.
+Any contribution to the project is ** highly appreciated **.
 
-## Licencia
+**Steps to do a PR:**
+1. Fork the script
+2. Modify the script
+3. Upload the files and confirm your changes.
+4. Make a Pull Request
 
-Distribuido con licencia MIT, no se permite la copia ni venta del script.
+## License
+
+You are not allowed to sell this script, or claim it's yours. Feel free to open a pull request if you find any bugs or you want to improve something.
  
-## Contacto
+## Contact
 
 VisiBait - [@visibait](https://twitter.com/visibait) - grafoplays@gmail.com
-
-Link del Proyecto: [https://github.com/visibait/VB-AC](https://github.com/visibait/VB-AC)
+Script link: [https://github.com/visibait/VB-AC](https://github.com/visibait/VB-AC)
