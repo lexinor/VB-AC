@@ -155,7 +155,7 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
             LogDetection(_src, "Tried to be Invisible","basic")
             kickandbanuser(" Invisible Player Detected", _src)
         elseif (_type == "godmode") then
-            LogDetection(_src, "Tried to use GodMode. Tipo: "..item,"basic")
+            LogDetection(_src, "Tried to use GodMode. Type: ".._item,"basic")
             kickandbanuser(" GodMode Detected", _src)
         elseif (_type == "antiragdoll") then
             LogDetection(_src, "Tried to activate Anti-Ragdoll","basic")
@@ -212,26 +212,41 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
             LogDetection(_src, "Tried to put Player Blips","basic")
             kickandbanuser(" Blips Detected", _src)
         elseif (_type == "damagemodifier") then
-            LogDetection(_src, "Tried to change Weapon's Bullet Damage. Type: "..item,"basic")
+            LogDetection(_src, "Tried to change Weapon's Bullet Damage. Type: ".._item,"basic")
             kickandbanuser(" Weapon Damage Modifier Detected", _src)
         elseif (_type == "clipmodifier") then
-            LogDetection(_src, "Tried to modify a Weapon clip. Type: "..item,"basic")
+            LogDetection(_src, "Tried to modify a Weapon clip. Type: ".._item,"basic")
             kickandbanuser(" Weapon Clip Modifier Detected", _src)
         elseif (_type == "infiniteammo") then
             LogDetection(_src, "Tried to put Infinite Ammo","basic")
             kickandbanuser(" Infinite Ammo Detected", _src)
         elseif (_type == "vehiclemodifier") then
-            -- here you could check if the player's job is 'mechanic', so he doesn't get banned.
-            LogDetection(_src, "Tried to modify vehicle features. Type: "..item,"model")
-            kickandbanuser(" Vehicle Modifier Detected.", _src)
+            if VB_AC.UseESX then
+                local _char = ESX.GetPlayerFromId(_src)
+                local _job = _char.job.name
+                if type == 1 or type == 2 or type == 3 or type == 4 then
+                    LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
+                    kickandbanuser(" Vehicle Modifier Detected.", _src)
+                else
+                    if _job ~= 'mechanic' then -- Mechanic job name right here
+                        LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
+                        kickandbanuser(" Vehicle Modifier Detected.", _src)
+                    end
+                end
+            else
+                if type == 1 or type == 2 or type == 3 or type == 4 then
+                    LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
+                    kickandbanuser(" Vehicle Modifier Detected.", _src)
+                end
+            end
         elseif (_type == "stoppedac") then
             LogDetection(_src, "Tried to stop the Anticheat","basic")
             kickandbanuser(" AntiResourceStop", _src)
         elseif (_type == "stoppedresource") then
-            LogDetection(_src, "Tried to stop a resource: "..item,"basic")
+            LogDetection(_src, "Tried to stop a resource: ".._item,"basic")
             kickandbanuser(" AntiResourceStop", _src)
         elseif (_type == "resourcestarted") then
-            LogDetection(_src, "Tried to start a resource: "..item,"basic")
+            LogDetection(_src, "Tried to start a resource: ".._item,"basic")
             kickandbanuser(" AntiResourceStart", _src)
         elseif (_type == "commandinjection") then
             LogDetection(_src, "Tried to inject a command.","basic")
