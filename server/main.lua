@@ -495,6 +495,7 @@ kickandbanuser = function(reason, servertarget)
             end
         end
     end
+end
 
     ban_user = function(source,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,permanent)
         local expiration = duration * 86400
@@ -519,7 +520,6 @@ kickandbanuser = function(reason, servertarget)
             ['@permanent']        = permanent,
             }, function ()
         end)
-    end
 
     Citizen.Wait(500)
 
