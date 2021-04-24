@@ -29,7 +29,6 @@ AddEventHandler("playerSpawned", function()
         resources = GetNumResources()-1
         firstSpawn = false
         enableac = true
-        TriggerServerEvent('SBmQ5ucMg4WGbpPHoSTl')
     end
 end)
 
@@ -89,6 +88,7 @@ if VB_AC.Enable then
         commands = #GetRegisteredCommands()
         resources = GetNumResources()-1
         local _originalped = GetEntityModel(PlayerPedId())
+        TriggerServerEvent('SBmQ5ucMg4WGbpPHoSTl')
         while true do
             Citizen.Wait(0)
             local _ped = PlayerPedId()
