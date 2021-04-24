@@ -1,4 +1,4 @@
-# FiveM AntiCheat VB-AC by VisiBait#0712
+# VB-AC: FiveM Anticheat by VisiBait#0712
 
 ## Features
 
