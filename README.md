@@ -45,6 +45,8 @@
 - Anti VPN
 - Anti NUI_DevTools
 
+Preview: https://streamable.com/flbdxc
+
 Optimized: ~0.02ms
 
 Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
