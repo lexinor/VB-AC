@@ -16,7 +16,7 @@ VB_AC.Enable = true
 VB_AC.MainAnticheat = true
 
 VB_AC.UseESX = true
-VB_AC.ESXTrigger = "esx:getSantaFeObjectnohack" -- Si usas ESX, pon el trigger aquí.
+VB_AC.ESXTrigger = "esx:getSharedObject" -- If you use ESX, put the trigger right here
 
 VB_AC.GodModeProtection = true
 VB_AC.AntiSpectate = true
