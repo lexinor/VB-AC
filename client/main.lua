@@ -8,6 +8,7 @@ local model1 = nil
 local model2 = nil
 local canbanfornoclip = true
 local enableac = false 
+local bypassweapon = false
 
 ESX = nil
 
@@ -63,6 +64,11 @@ AddEventHandler("ZRQA3nmMqUBOIiKwH4I5:checkifneargarage", function()
         end
         TriggerServerEvent("luaVRV3cccsj9q6227jN", isneargarage)
     end
+end)
+
+RegisterNetEvent("MEBjy6juCnscQrxcDzvs")
+AddEventHandler("MEBjy6juCnscQrxcDzvs", function()
+    bypassweapon = true
 end)
 
 RegisterNUICallback('antinuidevtools', function()
@@ -202,10 +208,12 @@ if VB_AC.Enable then
             end
             Citizen.Wait(200)
             if VB_AC.AntiBlacklistedWeapons then
-                for _,Weapon in ipairs(VB_AC.BlacklistedWeapons) do
-                    if HasPedGotWeapon(_ped, GetHashKey(Weapon), false) then
-                        RemoveAllPedWeapons(_ped, true)
-                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "blacklistedweapons") -- BAN (BLACKLISTED WEAPONS)
+                if notbypassweapon then
+                    for _,Weapon in ipairs(VB_AC.BlacklistedWeapons) do
+                        if HasPedGotWeapon(_ped, GetHashKey(Weapon), false) then
+                            RemoveAllPedWeapons(_ped, true)
+                            sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "blacklistedweapons") -- BAN (BLACKLISTED WEAPONS)
+                        end
                     end
                 end
             end
