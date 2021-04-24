@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS VB_AC (
   timeat varchar(50) NOT NULL,
   expiration varchar(50) NOT NULL,
   permanent int(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin; 
