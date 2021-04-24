@@ -94,6 +94,9 @@ AddEventHandler('SBmQ5ucMg4WGbpPHoSTl', function()
     if not canbanforentityspawn then
         canbanforentityspawn = true
     end
+    if IsPlayerAceAllowed(_src, "vbacbypass") then
+        TriggerClientEvent('MEBjy6juCnscQrxcDzvs', _src)
+    end
 end)
 
 -- EVENT HANDLERS
