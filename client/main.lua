@@ -1,4 +1,4 @@
--- VISI-AC (CLIENT)
+-- VB-AC (CLIENT)
 
 local firstSpawn = true
 local commands
@@ -452,21 +452,22 @@ if VB_AC.Enable then
                 Wait(1000)
                 local _newcolor, _newcolor2, _newcolor3 = GetVehicleCustomPrimaryColour(_vehiclein)
                 local _newneoncolor, _newneoncolor2, _newneoncolor3 = GetVehicleNeonLightsColour(_vehiclein)
-                if tonumber(_color) ~= tonumber(_newcolor) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "5") -- BAN (VEHICLE MODIFIER(TYPE: 5))
-                elseif tonumber(_color2) ~= tonumber(_newcolor2) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "6") -- BAN (VEHICLE MODIFIER(TYPE: 6))
-                elseif tonumber(_color3) ~= tonumber(_newcolor3) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "7") -- BAN (VEHICLE MODIFIER(TYPE: 7))
+                if IsPedInAnyVehicle(_ped, false) then -- Checks again just in case..
+                    if tonumber(_color) ~= tonumber(_newcolor) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "5") -- BAN (VEHICLE MODIFIER(TYPE: 5))
+                    elseif tonumber(_color2) ~= tonumber(_newcolor2) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "6") -- BAN (VEHICLE MODIFIER(TYPE: 6))
+                    elseif tonumber(_color3) ~= tonumber(_newcolor3) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "7") -- BAN (VEHICLE MODIFIER(TYPE: 7))
+                    end
+                    if tonumber(_neoncolor) ~= tonumber(_newneoncolor) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "8") -- BAN (VEHICLE MODIFIER(TYPE: 8))
+                    elseif tonumber(_neoncolor2) ~= tonumber(_newneoncolor2) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "9") -- BAN (VEHICLE MODIFIER(TYPE: 9))
+                    elseif tonumber(_neoncolor3) ~= tonumber(_newneoncolor3) then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "10") -- BAN (VEHICLE MODIFIER(TYPE: 10))
+                    end
                 end
-                if tonumber(_neoncolor) ~= tonumber(_newneoncolor) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "8") -- BAN (VEHICLE MODIFIER(TYPE: 8))
-                elseif tonumber(_neoncolor2) ~= tonumber(_newneoncolor2) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "9") -- BAN (VEHICLE MODIFIER(TYPE: 9))
-                elseif tonumber(_neoncolor3) ~= tonumber(_newneoncolor3) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "10") -- BAN (VEHICLE MODIFIER(TYPE: 10))
-                end
-                
             end
             if _sleep then Citizen.Wait(780) end
         end
