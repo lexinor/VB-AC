@@ -208,7 +208,7 @@ if VB_AC.Enable then
             end
             Citizen.Wait(200)
             if VB_AC.AntiBlacklistedWeapons then
-                if notbypassweapon then
+                if not bypassweapon then
                     for _,Weapon in ipairs(VB_AC.BlacklistedWeapons) do
                         if HasPedGotWeapon(_ped, GetHashKey(Weapon), false) then
                             RemoveAllPedWeapons(_ped, true)
