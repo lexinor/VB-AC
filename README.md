@@ -49,8 +49,6 @@ Optimized: ~0.02ms
 
 Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
 
-©VisiBait 2021
-
 ### Coded using:
 
 * [LUA](https://www.lua.org/)
@@ -83,3 +81,5 @@ You are not allowed to sell this script, or claim it's yours. Feel free to open 
 
 VisiBait - [@visibait](https://twitter.com/visibait) - grafoplays@gmail.com
 Script link: [https://github.com/visibait/VB-AC](https://github.com/visibait/VB-AC)
+
+©VisiBait 2021
