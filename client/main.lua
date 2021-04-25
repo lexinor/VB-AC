@@ -218,11 +218,6 @@ if VB_AC.Enable then
                 end
             end
             Citizen.Wait(200)
-            if VB_AC.AntiVDM then
-                N_0x4757f00bc6323cfe(-1553120962, 0.0)
-                Wait(0)
-            end
-            Citizen.Wait(200)
             if VB_AC.AntiThermalVision then
                 if GetUsingseethrough() then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "thermalvision") -- BAN (THERMAL VISION)
@@ -433,7 +428,9 @@ if VB_AC.Enable then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "4") -- BAN (VEHICLE MODIFIER(TYPE: 4))
                 end
                 SetVehicleTyresCanBurst(_vehiclein, true)
-
+                if VB_AC.AntiVDM then
+                    N_0x4757f00bc6323cfe(-1553120962, 0.0)
+                end
             end
             if _sleep then Citizen.Wait(710) end
         end
