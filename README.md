@@ -51,6 +51,9 @@ Optimized: ~0.02ms
 
 Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
 
+### In progress:
+* [V2] Development for v2 has begun. This update will include an admin menu and will patch a lot more injections in resources.
+
 ### Coded using:
 
 * [LUA](https://www.lua.org/)
