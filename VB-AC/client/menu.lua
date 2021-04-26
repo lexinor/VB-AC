@@ -6,7 +6,7 @@ local noclipspeed = 1
 local isnoclippingveh = false
 local noclipveh = 1
 -- Thread
-
+ 
 Citizen.CreateThread(function()
     Citizen.Wait(10000)
     while VB_AC.IsAdmin do
