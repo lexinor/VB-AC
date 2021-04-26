@@ -188,7 +188,7 @@ if VB_AC.Enable then
             if VB_AC.AntiSpeedHacks then
                 if not IsPedInAnyVehicle(_ped, true) then
                     if GetEntitySpeed(_ped) > 10 then
-                        if not IsPedFalling(_ped) and not IsPedInParachuteFreeFall(_ped) and not IsPedJumpingOutOfVehicle(_ped) then
+                        if not IsPedFalling(_ped) and not IsPedInParachuteFreeFall(_ped) and not IsPedJumpingOutOfVehicle(_ped) and not IsPedRagdoll(_ped) then
                             sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "speedhack") -- BAN (SPEEDHACK)
                         end
                     end
