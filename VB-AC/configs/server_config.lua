@@ -13,7 +13,7 @@
 
 VB_AC = {}
 
-VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
+VB_AC.UseESX = true -- Do you use ESX? Activate this option.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
 
 -- Discord Webhooks right here :)
