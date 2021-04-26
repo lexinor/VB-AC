@@ -9,6 +9,13 @@ Si encuentras algo que no funciona, abre una incidencia en mi GitHub.
 Espero que disfrutes todas las funcionalidades que trae este script, recuerdo que es gratis pero detecta más cosas que otros que son de pago.
 Dicho esto, un saludo.
 
+Steps for Installation: 
+  Insert the SQL Provided in Files
+  Start menuv and VB-AC in your Server.cfg
+  Check the config files and add the webhooks and all of that stuff.
+  Enjoy!
+
+
 ADMIN BYPASS (SERVER.CFG)
 add_ace vbacbypass allow
 add_ace identifier.steam:000000000000000 vbacbypass allow
