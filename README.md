@@ -7,7 +7,7 @@ Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu
 
 ## Features
 
-- Anti GodMode
+- Anti GodMode 
 - Anti Spectate
 - Anti SpeedHacks
 - Anti Explosion Damage
