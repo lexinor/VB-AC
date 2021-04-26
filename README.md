@@ -1,4 +1,7 @@
-# VB-AC: FiveM Anticheat by VisiBait#0712
+# VB-AC v1.5: FiveM Anticheat by VisiBait#0712
+
+### NEW ADMIN MENU:
+[NEW] Admin Menu (Using MenuV): https://github.com/ThymonA/menuv
 
 ## Features
 
@@ -45,6 +48,8 @@
 - Anti VPN
 - Anti NUI_DevTools
 
+
+
 Preview: https://streamable.com/flbdxc
 
 Optimized: ~0.02ms
@@ -52,7 +57,7 @@ Optimized: ~0.02ms
 Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
 
 ### In progress:
-* [V2] Development for v2 has begun. This update will include an admin menu and will patch a lot more injections in resources.
+* [V2] Development for v2 has begun. This update will include will patch a lot more injections in resources.
 
 ### Coded using:
 
