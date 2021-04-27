@@ -25,3 +25,5 @@ If you want to uninstall the anticheat:
 ADMIN BYPASS (SERVER.CFG)
 add_ace vbacbypass allow
 add_ace identifier.steam:000000000000000 vbacbypass allow
+
+TO OPEN THE ADMIN MENU THE KEY IS INSERT (YOU HAVE TO BYPASS THEM FIRST)
