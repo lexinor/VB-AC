@@ -69,7 +69,7 @@ VB_AC.ClearPedsAfterDetection = true
 VB_AC.ClearObjectsAfterDetection = true
 VB_AC.ClearVehiclesAfterDetection = true
 VB_AC.AntiMenyoo = true
-VB_AC.AntiPedRevive = true
+VB_AC.AntiPedRevive = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
 VB_AC.AntiSuicide = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
 VB_AC.AntiGiveArmour = true
 
