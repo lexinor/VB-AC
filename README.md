@@ -7,6 +7,8 @@
 
 [NEW] Anti Injection System (Type vbacinstall in server console)
 
+Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu (https://github.com/Project-Entity/pe-adminmenu)
+
 ## Features
 
 - Anti GodMode
