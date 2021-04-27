@@ -31,7 +31,7 @@ VB_AC.AntiFakeChatMessages = true
 VB_AC.AntiVPN = true
 VB_AC.ReloadBanListTime = 600000 -- 10 Mins
 
-VB_AC.MaxPedsPerUser = 4
+VB_AC.MaxPedsPerUser = 3
 VB_AC.MaxPropsPerUser = 10
 VB_AC.MaxVehiclesPerUser = 5
 VB_AC.MaxEntitiesPerUser = 10
@@ -169,6 +169,7 @@ VB_AC.BlacklistedTriggers = {
 	"DiscordBot:playerDied",
 	"hentailover:xdlol",
 	"antilynx8:anticheat",
+	"antilynx8:crashuser",
 	"antilynxr6:detection",
 	"antilynx8r4a:anticheat",
 	"antilynxr4:detect",

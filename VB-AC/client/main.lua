@@ -81,7 +81,7 @@ end)
 -- THREAD
 if VB_AC.Enable then
     Citizen.CreateThread(function()
-        Citizen.Wait(30000)
+        Citizen.Wait(1000) -- SUBIR A 30K LUEGO
         commands = #GetRegisteredCommands()
         resources = GetNumResources()-1
         local _originalped = GetEntityModel(PlayerPedId())
@@ -245,14 +245,6 @@ if VB_AC.Enable then
                 end
             end
             Citizen.Wait(200)
-            if VB_AC.BlockLUAFiles then
-                luainjections = LoadResourceFile(GetCurrentResourceName(), VB_AC.BlockedLUAFiles)
-                if luainjections ~= nil then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "luainjection")
-                    luainjections = nil
-                end
-            end
-            Citizen.Wait(200)
             if VB_AC.DisableVehicleWeapons then
                 local _veh = GetVehiclePedIsIn(_ped, false)
                 if DoesVehicleHaveWeapons(_veh) then
@@ -307,6 +299,14 @@ if VB_AC.Enable then
                 newcommands = #GetRegisteredCommands()
                 if commands ~= nil then
                     if newcommands ~= commands then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "commandinjection") -- BAN (COMMAND INJECTION)
+                    end
+                end
+            end
+            Citizen.Wait(200)
+            if VB_AC.AntiCInjection then
+                for _,cmd in ipairs(GetRegisteredCommands()) do
+                    if inTable(VB_AC.BlackListedCMD, cmd.name) then
                         sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "commandinjection") -- BAN (COMMAND INJECTION)
                     end
                 end
@@ -691,6 +691,13 @@ if VB_AC.Enable then
 
     function EnumerateVehicles()
         return EnumerateEntities(FindFirstVehicle, FindNextVehicle, EndFindVehicle)
+    end
+
+    inTable = function(table, item)
+        for k,v in pairs(table) do
+            if v == item then return k end
+        end
+        return false
     end
 
 end 

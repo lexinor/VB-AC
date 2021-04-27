@@ -33,14 +33,20 @@ VB_AC.AntiResourceStartorStop = true
 VB_AC.AntiCommandInjection = false -- If you can get in the server while this is "true" perfect. Otherwise just disable it.
 VB_AC.AntiLicenseClears = true
 
-VB_AC.BlockLUAFiles = true
-VB_AC.BlockedLUAFiles = {
-	"ham.lua",
-	"fallout.lua",
-	"stars.lua",
-	"rape.lua",
-	"Infinity.lua",
-	"fivex.lua"
+VB_AC.AntiCInjection = true
+VB_AC.BlackListedCMD = {
+	"killmenu",
+	"chocolate",
+	"pk",
+	"haha",
+	"lol",
+	"panickey",
+	"killmenu",
+	"panik",
+	"lynx",
+	"brutan",
+	"panic",
+	"purgemenu"
 }
 
 VB_AC.DisableVehicleWeapons = true
