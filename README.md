@@ -4,7 +4,8 @@
 
 ### VB-AC [v2.0]:
 [NEW] Admin Menu (Using MenuV): https://github.com/ThymonA/menuv
-[NEW] Anti Injection System
+
+[NEW] Anti Injection System (Type vbacinstall in server console)
 
 ## Features
 
