@@ -81,7 +81,7 @@ end)
 -- THREAD
 if VB_AC.Enable then
     Citizen.CreateThread(function()
-        Citizen.Wait(1000) -- SUBIR A 30K LUEGO
+        Citizen.Wait(30000)
         commands = #GetRegisteredCommands()
         resources = GetNumResources()-1
         local _originalped = GetEntityModel(PlayerPedId())
