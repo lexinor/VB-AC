@@ -8,7 +8,7 @@ local noclipveh = 1
 -- Thread
  
 Citizen.CreateThread(function()
-    Citizen.Wait(10000)
+    Citizen.Wait(35000)
     while VB_AC.IsAdmin do
         Citizen.Wait(0)
         if isusingfuncs then
