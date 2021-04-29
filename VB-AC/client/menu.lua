@@ -8,78 +8,79 @@ local noclipveh = 1
 -- Thread
  
 Citizen.CreateThread(function()
-    Citizen.Wait(35000)
-    while VB_AC.IsAdmin do
-        Citizen.Wait(0)
-        if isusingfuncs then
-            if isnoclipping then
-                local _ped = PlayerPedId()
-                local _pcoords = GetEntityCoords(_ped)
-                local _x = _pcoords.x
-                local _y = _pcoords.y
-                local _z = _pcoords.z
-                local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
-                local pitch = GetGameplayCamRelativePitch()
-                local x = -math.sin(heading*math.pi/180.0)
-                local y = math.cos(heading*math.pi/180.0)
-                local z = math.sin(pitch*math.pi/180.0)
-                local len = math.sqrt(x*x+y*y+z*z)
-                if len ~= 0 then
-                  x = x/len
-                  y = y/len
-                  z = z/len
+    while true do
+     Citizen.Wait(0)
+     if VB_AC.IsAdmin
+            if isusingfuncs then
+                if isnoclipping then
+                    local _ped = PlayerPedId()
+                    local _pcoords = GetEntityCoords(_ped)
+                    local _x = _pcoords.x
+                    local _y = _pcoords.y
+                    local _z = _pcoords.z
+                    local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
+                    local pitch = GetGameplayCamRelativePitch()
+                    local x = -math.sin(heading*math.pi/180.0)
+                    local y = math.cos(heading*math.pi/180.0)
+                    local z = math.sin(pitch*math.pi/180.0)
+                    local len = math.sqrt(x*x+y*y+z*z)
+                    if len ~= 0 then
+                      x = x/len
+                      y = y/len
+                      z = z/len
+                    end
+                    local _camx = x
+                    local _camy = y
+                    local _camz = z
+                    if IsControlPressed(0, 32) then
+                        _x = _x + noclipspeed * _camx
+                        _y = _y + noclipspeed * _camy
+                        _z = _z + noclipspeed * _camz
+                    elseif IsControlPressed(0, 33) then
+                        _x = _x - noclipspeed * _camx
+                        _y = _y - noclipspeed * _camy
+                        _z = _z - noclipspeed * _camz
+                    end
+                    SetEntityVisible(_ped, false)
+                    SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
+                    SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
                 end
-                local _camx = x
-                local _camy = y
-                local _camz = z
-                if IsControlPressed(0, 32) then
-                    _x = _x + noclipspeed * _camx
-                    _y = _y + noclipspeed * _camy
-                    _z = _z + noclipspeed * _camz
-                elseif IsControlPressed(0, 33) then
-                    _x = _x - noclipspeed * _camx
-                    _y = _y - noclipspeed * _camy
-                    _z = _z - noclipspeed * _camz
+                if isnoclippingveh then
+                    local _ped = GetVehiclePedIsIn(PlayerPedId(), false)
+                    local _pcoords = GetEntityCoords(_ped)
+                    local _x = _pcoords.x
+                    local _y = _pcoords.y
+                    local _z = _pcoords.z
+                    local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
+                    local pitch = GetGameplayCamRelativePitch()
+                    local x = -math.sin(heading*math.pi/180.0)
+                    local y = math.cos(heading*math.pi/180.0)
+                    local z = math.sin(pitch*math.pi/180.0)
+                    local len = math.sqrt(x*x+y*y+z*z)
+                    if len ~= 0 then
+                      x = x/len
+                      y = y/len
+                      z = z/len
+                    end
+                    local _camx = x
+                    local _camy = y
+                    local _camz = z
+                    if IsControlPressed(0, 32) then
+                        _x = _x + noclipveh * _camx
+                        _y = _y + noclipveh * _camy
+                        _z = _z + noclipveh * _camz
+                    elseif IsControlPressed(0, 33) then
+                        _x = _x - noclipveh * _camx
+                        _y = _y - noclipveh * _camy
+                        _z = _z - noclipveh * _camz
+                    end
+                    SetEntityVisible(_ped, false)
+                    SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
+                    SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
                 end
-                SetEntityVisible(_ped, false)
-                SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
-                SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
-            end
-            if isnoclippingveh then
-                local _ped = GetVehiclePedIsIn(PlayerPedId(), false)
-                local _pcoords = GetEntityCoords(_ped)
-                local _x = _pcoords.x
-                local _y = _pcoords.y
-                local _z = _pcoords.z
-                local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
-                local pitch = GetGameplayCamRelativePitch()
-                local x = -math.sin(heading*math.pi/180.0)
-                local y = math.cos(heading*math.pi/180.0)
-                local z = math.sin(pitch*math.pi/180.0)
-                local len = math.sqrt(x*x+y*y+z*z)
-                if len ~= 0 then
-                  x = x/len
-                  y = y/len
-                  z = z/len
-                end
-                local _camx = x
-                local _camy = y
-                local _camz = z
-                if IsControlPressed(0, 32) then
-                    _x = _x + noclipveh * _camx
-                    _y = _y + noclipveh * _camy
-                    _z = _z + noclipveh * _camz
-                elseif IsControlPressed(0, 33) then
-                    _x = _x - noclipveh * _camx
-                    _y = _y - noclipveh * _camy
-                    _z = _z - noclipveh * _camz
-                end
-                SetEntityVisible(_ped, false)
-                SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
-                SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
             end
         end
-    end
+   end
 end)
 -- MENU 2
 local menu2 = MenuV:CreateMenu(false, "VB-AC Admin Tools", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Admin Menu')
