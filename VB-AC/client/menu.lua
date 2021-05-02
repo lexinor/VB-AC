@@ -10,7 +10,9 @@ local noclipveh = 1
 Citizen.CreateThread(function()
     while true do
      Citizen.Wait(0)
-     if VB_AC.IsAdmin
+     local sleep = true
+     if VB_AC.IsAdmin then
+            sleep = false
             if isusingfuncs then
                 if isnoclipping then
                     local _ped = PlayerPedId()
@@ -80,6 +82,7 @@ Citizen.CreateThread(function()
                 end
             end
         end
+   if sleep then Citizen.Wait(1000) end
    end
 end)
 -- MENU 2
