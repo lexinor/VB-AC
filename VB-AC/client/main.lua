@@ -613,12 +613,6 @@ if VB_AC.Enable then
         end)
     end
 
-    -- NUI CALLBACKS
-    
-    RegisterNUICallback('antinuidevtools', function()
-        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "devtools")
-    end)
-
     -- FUNCS
 
     sendinfotoserver = function(trigger, type, additionalinfo)
