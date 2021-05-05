@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
     Citizen.Wait(2500)
     TriggerServerEvent('SBmQ5ucMg4WGbpPHoSTl')
     Citizen.Wait(7500)
-    while Lealtad_AC.IsAdmin do
+    while VB_AC.IsAdmin do
         Citizen.Wait(0)
         if isusingfuncs then
             if isnoclipping then
