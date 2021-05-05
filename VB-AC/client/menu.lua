@@ -1,5 +1,5 @@
 -- Locales
-Lealtad_AC.IsAdmin = false -- DON'T TOUCH THIS
+VB_AC.IsAdmin = false -- DON'T TOUCH THIS
 local isusingfuncs = false
 local isnoclipping = false
 local noclipspeed = 1
