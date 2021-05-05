@@ -29,13 +29,13 @@ if VB_AC.UseESX then
         local _charbank = _char.getAccount('bank').money
         if tonumber(_charmoney) > tonumber(efectivo) then
             local amount = tonumber(_charmoney) - tonumber(efectivo)
-            if amount > Lealtad_AC.MaxTransferAmount then -- HAY QUE CREAR ESO DE MAXTRANSFER
+            if amount > VB_AC.MaxTransferAmount then -- HAY QUE CREAR ESO DE MAXTRANSFER
                 -- mandar baneo aqui
             end
         end
         if tonumber(_charbank) > tonumber(banco) then
             local amount = tonumber(_charbank) - tonumber(banco)
-            if amount > Lealtad_AC.MaxTransferAmount then
+            if amount > VB_AC.MaxTransferAmount then
                 -- mandar baneo aqui
             end
         end
