@@ -17,6 +17,7 @@ VB_AC.MainAnticheat = true
 
 VB_AC.UseESX = true
 VB_AC.ESXTrigger = "esx:getSharedObject" -- If you use ESX, put the trigger right here
+VB_AC.CheckPlayersMoney = true
 
 VB_AC.GodModeProtection = true
 VB_AC.AntiSpectate = true
@@ -69,7 +70,7 @@ VB_AC.ClearPedsAfterDetection = true
 VB_AC.ClearObjectsAfterDetection = true
 VB_AC.ClearVehiclesAfterDetection = true
 VB_AC.AntiMenyoo = true
-VB_AC.AntiPedRevive = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
+VB_AC.AntiPedRevive = true
 VB_AC.AntiSuicide = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
 VB_AC.AntiGiveArmour = true
 

@@ -1,89 +1,87 @@
 -- Locales
-VB_AC.IsAdmin = false -- DON'T TOUCH THIS
+Lealtad_AC.IsAdmin = false -- DON'T TOUCH THIS
 local isusingfuncs = false
 local isnoclipping = false
 local noclipspeed = 1
 local isnoclippingveh = false
 local noclipveh = 1
 -- Thread
- 
+
 Citizen.CreateThread(function()
-    while true do
-     Citizen.Wait(0)
-     local sleep = true
-     if VB_AC.IsAdmin then
-            sleep = false
-            if isusingfuncs then
-                if isnoclipping then
-                    local _ped = PlayerPedId()
-                    local _pcoords = GetEntityCoords(_ped)
-                    local _x = _pcoords.x
-                    local _y = _pcoords.y
-                    local _z = _pcoords.z
-                    local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
-                    local pitch = GetGameplayCamRelativePitch()
-                    local x = -math.sin(heading*math.pi/180.0)
-                    local y = math.cos(heading*math.pi/180.0)
-                    local z = math.sin(pitch*math.pi/180.0)
-                    local len = math.sqrt(x*x+y*y+z*z)
-                    if len ~= 0 then
-                      x = x/len
-                      y = y/len
-                      z = z/len
-                    end
-                    local _camx = x
-                    local _camy = y
-                    local _camz = z
-                    if IsControlPressed(0, 32) then
-                        _x = _x + noclipspeed * _camx
-                        _y = _y + noclipspeed * _camy
-                        _z = _z + noclipspeed * _camz
-                    elseif IsControlPressed(0, 33) then
-                        _x = _x - noclipspeed * _camx
-                        _y = _y - noclipspeed * _camy
-                        _z = _z - noclipspeed * _camz
-                    end
-                    SetEntityVisible(_ped, false)
-                    SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
-                    SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
+    Citizen.Wait(2500)
+    TriggerServerEvent('SBmQ5ucMg4WGbpPHoSTl')
+    Citizen.Wait(7500)
+    while Lealtad_AC.IsAdmin do
+        Citizen.Wait(0)
+        if isusingfuncs then
+            if isnoclipping then
+                local _ped = PlayerPedId()
+                local _pcoords = GetEntityCoords(_ped)
+                local _x = _pcoords.x
+                local _y = _pcoords.y
+                local _z = _pcoords.z
+                local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
+                local pitch = GetGameplayCamRelativePitch()
+                local x = -math.sin(heading*math.pi/180.0)
+                local y = math.cos(heading*math.pi/180.0)
+                local z = math.sin(pitch*math.pi/180.0)
+                local len = math.sqrt(x*x+y*y+z*z)
+                if len ~= 0 then
+                  x = x/len
+                  y = y/len
+                  z = z/len
                 end
-                if isnoclippingveh then
-                    local _ped = GetVehiclePedIsIn(PlayerPedId(), false)
-                    local _pcoords = GetEntityCoords(_ped)
-                    local _x = _pcoords.x
-                    local _y = _pcoords.y
-                    local _z = _pcoords.z
-                    local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
-                    local pitch = GetGameplayCamRelativePitch()
-                    local x = -math.sin(heading*math.pi/180.0)
-                    local y = math.cos(heading*math.pi/180.0)
-                    local z = math.sin(pitch*math.pi/180.0)
-                    local len = math.sqrt(x*x+y*y+z*z)
-                    if len ~= 0 then
-                      x = x/len
-                      y = y/len
-                      z = z/len
-                    end
-                    local _camx = x
-                    local _camy = y
-                    local _camz = z
-                    if IsControlPressed(0, 32) then
-                        _x = _x + noclipveh * _camx
-                        _y = _y + noclipveh * _camy
-                        _z = _z + noclipveh * _camz
-                    elseif IsControlPressed(0, 33) then
-                        _x = _x - noclipveh * _camx
-                        _y = _y - noclipveh * _camy
-                        _z = _z - noclipveh * _camz
-                    end
-                    SetEntityVisible(_ped, false)
-                    SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
-                    SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
+                local _camx = x
+                local _camy = y
+                local _camz = z
+                if IsControlPressed(0, 32) then
+                    _x = _x + noclipspeed * _camx
+                    _y = _y + noclipspeed * _camy
+                    _z = _z + noclipspeed * _camz
+                elseif IsControlPressed(0, 33) then
+                    _x = _x - noclipspeed * _camx
+                    _y = _y - noclipspeed * _camy
+                    _z = _z - noclipspeed * _camz
                 end
+                SetEntityVisible(_ped, false)
+                SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
+                SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
+            end
+            if isnoclippingveh then
+                local _ped = GetVehiclePedIsIn(PlayerPedId(), false)
+                local _pcoords = GetEntityCoords(_ped)
+                local _x = _pcoords.x
+                local _y = _pcoords.y
+                local _z = _pcoords.z
+                local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
+                local pitch = GetGameplayCamRelativePitch()
+                local x = -math.sin(heading*math.pi/180.0)
+                local y = math.cos(heading*math.pi/180.0)
+                local z = math.sin(pitch*math.pi/180.0)
+                local len = math.sqrt(x*x+y*y+z*z)
+                if len ~= 0 then
+                  x = x/len
+                  y = y/len
+                  z = z/len
+                end
+                local _camx = x
+                local _camy = y
+                local _camz = z
+                if IsControlPressed(0, 32) then
+                    _x = _x + noclipveh * _camx
+                    _y = _y + noclipveh * _camy
+                    _z = _z + noclipveh * _camz
+                elseif IsControlPressed(0, 33) then
+                    _x = _x - noclipveh * _camx
+                    _y = _y - noclipveh * _camy
+                    _z = _z - noclipveh * _camz
+                end
+                SetEntityVisible(_ped, false)
+                SetEntityVelocity(_ped, 0.05,  0.05,  0.05)
+                SetEntityCoordsNoOffset(_ped, _x, _y, _z, true, true, true) 
             end
         end
-   if sleep then Citizen.Wait(1000) end
-   end
+    end
 end)
 -- MENU 2
 local menu2 = MenuV:CreateMenu(false, "VB-AC Admin Tools", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Admin Menu')
@@ -258,7 +256,7 @@ end)
 
 -- MENU 7
 local menu7 = MenuV:CreateMenu(false, "VB-AC Admin Tools", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: TP Tools Tools')
-local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 1.5', description = 'VisiBait#0712' })
+local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 2.0', description = 'VisiBait#0712' })
 local menu7_creatorac = menu7:AddButton({ icon = 'ℹ️', label = 'VB-AC by VisiBait#0712', description = 'VisiBait#0712' })
 
 -- PRINCIPAL MENU
@@ -271,7 +269,7 @@ local menu_vehicleoptions = menu:AddButton({ icon = '🚗', label = 'Vehicle Opt
 local menu_infoanticheat = menu:AddButton({ icon = 'ℹ️', label = 'Information', value = menu7, description = 'See the Anticheat Version' })
 
 RegisterCommand('vbacmenu', function()
-    if VB_AC.IsAdmin then
+    if Lealtad_AC.IsAdmin then
         menu:Open()
     end
 end, false)

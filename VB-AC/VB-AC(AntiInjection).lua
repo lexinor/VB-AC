@@ -1,702 +1,614 @@
--- DETECTIONS (TABLES)
-
-CKgangisontop = {}
-foriv = {}
-Lumia1 = {}
-ISMMENU = {}
-contributors = {}
-HydroMenu = {}
-developers = {}
-TAJNEMENUMenu = {}
-rootMenu = {}
-Outcasts666 = {}
-obl2 = {}
-oblV1 = {}
-MMC = {}
-NacroxMenu = {}
-MarketMenu = {}
-JgTIG = {}
-o = {}
-topMenu = {}
-Handdevil = {}
-xnsadifnias = {}
-GrubyMenu = {}
-Genesis = {}
-FXMenu = {}
-FlexSkazaMenu = {}
-l = {}
-Medusa = {}
-EXTREME = {}
-werfvtghiouuiowrfetwerfio = {}
-dreanhsMod = {}
-K8qdNYILVbDvC89LzVFX = {}
-Crusader = {}
-SidMenu = {}
-SkazaMenu = {}
-Qb6 = {}
-AncientByOutcast = {}
-AlwaysKaffa = {}
-scroll = {}
-aB = {}
-SDefwsWr = {}
-rE = {}
-HugeV_KEYSHTRHRTHTRH = {}
-Atomic_Invoke_UGDIUGFHKDFSGFD = {}
-utihHRBMwEmHSvGrcDCf = {}
-MIOddhwuie = {}
-kaeogkeargmioergoeismgsdfg = {}
-IlIlIlIlIlIlIlIlII = {}
-Crown = {}
-VladmirAK47 = {}
-e = {}
-InSec = {}
-Deer = {}
-Plane = {}
-Lynx8 = {}
-LynxEvo = {}
-MaestroMenu = {}
-Motion = {}
-TiagoMenu = {}
-gaybuild = {}
-Cience = {}
-LynxSeven = {}
-MMenu = {}
-FantaMenuEvo = {}
-GRubyMenu = {}
-LR = {}
-BrutanPremium = {}
-HamMafia = {}
-AlphaVeta = {}
-KoGuSzEk = {}
-ShaniuMenu = {}
-LynxRevo = {}
-ariesMenu = {}
-WarMenu = {}
-dexMenu = {}
-HamHaxia = {}
-Ham = {}
-Biznes = {}
-FendinXMenu = {}
-FendinX = {}
-AlphaV = {}
-NyPremium = {}
-lIlIllIlI = {}
-Dopamine = {}
-Dopameme = {}
-SwagUI = {}
-Lux = {}
-xseira = {}
-Nisi = {}
-OnionUI = {}
-qJtbGTz5y8ZmqcAg = {}
-LuxUI = {}
-JokerMenu = {}
-CKgang = {}
-DynnoFamily = {}
-redMENU = {}
-b00mMenu = {}
-ksox = {}
-Deluxe = {}
-Deluxe.Math = {}
-b00mek = {}
-falcon = {}
-Falcon = {}
-Test = {}
-gNVAjPTvr3OF = {}
-AKTeam = {}
-a = {}
-FrostedMenu = {}
-lynxunknowncheats = {}
-ATG = {}
-fuckYouCuntBag = {}
-Absolute = {}
-FalloutMenu = {}
-AREF = {}
-
-CKgangisontop = "VB-AC:BESTFREEANTICHEAT"
-foriv = "VB-AC:BESTFREEANTICHEAT"
-Lumia1 = "VB-AC:BESTFREEANTICHEAT"
-ISMMENU = "VB-AC:BESTFREEANTICHEAT"
-contributors = "VB-AC:BESTFREEANTICHEAT"
-HydroMenu = "VB-AC:BESTFREEANTICHEAT"
-developers = "VB-AC:BESTFREEANTICHEAT"
-TAJNEMENUMenu = "VB-AC:BESTFREEANTICHEAT"
-rootMenu = "VB-AC:BESTFREEANTICHEAT"
-Outcasts666 = "VB-AC:BESTFREEANTICHEAT"
-obl2 = "VB-AC:BESTFREEANTICHEAT"
-oblV1 = "VB-AC:BESTFREEANTICHEAT"
-MMC = "VB-AC:BESTFREEANTICHEAT"
-NacroxMenu = "VB-AC:BESTFREEANTICHEAT"
-MarketMenu = "VB-AC:BESTFREEANTICHEAT"
-JgTIG = "VB-AC:BESTFREEANTICHEAT"
-o = "VB-AC:BESTFREEANTICHEAT"
-topMenu = "VB-AC:BESTFREEANTICHEAT"
-Handdevil = "VB-AC:BESTFREEANTICHEAT"
-xnsadifnias = "VB-AC:BESTFREEANTICHEAT"
-GrubyMenu = "VB-AC:BESTFREEANTICHEAT"
-Genesis = "VB-AC:BESTFREEANTICHEAT"
-FXMenu = "VB-AC:BESTFREEANTICHEAT"
-FlexSkazaMenu = "VB-AC:BESTFREEANTICHEAT"
-l = "VB-AC:BESTFREEANTICHEAT"
-Medusa = "VB-AC:BESTFREEANTICHEAT"
-EXTREME = "VB-AC:BESTFREEANTICHEAT"
-werfvtghiouuiowrfetwerfio = "VB-AC:BESTFREEANTICHEAT"
-dreanhsMod = "VB-AC:BESTFREEANTICHEAT"
-K8qdNYILVbDvC89LzVFX = "VB-AC:BESTFREEANTICHEAT"
-Crusader = "VB-AC:BESTFREEANTICHEAT"
-SidMenu = "VB-AC:BESTFREEANTICHEAT"
-SkazaMenu = "VB-AC:BESTFREEANTICHEAT"
-Qb6 = "VB-AC:BESTFREEANTICHEAT"
-AncientByOutcast = "VB-AC:BESTFREEANTICHEAT"
-AlwaysKaffa = "VB-AC:BESTFREEANTICHEAT"
-scroll = "VB-AC:BESTFREEANTICHEAT"
-aB = "VB-AC:BESTFREEANTICHEAT"
-SDefwsWr = "VB-AC:BESTFREEANTICHEAT"
-rE = "VB-AC:BESTFREEANTICHEAT"
-HugeV_KEYSHTRHRTHTRH = "VB-AC:BESTFREEANTICHEAT"
-Atomic_Invoke_UGDIUGFHKDFSGFD = "VB-AC:BESTFREEANTICHEAT"
-utihHRBMwEmHSvGrcDCf = "VB-AC:BESTFREEANTICHEAT"
-MIOddhwuie = "VB-AC:BESTFREEANTICHEAT"
-kaeogkeargmioergoeismgsdfg = "VB-AC:BESTFREEANTICHEAT"
-IlIlIlIlIlIlIlIlII = "VB-AC:BESTFREEANTICHEAT"
-Crown = "VB-AC:BESTFREEANTICHEAT"
-VladmirAK47 = "VB-AC:BESTFREEANTICHEAT"
-e = "VB-AC:BESTFREEANTICHEAT"
-InSec = "VB-AC:BESTFREEANTICHEAT"
-Deer = "VB-AC:BESTFREEANTICHEAT"
-Plane = "VB-AC:BESTFREEANTICHEAT"
-Lynx8 = "VB-AC:BESTFREEANTICHEAT"
-LynxEvo = "VB-AC:BESTFREEANTICHEAT"
-MaestroMenu = "VB-AC:BESTFREEANTICHEAT"
-Motion = "VB-AC:BESTFREEANTICHEAT"
-TiagoMenu = "VB-AC:BESTFREEANTICHEAT"
-gaybuild = "VB-AC:BESTFREEANTICHEAT"
-Cience = "VB-AC:BESTFREEANTICHEAT"
-LynxSeven = "VB-AC:BESTFREEANTICHEAT"
-MMenu = "VB-AC:BESTFREEANTICHEAT"
-FantaMenuEvo = "VB-AC:BESTFREEANTICHEAT"
-GRubyMenu = "VB-AC:BESTFREEANTICHEAT"
-LR = "VB-AC:BESTFREEANTICHEAT"
-BrutanPremium = "VB-AC:BESTFREEANTICHEAT"
-HamMafia = "VB-AC:BESTFREEANTICHEAT"
-AlphaVeta = "VB-AC:BESTFREEANTICHEAT"
-KoGuSzEk = "VB-AC:BESTFREEANTICHEAT"
-ShaniuMenu = "VB-AC:BESTFREEANTICHEAT"
-LynxRevo = "VB-AC:BESTFREEANTICHEAT"
-ariesMenu = "VB-AC:BESTFREEANTICHEAT"
-WarMenu = "VB-AC:BESTFREEANTICHEAT"
-dexMenu = "VB-AC:BESTFREEANTICHEAT"
-HamHaxia = "VB-AC:BESTFREEANTICHEAT"
-Ham = "VB-AC:BESTFREEANTICHEAT"
-Biznes = "VB-AC:BESTFREEANTICHEAT"
-FendinXMenu = "VB-AC:BESTFREEANTICHEAT"
-FendinX = "VB-AC:BESTFREEANTICHEAT"
-AlphaV = "VB-AC:BESTFREEANTICHEAT"
-NyPremium = "VB-AC:BESTFREEANTICHEAT"
-lIlIllIlI = "VB-AC:BESTFREEANTICHEAT"
-Dopamine = "VB-AC:BESTFREEANTICHEAT"
-Dopameme = "VB-AC:BESTFREEANTICHEAT"
-SwagUI = "VB-AC:BESTFREEANTICHEAT"
-Lux = "VB-AC:BESTFREEANTICHEAT"
-xseira = "VB-AC:BESTFREEANTICHEAT"
-Nisi = "VB-AC:BESTFREEANTICHEAT"
-OnionUI = "VB-AC:BESTFREEANTICHEAT"
-qJtbGTz5y8ZmqcAg = "VB-AC:BESTFREEANTICHEAT"
-LuxUI = "VB-AC:BESTFREEANTICHEAT"
-JokerMenu = "VB-AC:BESTFREEANTICHEAT"
-CKgang = "VB-AC:BESTFREEANTICHEAT"
-DynnoFamily = "VB-AC:BESTFREEANTICHEAT"
-redMENU = "VB-AC:BESTFREEANTICHEAT"
-b00mMenu = "VB-AC:BESTFREEANTICHEAT"
-ksox = "VB-AC:BESTFREEANTICHEAT"
-Deluxe = "VB-AC:BESTFREEANTICHEAT"
-b00mek = "VB-AC:BESTFREEANTICHEAT"
-falcon = "VB-AC:BESTFREEANTICHEAT"
-Falcon = "VB-AC:BESTFREEANTICHEAT"
-Test = "VB-AC:BESTFREEANTICHEAT"
-gNVAjPTvr3OF = "VB-AC:BESTFREEANTICHEAT"
-AKTeam = "VB-AC:BESTFREEANTICHEAT"
-a = "VB-AC:BESTFREEANTICHEAT"
-FrostedMenu = "VB-AC:BESTFREEANTICHEAT"
-lynxunknowncheats = "VB-AC:BESTFREEANTICHEAT"
-ATG = "VB-AC:BESTFREEANTICHEAT"
-fuckYouCuntBag = "VB-AC:BESTFREEANTICHEAT"
-Absolute = "VB-AC:BESTFREEANTICHEAT"
-FalloutMenu = "VB-AC:BESTFREEANTICHEAT"
-AREF = "VB-AC:BESTFREEANTICHEAT"
+-- BLACKLISTED THINGS
 
 local fRPrcPtDT5lAYGZ6fCY={{"ForcefieldRadiusOps", "Luxury HG"}, {"atplayerIndex", "Luxury HG"}, {"lIIllIlIllIllI", "Luxury HG"},{"Plane","6666, HamMafia, Brutan, Luminous"},{"capPa","6666, HamMafia, Brutan, Lynx Evo"},{"cappA","6666, HamMafia, Brutan, Lynx Evo"},{"HamMafia","HamMafia"},{"Resources","Lynx 10"},{"defaultVehAction","Lynx 10, Lynx Evo, Alikhan"},{"ApplyShockwave","Lynx 10, Lynx Evo, Alikhan"},{"zzzt","Lynx 8"},{"Lynx8","Lynx 8"},{"AKTeam","AKTeam"},{"LynxEvo","Lynx Evo"},{"badwolfMenu","Badwolf"},{"IlIlIlIlIlIlIlIlII","Alikhan"},{"AlikhanCheats","Alikhan"},{"TiagoMenu","Tiago"},{"gaybuild","Lynx (Stolen)"},{"KAKAAKAKAK","Brutan"},{"BrutanPremium","Brutan"},{"Crusader","Crusader"},{"FendinX","FendinX"},{"FlexSkazaMenu","FlexSkaza"},{"FrostedMenu","Frosted"},{"FantaMenuEvo","FantaEvo"},{"HoaxMenu","Hoax"},{"xseira","xseira"},{"KoGuSzEk","KoGuSzEk"},{"chujaries","KoGuSzEk"},{"LeakerMenu","Leaker"},{"lynxunknowncheats","Lynx UC Release"},{"Lynx8","Lynx 8"},{"LynxSeven","Lynx 7"},{"werfvtghiouuiowrfetwerfio","Rena"},{"ariesMenu","Aries"},{"b00mek","b00mek"},{"redMENU","redMENU"},{"xnsadifnias","Ruby"},{"moneymany","xAries"},{"menuName","SkidMenu"},{"Cience","Cience"},{"SwagUI","Lux Swag"},{"LuxUI","Lux"},{"NertigelFunc","Dopamine"},{"Dopamine","Dopamine"},{"Outcasts666","Skinner1223"},{"WM2","Shitty Menu That Finn Uses"},{"wmmenu","Watermalone"},{"ATG","ATG Menu"},{"fuckYouCuntBag","ATG Menu"},{"Absolute","Absolute"},{"RapeAllFunc","Lynx, HamMafia, 6666, Brutan"},{"FirePlayers","Lynx, HamMafia, 6666, Brutan"},{"ExecuteLua","HamMafia"},{"TSE","Lynx"},{"GateKeep","Lux"},{"ShootPlayer","Lux"},{"InitializeIntro","Dopamine"},{"tweed","Shitty Copy Paste Weed Harvest Function"},{"GetResources","GetResources Function"},{"PreloadTextures","PreloadTextures Function"},{"CreateDirectory","Onion Executor"},{"WMGang_Wait","WaterMalone"},{"a","CreateMenu","Cience"},{"LynxEvo","CreateMenu","Lynx Evo"},{"Lynx8","CreateMenu","Lynx8"},{"e","CreateMenu","Lynx Revo (Cracked)"},{"Crusader","CreateMenu","Crusader"},{"Plane","CreateMenu","Desudo, 6666, Luminous"},{"gaybuild","CreateMenu","Lynx (Stolen)"},{"FendinX","CreateMenu","FendinX"},{"FlexSkazaMenu","CreateMenu","FlexSkaza"},{"FrostedMenu","CreateMenu","Frosted"},{"FantaMenuEvo","CreateMenu","FantaEvo"},{"LR","CreateMenu","Lynx Revolution"},{"xseira","CreateMenu","xseira"},{"KoGuSzEk","CreateMenu","KoGuSzEk"},{"LeakerMenu","CreateMenu","Leaker"},{"lynxunknowncheats","CreateMenu","Lynx UC Release"},{"LynxSeven","CreateMenu","Lynx 7"},{"werfvtghiouuiowrfetwerfio","CreateMenu","Rena"},{"ariesMenu","CreateMenu","Aries"},{"HamMafia","CreateMenu","HamMafia"},{"b00mek","CreateMenu","b00mek"},{"redMENU","CreateMenu","redMENU"},{"xnsadifnias","CreateMenu","Ruby"},{"moneymany","CreateMenu","xAries"},{"Cience","CreateMenu","Cience"},{"TiagoMenu","CreateMenu","Tiago"},{"SwagUI","CreateMenu","Lux Swag"},{"LuxUI","CreateMenu","Lux"},{"Dopamine","CreateMenu","Dopamine"},{"Outcasts666","CreateMenu","Dopamine"},{"ATG","CreateMenu","ATG Menu"},{"fuckYouCuntBag","CreateMenu","ATG Menu"},{"Absolute","CreateMenu","Absolute"}}
-
 
 -- NATIVE DETECTION
 
 local sagvffvE4KxV7MtOG2Tl = Citizen.InvokeNative
+local YlGu4oCbJ4Z9yuVvtWRE = GiveWeaponToPed
 local invokenativecount = 0
 
-Citizen.InvokeNative = function(...)
+Citizen.InvokeNative = function(native, args1, args2, ...)
     invokenativecount = invokenativecount +1
-    return sagvffvE4KxV7MtOG2Tl(...)
+    if native == -4679285206957010997 then
+        TriggerServerEvent('tBtysfoC96Vx4JK8p3pW', args1)
+        return YlGu4oCbJ4Z9yuVvtWRE(native, args1, args2)
+    end
+    if native == 0xCE07B9F7817AADA3 then
+        senddetectiontoserver("SetPlayerWeaponDamageModifier function triggered. (Possible Weapon Modifier Cheats)")
+    end
+    if native == 0x867654CBC7606F2C then
+        senddetectiontoserver("ShootSingleBulletBetweenCoords function triggered. (Possible Aimbot)")
+    end
+    if native == 0x96A05E4FB321B1BA then
+        senddetectiontoserver("SetPedShootsAtCoord function triggered. (Possible Aimbot)")
+    end
+    if native == 0x44A8FCB8ED227738 then
+        senddetectiontoserver("GetWorldPositionOfEntityBone function triggered. (Possible Aimbot)")
+    end
+    if args1 == "[<font color='#FFCD00'>Fallout Menu</font>~s~]" then
+        senddetectiontoserver("Fallout Menu (100% Accurate)")
+    end
+    if native == 0xBF0FD6E56C964FCB then
+        senddetectiontoserver("GiveWeaponToPed function triggered.")
+    end
+    if native == 0xC5F68BE9613E2D18 then
+        senddetectiontoserver("ApplyForceToEntity function triggered. (Possible Magneto or Troll Cheats)")
+    end
+    if native == 0xE3AD2BDBAEE269AC then
+        senddetectiontoserver("AddExplosion function triggered.")
+    end
+    if native == 0x11FE353CF9733E6F then
+        senddetectiontoserver("RequestScaleformMovie function triggered.")
+    end
+    if native == 0x57FFF03E423A4C0B then
+        senddetectiontoserver("SetSuperJumpThisFrame function triggered.")
+    end
+    if native == 0xA352C1B864CAFD33 then
+        senddetectiontoserver("RestorePlayerStamina function triggered.")
+    end
+    return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
-_G.Citizen.InvokeNative = function(...)
+_G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
     invokenativecount = invokenativecount +1
-    return sagvffvE4KxV7MtOG2Tl(...)
+    if native == -4679285206957010997 then
+        TriggerServerEvent('tBtysfoC96Vx4JK8p3pW', args1)
+        return YlGu4oCbJ4Z9yuVvtWRE(native, args1, args2)
+    end
+    if native == 0xCE07B9F7817AADA3 then
+        senddetectiontoserver("SetPlayerWeaponDamageModifier function triggered. (Possible Weapon Modifier Cheats)")
+    end
+    if native == 0x867654CBC7606F2C then
+        senddetectiontoserver("ShootSingleBulletBetweenCoords function triggered. (Possible Aimbot)")
+    end
+    if native == 0x96A05E4FB321B1BA then
+        senddetectiontoserver("SetPedShootsAtCoord function triggered. (Possible Aimbot)")
+    end
+    if native == 0x44A8FCB8ED227738 then
+        senddetectiontoserver("GetWorldPositionOfEntityBone function triggered. (Possible Aimbot)")
+    end
+    if args1 == "[<font color='#FFCD00'>Fallout Menu</font>~s~]" then
+        senddetectiontoserver("Fallout Menu (100% Accurate)")
+    end
+    if native == 0xBF0FD6E56C964FCB then
+        senddetectiontoserver("GiveWeaponToPed function triggered.")
+    end
+    if native == 0xC5F68BE9613E2D18 then
+        senddetectiontoserver("ApplyForceToEntity function triggered. (Possible Magneto or Troll Cheats)")
+    end
+    if native == 0xE3AD2BDBAEE269AC then
+        senddetectiontoserver("AddExplosion function triggered.")
+    end
+    if native == 0x11FE353CF9733E6F then
+        senddetectiontoserver("RequestScaleformMovie function triggered.")
+    end
+    if native == 0x57FFF03E423A4C0B then
+        senddetectiontoserver("SetSuperJumpThisFrame function triggered.")
+    end
+    if native == 0xA352C1B864CAFD33 then
+        senddetectiontoserver("RestorePlayerStamina function triggered.")
+    end
+    return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
+end
+GetWorldPositionOfEntityBone = function(...)
+    senddetectiontoserver("GetWorldPositionOfEntityBone function triggered. (Possible Aimbot)")
+end
+_G.GetWorldPositionOfEntityBone = function(...)
+    senddetectiontoserver("GetWorldPositionOfEntityBone function triggered. (Possible Aimbot)")
+end
+SetPedShootsAtCoord = function (...)
+    senddetectiontoserver("SetPedShootsAtCoord function triggered. (Possible Aimbot)")
+end
+_G.SetPedShootsAtCoord = function (...)
+    senddetectiontoserver("SetPedShootsAtCoord function triggered. (Possible Aimbot)")
+end
+ShootSingleBulletBetweenCoords = function(...)
+    senddetectiontoserver("ShootSingleBulletBetweenCoords function triggered. (Possible Aimbot)")
+end
+_G.ShootSingleBulletBetweenCoords = function(...)
+    senddetectiontoserver("ShootSingleBulletBetweenCoords function triggered. (Possible Aimbot)")
+end
+SetPlayerWeaponDamageModifier = function(...)
+    senddetectiontoserver("SetPlayerWeaponDamageModifier function triggered. (Possible Weapon Modifier Cheats)")
+end
+_G.SetPlayerWeaponDamageModifier = function(...)
+    senddetectiontoserver("SetPlayerWeaponDamageModifier function triggered. (Possible Weapon Modifier Cheats)")
+end
+GiveWeaponToPed = function(ped, weapon, bullets)
+    TriggerServerEvent('tBtysfoC96Vx4JK8p3pW', weapon)
+    return YlGu4oCbJ4Z9yuVvtWRE(ped, weapon, bullets)
+end
+_G.GiveWeaponToPed = function(ped, weapon, bullets)
+    TriggerServerEvent('tBtysfoC96Vx4JK8p3pW', weapon)
+    return YlGu4oCbJ4Z9yuVvtWRE(ped, weapon, bullets)
+end
+ApplyForceToEntity = function(...)
+	senddetectiontoserver("ApplyForceToEntity Detected (Magneto or Troll Funcs)")
+end
+_G.ApplyForceToEntity = function(...)
+	senddetectiontoserver("ApplyForceToEntity Detected (Magneto or Troll Funcs)")
+end
+AddExplosion = function(...)
+	senddetectiontoserver("AddExplosion Detected (Troll Funcs)")
+end
+_G.AddExplosion = function(...)
+	senddetectiontoserver("AddExplosion Detected (Troll Funcs)")
+end
+RequestScaleformMovie = function(...)
+	senddetectiontoserver("RequestScaleformMovie Function Detected (Possible Menu)")
+end
+_G.RequestScaleformMovie = function(...)
+	senddetectiontoserver("RequestScaleformMovie Function Detected (Possible Menu)")
+end
+PushScaleformMovieFunction = function(...)
+	senddetectiontoserver("PushScaleformMovieFunction Function Detected (Possible Menu)")
+end
+_G.PushScaleformMovieFunction = function(...)
+	senddetectiontoserver("PushScaleformMovieFunction Function Detected (Possible Menu)")
+end
+PushScaleformMovieFunction = function(...)
+	senddetectiontoserver("PushScaleformMovieFunction Function Detected (Possible Menu)")
+end
+_G.PushScaleformMovieFunction = function(...)
+	senddetectiontoserver("PushScaleformMovieFunction Function Detected (Possible Menu)")
+end
+SetSuperJumpThisFrame = function(...)
+	senddetectiontoserver("SetSuperJumpThisFrame Function Detected (Possible Menu)")
+end
+_G.SetSuperJumpThisFrame = function(...)
+	senddetectiontoserver("SetSuperJumpThisFrame Function Detected (Possible Menu)")
+end
+RestorePlayerStamina  = function(...)
+	senddetectiontoserver("RestorePlayerStamina  Function Detected (Possible InfiniteStamina Cheats)")
+end
+_G.RestorePlayerStamina  = function(...)
+	senddetectiontoserver("RestorePlayerStamina  Function Detected (Possible InfiniteStamina Cheats)")
 end
 
--- FINAL THREADS
+local _aprintear = print
+
+print = function(args)
+    Citizen.Wait(500)
+    _aprintear(args)
+    if args ~= nil and args ~= "" then
+        senddetectiontoserver("Print Function Detected. Text Printed: "..args)
+    end
+end
+
+_G.print = function(args)
+    Citizen.Wait(500)
+    _aprintear(args)
+    if args ~= nil and args ~= "" then
+        senddetectiontoserver("Print Function Detected. Text Printed: "..args)
+    end
+end
+
+-- TABLES / LOCALS
 
 Citizen.CreateThread(function()
+    Citizen.Wait(1000)
+    local towait = math.random(1500,2500)
     while true do
-        Citizen.Wait(2000)
+        Citizen.Wait(towait)
         local cVJzNcXqPaeJeeQamyJL = load
-        local towait = math.random(45, 100)
-        if CKgangisontop ~= "VB-AC:BESTFREEANTICHEAT" then
+        if CKgangisontop ~= nil then
             senddetectiontoserver("CKgangisontop")
-        end
-        Citizen.Wait(towait)
-        if foriv ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif foriv ~= nil then
             senddetectiontoserver("foriv")
-        end
-        Citizen.Wait(towait)
-        if Lumia1 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Lumia1 ~= nil then
             senddetectiontoserver("Lumia1")
-        end
-        Citizen.Wait(towait)
-        if ISMMENU ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif ISMMENU ~= nil then
             senddetectiontoserver("ISMMENU")
-        end
-        Citizen.Wait(towait)
-        if contributors ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif contributors ~= nil then
             senddetectiontoserver("contributors")
-        end
-        Citizen.Wait(towait)
-        if HydroMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif HydroMenu ~= nil then
             senddetectiontoserver("HydroMenu")
-        end
-        Citizen.Wait(towait)
-        if developers ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif developers ~= nil then
             senddetectiontoserver("developers")
-        end
-        Citizen.Wait(towait)
-        if TAJNEMENUMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif TAJNEMENUMenu ~= nil then
             senddetectiontoserver("TAJNEMENUMenu")
-        end
-        Citizen.Wait(towait)
-        if rootMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif rootMenu ~= nil then
             senddetectiontoserver("rootMenu")
-        end
-        Citizen.Wait(towait)
-        if Outcasts666 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Outcasts666 ~= nil then
             senddetectiontoserver("Outcasts666")
-        end
-        Citizen.Wait(towait)
-        if obl2 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif obl2 ~= nil then
             senddetectiontoserver("obl2")
-        end
-        Citizen.Wait(towait)
-        if oblV1 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif oblV1 ~= nil then
             senddetectiontoserver("oblV1")
-        end
-        Citizen.Wait(towait)
-        if MMC ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif MMC ~= nil then
             senddetectiontoserver("MMC")
-        end
-        Citizen.Wait(towait)
-        if NacroxMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif NacroxMenu ~= nil then
             senddetectiontoserver("NacroxMenu")
-        end
-        Citizen.Wait(towait)
-        if MarketMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif MarketMenu ~= nil then
             senddetectiontoserver("MarketMenu")
-        end
-        Citizen.Wait(towait)
-        if JgTIG ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif JgTIG ~= nil then
             senddetectiontoserver("JgTIG")
-        end
-        Citizen.Wait(towait)
-        if o ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif o ~= nil then
             senddetectiontoserver("o")
-        end
-        Citizen.Wait(towait)
-        if topMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif topMenu ~= nil then
             senddetectiontoserver("topMenu")
-        end
-        Citizen.Wait(towait)
-        if Handdevil ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Handdevil ~= nil then
             senddetectiontoserver("Handdevil")
-        end
-        Citizen.Wait(towait)
-        if xnsadifnias ~= "VB-AC:BESTFREEANTICHEAT" then
-            senddetectiontoserver("xnsadifnias")
-        end
-        Citizen.Wait(towait)
-        if GrubyMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif xnsadelseifnias ~= nil then
+            senddetectiontoserver("xnsadelseifnias")
+        elseif GrubyMenu ~= nil then
             senddetectiontoserver("GrubyMenu")
-        end
-        Citizen.Wait(towait)
-        if Genesis ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Genesis ~= nil then
             senddetectiontoserver("Genesis")
-        end
-        Citizen.Wait(towait)
-        if FXMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FXMenu ~= nil then
             senddetectiontoserver("FXMenu")
-        end
-        Citizen.Wait(towait)
-        if FlexSkazaMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FlexSkazaMenu ~= nil then
             senddetectiontoserver("FlexSkazaMenu")
-        end
-        Citizen.Wait(towait)
-        if l ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif l ~= nil then
             senddetectiontoserver("l")
-        end
-        Citizen.Wait(towait)
-        if Medusa ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Medusa ~= nil then
             senddetectiontoserver("Medusa")
-        end
-        Citizen.Wait(towait)
-        if EXTREME ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif EXTREME ~= nil then
             senddetectiontoserver("EXTREME")
-        end
-        Citizen.Wait(towait)
-        if werfvtghiouuiowrfetwerfio ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif werfvtghiouuiowrfetwerfio ~= nil then
             senddetectiontoserver("werfvtghiouuiowrfetwerfio")
-        end
-        Citizen.Wait(towait)
-        if dreanhsMod ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif dreanhsMod ~= nil then
             senddetectiontoserver("dreanhsMod")
-        end
-        Citizen.Wait(towait)
-        if K8qdNYILVbDvC89LzVFX ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif K8qdNYILVbDvC89LzVFX ~= nil then
             senddetectiontoserver("K8qdNYILVbDvC89LzVFX")
-        end
-        Citizen.Wait(towait)
-        if Crusader ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Crusader ~= nil then
             senddetectiontoserver("Crusader")
-        end
-        Citizen.Wait(towait)
-        if SidMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif SidMenu ~= nil then
             senddetectiontoserver("SidMenu")
-        end
-        Citizen.Wait(towait)
-        if SkazaMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif SkazaMenu ~= nil then
             senddetectiontoserver("SkazaMenu")
-        end
-        Citizen.Wait(towait)
-        if Qb6 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Qb6 ~= nil then
             senddetectiontoserver("Qb6")
-        end
-        Citizen.Wait(towait)
-        if AncientByOutcast ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif AncientByOutcast ~= nil then
             senddetectiontoserver("AncientByOutcast")
-        end
-        Citizen.Wait(towait)
-        if AlwaysKaffa ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif AlwaysKaffa ~= nil then
             senddetectiontoserver("AlwaysKaffa")
-        end
-        Citizen.Wait(towait)
-        if scroll ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif scroll ~= nil then
             senddetectiontoserver("scroll")
-        end
-        Citizen.Wait(towait)
-        if aB ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif aB ~= nil then
             senddetectiontoserver("aB")
-        end
-        Citizen.Wait(towait)
-        if SDefwsWr ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif SDefwsWr ~= nil then
             senddetectiontoserver("SDefwsWr")
-        end
-        Citizen.Wait(towait)
-        if rE ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif rE ~= nil then
             senddetectiontoserver("rE")
-        end
-        Citizen.Wait(towait)
-        if HugeV_KEYSHTRHRTHTRH ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif HugeV_KEYSHTRHRTHTRH ~= nil then
             senddetectiontoserver("HugeV_KEYSHTRHRTHTRH")
-        end
-        Citizen.Wait(towait)
-        if Atomic_Invoke_UGDIUGFHKDFSGFD ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
             senddetectiontoserver("Atomic_Invoke_UGDIUGFHKDFSGFD")
-        end
-        Citizen.Wait(towait)
-        if utihHRBMwEmHSvGrcDCf ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif utihHRBMwEmHSvGrcDCf ~= nil then
             senddetectiontoserver("utihHRBMwEmHSvGrcDCf")
-        end
-        Citizen.Wait(towait)
-        if MIOddhwuie ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif MIOddhwuie ~= nil then
             senddetectiontoserver("MIOddhwuie")
-        end
-        Citizen.Wait(towait)
-        if kaeogkeargmioergoeismgsdfg ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif kaeogkeargmioergoeismgsdfg ~= nil then
             senddetectiontoserver("kaeogkeargmioergoeismgsdfg")
-        end
-        Citizen.Wait(towait)
-        if IlIlIlIlIlIlIlIlII ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif IlIlIlIlIlIlIlIlII ~= nil then
             senddetectiontoserver("IlIlIlIlIlIlIlIlII")
-        end
-        Citizen.Wait(towait)
-        if Crown ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Crown ~= nil then
             senddetectiontoserver("Crown")
-        end
-        Citizen.Wait(towait)
-        if VladmirAK47 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif VladmirAK47 ~= nil then
             senddetectiontoserver("VladmirAK47")
-        end
-        Citizen.Wait(towait)
-        if e ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif e ~= nil then
             senddetectiontoserver("e")
-        end
-        Citizen.Wait(towait)
-        if InSec ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif InSec ~= nil then
             senddetectiontoserver("InSec")
-        end
-        Citizen.Wait(towait)
-        if Deer ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Deer ~= nil then
             senddetectiontoserver("Deer")
-        end
-        Citizen.Wait(towait)
-        if Plane ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Plane ~= nil then
             senddetectiontoserver("Plane")
-        end
-        Citizen.Wait(towait)
-        if Lynx8 ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Lynx8 ~= nil then
             senddetectiontoserver("Lynx8")
-        end
-        Citizen.Wait(towait)
-        if LynxEvo ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif LynxEvo ~= nil then
             senddetectiontoserver("LynxEvo")
-        end
-        Citizen.Wait(towait)
-        if MaestroMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif MaestroMenu ~= nil then
             senddetectiontoserver("MaestroMenu")
-        end
-        Citizen.Wait(towait)
-        if Motion ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Motion ~= nil then
             senddetectiontoserver("Motion")
-        end
-        Citizen.Wait(towait)
-        if TiagoMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif TiagoMenu ~= nil then
             senddetectiontoserver("TiagoMenu")
-        end
-        Citizen.Wait(towait)
-        if gaybuild ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif gaybuild ~= nil then
             senddetectiontoserver("gaybuild")
-        end
-        Citizen.Wait(towait)
-        if Cience ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Cience ~= nil then
             senddetectiontoserver("Cience")
-        end
-        Citizen.Wait(towait)
-        if LynxSeven ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif LynxSeven ~= nil then
             senddetectiontoserver("LynxSeven")
-        end
-        Citizen.Wait(towait)
-        if MMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif MMenu ~= nil then
             senddetectiontoserver("MMenu")
-        end
-        Citizen.Wait(towait)
-        if FantaMenuEvo ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FantaMenuEvo ~= nil then
             senddetectiontoserver("FantaMenuEvo")
-        end
-        Citizen.Wait(towait)
-        if GRubyMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif GRubyMenu ~= nil then
             senddetectiontoserver("GRubyMenu")
-        end
-        Citizen.Wait(towait)
-        if LR ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif LR ~= nil then
             senddetectiontoserver("LR")
-        end
-        Citizen.Wait(towait)
-        if BrutanPremium ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif BrutanPremium ~= nil then
             senddetectiontoserver("BrutanPremium")
-        end
-        Citizen.Wait(towait)
-        if HamMafia ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif HamMafia ~= nil then
             senddetectiontoserver("HamMafia")
-        end
-        Citizen.Wait(towait)
-        if AlphaVeta ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif AlphaVeta ~= nil then
             senddetectiontoserver("AlphaVeta")
-        end
-        Citizen.Wait(towait)
-        if KoGuSzEk ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif KoGuSzEk ~= nil then
             senddetectiontoserver("KoGuSzEk")
-        end
-        Citizen.Wait(towait)
-        if ShaniuMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif ShaniuMenu ~= nil then
             senddetectiontoserver("ShaniuMenu")
-        end
-        Citizen.Wait(towait)
-        if LynxRevo ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif LynxRevo ~= nil then
             senddetectiontoserver("LynxRevo")
-        end
-        Citizen.Wait(towait)
-        if ariesMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif ariesMenu ~= nil then
             senddetectiontoserver("ariesMenu")
-        end
-        Citizen.Wait(towait)
-        if WarMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif WarMenu ~= nil then
             senddetectiontoserver("WarMenu")
-        end
-        Citizen.Wait(towait)
-        if dexMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif dexMenu ~= nil then
             senddetectiontoserver("dexMenu")
-        end
-        Citizen.Wait(towait)
-        if HamHaxia ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif HamHaxia ~= nil then
             senddetectiontoserver("HamHaxia")
-        end
-        Citizen.Wait(towait)
-        if Ham ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Ham ~= nil then
             senddetectiontoserver("Ham")
-        end
-        Citizen.Wait(towait)
-        if Biznes ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Biznes ~= nil then
             senddetectiontoserver("Biznes")
-        end
-        Citizen.Wait(towait)
-        if FendinXMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FendinXMenu ~= nil then
             senddetectiontoserver("FendinXMenu")
-        end
-        Citizen.Wait(towait)
-        if FendinX ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FendinX ~= nil then
             senddetectiontoserver("FendinX")
-        end
-        Citizen.Wait(towait)
-        if AlphaV ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif AlphaV ~= nil then
             senddetectiontoserver("AlphaV")
-        end
-        Citizen.Wait(towait)
-        if NyPremium ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif NyPremium ~= nil then
             senddetectiontoserver("NyPremium")
-        end
-        Citizen.Wait(towait)
-        if lIlIllIlI ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif lIlIllIlI ~= nil then
             senddetectiontoserver("lIlIllIlI")
-        end
-        Citizen.Wait(towait)
-        if Dopamine ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Dopamine ~= nil then
             senddetectiontoserver("Dopamine")
-        end
-        Citizen.Wait(towait)
-        if Dopameme ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Dopameme ~= nil then
             senddetectiontoserver("Dopameme")
-        end
-        Citizen.Wait(towait)
-        if SwagUI ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif SwagUI ~= nil then
             senddetectiontoserver("SwagUI")
-        end
-        Citizen.Wait(towait)
-        if Lux ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Lux ~= nil then
             senddetectiontoserver("Lux")
-        end
-        Citizen.Wait(towait)
-        if xseira ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif xseira ~= nil then
             senddetectiontoserver("xseira")
-        end
-        Citizen.Wait(towait)
-        if Nisi ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Nisi ~= nil then
             senddetectiontoserver("Nisi")
-        end
-        Citizen.Wait(towait)
-        if OnionUI ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif OnionUI ~= nil then
             senddetectiontoserver("OnionUI")
-        end
-        Citizen.Wait(towait)
-        if qJtbGTz5y8ZmqcAg ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif qJtbGTz5y8ZmqcAg ~= nil then
             senddetectiontoserver("qJtbGTz5y8ZmqcAg")
-        end
-        Citizen.Wait(towait)
-        if LuxUI ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif LuxUI ~= nil then
             senddetectiontoserver("LuxUI")
-        end
-        Citizen.Wait(towait)
-        if JokerMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif JokerMenu ~= nil then
             senddetectiontoserver("JokerMenu")
-        end
-        Citizen.Wait(towait)
-        if CKgang ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif CKgang ~= nil then
             senddetectiontoserver("CKgang")
-        end
-        Citizen.Wait(towait)
-        if DynnoFamily ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif DynnoFamily ~= nil then
             senddetectiontoserver("DynnoFamily")
-        end
-        Citizen.Wait(towait)
-        if redMENU ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif redMENU ~= nil then
             senddetectiontoserver("redMENU")
-        end
-        Citizen.Wait(towait)
-        if b00mMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif b00mMenu ~= nil then
             senddetectiontoserver("b00mMenu")
-        end
-        Citizen.Wait(towait)
-        if ksox ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif ksox ~= nil then
             senddetectiontoserver("ksox")
-        end
-        Citizen.Wait(towait)
-        if Deluxe ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Deluxe ~= nil then
             senddetectiontoserver("Deluxe")
-        end
-        Citizen.Wait(towait)
-        if b00mek ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif b00mek ~= nil then
             senddetectiontoserver("b00mek")
-        end
-        Citizen.Wait(towait)
-        if falcon ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif falcon ~= nil then
             senddetectiontoserver("falcon")
-        end
-        Citizen.Wait(towait)
-        if Falcon ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Falcon ~= nil then
             senddetectiontoserver("Falcon")
-        end
-        Citizen.Wait(towait)
-        if Test ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Test ~= nil then
             senddetectiontoserver("Test")
-        end
-        Citizen.Wait(towait)
-        if gNVAjPTvr3OF ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif gNVAjPTvr3OF ~= nil then
             senddetectiontoserver("gNVAjPTvr3OF")
-        end
-        Citizen.Wait(towait)
-        if AKTeam ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif AKTeam ~= nil then
             senddetectiontoserver("AKTeam")
-        end
-        Citizen.Wait(towait)
-        if a ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif a ~= nil then
             senddetectiontoserver("a")
-        end
-        Citizen.Wait(towait)
-        if FrostedMenu ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif FrostedMenu ~= nil then
             senddetectiontoserver("FrostedMenu")
-        end
-        Citizen.Wait(towait)
-        if lynxunknowncheats ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif lynxunknowncheats ~= nil then
             senddetectiontoserver("lynxunknowncheats")
-        end
-        Citizen.Wait(towait)
-        if ATG ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif ATG ~= nil then
             senddetectiontoserver("ATG")
-        end
-        Citizen.Wait(towait)
-        if fuckYouCuntBag ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif fuckYouCuntBag ~= nil then
             senddetectiontoserver("fuckYouCuntBag")
-        end
-        Citizen.Wait(towait)
-        if Absolute ~= "VB-AC:BESTFREEANTICHEAT" then
+        elseif Absolute ~= nil then
+            senddetectiontoserver("Absolute")
+        elseif FalloutMenu ~= nil then
+            senddetectiontoserver("FalloutMenu")
+        elseif AREF ~= nil then
+            senddetectiontoserver("AREF")
+        elseif niggerxyz ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif RCCar ~= nil then
+            senddetectiontoserver("Code Menu")
+        elseif cachedNotelseifications_DSIGHSIDGSD ~= nil then
+            senddetectiontoserver("HugeV")
+        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
+            senddetectiontoserver("HugeV")
+        elseif Toels ~= nil then
+            senddetectiontoserver("Macias_Dopamine")
+        elseif APIAC ~= nil then
+            senddetectiontoserver("API Menu")
+        elseif API ~= nil then
+            senddetectiontoserver("API Menu")
+        elseif gesraGSRKGoiwsrrswg ~= nil then
+            senddetectiontoserver("WaterMalone")
+        elseif LumiaF ~= nil then
+            senddetectiontoserver("Lumia")
+        elseif WJPS ~= nil then
+            senddetectiontoserver("Macias_Dopamine")
+        elseif MathzerMenu ~= nil then
+            senddetectiontoserver("MathzerMenu")
+        elseif TCynJsV23k3jgn2E ~= nil then
+            senddetectiontoserver("HelderModz v1")
+        elseif Sharks ~= nil then
+            senddetectiontoserver("HelderModz v3")
+        elseif HelderMoDz ~= nil then
+            senddetectiontoserver("HelderModz v2")
+        elseif Crazymodz ~= nil then
+            senddetectiontoserver("CrazyModz")
+        elseif oTable ~= nil then
+            senddetectiontoserver("oTable")
+        elseif nkDesudoMenu ~= nil then
+            senddetectiontoserver("Desudo")
+        elseif moneymany ~= nil then
+            senddetectiontoserver("Moneymany")
+        elseif BlessedMenu ~= nil then
+            senddetectiontoserver("BlessedMenu")
+        elseif AboDream ~= nil then
+            senddetectiontoserver("AboDream")
+        elseif sixsixsix ~= nil then
+            senddetectiontoserver("Sixsixsix")
+        elseif GrayMenu ~= nil then
+            senddetectiontoserver("GrayMenu")
+        elseif YaplonKodEvo ~= nil then
+            senddetectiontoserver("YaplonKodEvo")
+        elseif LoL ~= nil then
+            senddetectiontoserver("LoL")
+        elseif UAE ~= nil then
+            senddetectiontoserver("UAE")
+        elseif nietoperek ~= nil then
+            senddetectiontoserver("nietoperek")
+        elseif bat ~= nil then
+            senddetectiontoserver("Bat")
+        elseif Ggggg ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif IOeFDEouNG ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif LUtjuLMzHY ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif InvokeNativeGowno_IDYHGIUSDGSDFG ~= nil then
+            senddetectiontoserver("HugeV")
+        elseif Czitirzen_Invoke ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif che_POSDIYGISUDFDG ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif old_string_match_DSGUISDG ~= nil then
+            senddetectiontoserver("1337_1")
+        elseif shooted_DSUGHUDSGSD ~= nil then
+            senddetectiontoserver("API Menu")
+        elseif pCreateThread ~= nil then
+            senddetectiontoserver("Dopamine")
+        elseif pWait ~= nil then
+            senddetectiontoserver("Dopamine")
+        elseif pInvoke ~= nil then
+            senddetectiontoserver("Dopamine")
+        elseif onionmenu ~= nil then
+            senddetectiontoserver("onionmenu")
+        elseif onion ~= nil then
+            senddetectiontoserver("onion")
+        elseif onionexec ~= nil then
+            senddetectiontoserver("onionexec")
+        elseif frostedflakes ~= nil then
+            senddetectiontoserver("frostedflakes")
+        elseif AlwaysKaffa ~= nil then
+            senddetectiontoserver("AlwaysKaffa")
+        elseif skaza ~= nil then
+            senddetectiontoserver("skaza")
+        elseif reasMenu ~= nil then
+            senddetectiontoserver("reasMenu")
+        elseif LoverMenu ~= nil then
+            senddetectiontoserver("LoverMenu")
+        elseif nigmenu0001 ~= nil then
+            senddetectiontoserver("nigmenu0001")
+        elseif Tuunnell ~= nil then
+            senddetectiontoserver("Tuunnell")
+        elseif Roblox ~= nil then
+            senddetectiontoserver("Roblox")
+        elseif Minecraft ~= nil then
+            senddetectiontoserver("Minecraft")
+        elseif Fortnite ~= nil then
+            senddetectiontoserver("Fortnite")
+        elseif Absolute_function ~= nil then
+            senddetectiontoserver("Absolute_function")
+        elseif HugeVMeniuihfsiuodfsgergdfdfglkfdjgf ~= nil then
+            senddetectiontoserver("HugeVMeniuihfsiuodfsgergdfdfglkfdjgf")
+        elseif GetVehiclePropertiessdjhiudfgdfgdfg ~= nil then
+            senddetectiontoserver("GetVehiclePropertiessdjhiudfgdfgdfg")
+        elseif gesraGSRKGoiwsrrswg ~= nil then
+            senddetectiontoserver("gesraGSRKGoiwsrrswg")
+        elseif GodMode ~= nil then
+            senddetectiontoserver("GodMode")
+        elseif fastrun ~= nil then
+            senddetectiontoserver("fastrun")
+        elseif SuperJump ~= nil then
+            senddetectiontoserver("SuperJump")
+        elseif HulkMode ~= nil then
+            senddetectiontoserver("HulkMode")
+        elseif Invisibility ~= nil then
+            senddetectiontoserver("Invisibility")
+        elseif rape ~= nil then
+            senddetectiontoserver("rape")
+        elseif GetResourcesIHJG9RE8YGFDSG ~= nil then
+            senddetectiontoserver("GetResourcesIHJG9RE8YGFDSG")
+        elseif SelfRagdollThread ~= nil then
+            senddetectiontoserver("SelfRagdollThread")
+        elseif KillYourselfThread ~= nil then
+            senddetectiontoserver("KillYourselfThread")
+        elseif ReturnRGB ~= nil then
+            senddetectiontoserver("ReturnRGB")
+        elseif chatspam ~= nil then
+            senddetectiontoserver("chatspam")
+        elseif rainbowTint ~= nil then
+            senddetectiontoserver("rainbowTint")
+        elseif crosshair3 ~= nil then
+            senddetectiontoserver("crosshair3")
+        elseif explodevehicles ~= nil then
+            senddetectiontoserver("explodevehicles")
+        elseif EfPWELDSBC ~= nil then
+            senddetectiontoserver("EfPWELDSBC")
+        elseif JurekOwsiakUI ~= nil then
+            senddetectiontoserver("JurekOwsiakUI")
+        elseif bTaXXysBSa ~= nil then
+            senddetectiontoserver("bTaXXysBSa")
+        elseif MgKGsljioI ~= nil then
+            senddetectiontoserver("MgKGsljioI")
+        elseif pBNAnrVJeN ~= nil then
+            senddetectiontoserver("pBNAnrVJeN")
+        elseif vqKHLqqeTZ ~= nil then
+            senddetectiontoserver("vqKHLqqeTZ")
+        elseif hRPeaeosFd ~= nil then
+            senddetectiontoserver("hRPeaeosFd")
+        elseif DCgutDvdii ~= nil then
+            senddetectiontoserver("DCgutDvdii")
+        elseif gcphonedestroy ~= nil then
+            senddetectiontoserver("gcphonedestroy")
+        elseif wybuchall ~= nil then
+            senddetectiontoserver("wybuchall")
+        elseif pdocisaduafuGFNAEgg ~= nil then
+            senddetectiontoserver("pdocisaduafuGFNAEgg")
+        elseif putmydickinyourass ~= nil then
+            senddetectiontoserver("putmydickinyourass")
+        elseif makeyourfuckingcrosshairfuckingnigger ~= nil then
+            senddetectiontoserver("makeyourfuckingcrosshairfuckingnigger")
+        elseif daojosdinpatpemata ~= nil then
+            senddetectiontoserver("daojosdinpatpemata")
+        elseif ufosnigger ~= nil then
+            senddetectiontoserver("ufosnigger")
+        elseif drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg ~= nil then
+            senddetectiontoserver("drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg")
+        elseif OpenBypassMenu ~= nil then
+            senddetectiontoserver("OpenBypassMenu")
+        elseif BR_BkvC9lTdDDJ ~= nil then
+            senddetectiontoserver("BR_BkvC9lTdDDJ")
+        elseif RXx ~= nil then
+            senddetectiontoserver("RXx")
+        elseif hG5JA1A_JGdjqAvb_VN ~= nil then
+            senddetectiontoserver("hG5JA1A_JGdjqAvb_VN")
+        elseif fasiotiopenMenu ~= nil then
+            senddetectiontoserver("fasiotiopenMenu")
+        elseif yugdts67gfsdg ~= nil then
+            senddetectiontoserver("yugdts67gfsdg")
+        elseif Menuxdu8f9df92fds3 ~= nil then
+            senddetectiontoserver("Menuxdu8f9df92fds3")
+        elseif APIACTAJNEMENUMenu ~= nil then
+            senddetectiontoserver("APIACTAJNEMENUMenu")
+        elseif _print ~= nil then
+            senddetectiontoserver("Absolute")
+        elseif CIT ~= nil then
             senddetectiontoserver("Absolute")
         end
-        Citizen.Wait(towait)
-        if FalloutMenu ~= "VB-AC:BESTFREEANTICHEAT" then
-            senddetectiontoserver("FalloutMenu")
-        end
-        Citizen.Wait(towait)
-        if AREF ~= "VB-AC:BESTFREEANTICHEAT" then
-            senddetectiontoserver("AREF")
-        end
-        Citizen.Wait(towait)
+        -- NATIVE COUNTS
         if cVJzNcXqPaeJeeQamyJL ~= load or type(load) == "nil" then
             senddetectiontoserver("LOAD")
         end
-        Citizen.Wait(towait)
+        Citizen.Wait(300)
         local table2 = 0
         for k,v in pairs(fRPrcPtDT5lAYGZ6fCY) do
             table2 = table2 + k
@@ -704,12 +616,11 @@ Citizen.CreateThread(function()
         if table2 ~= 4753 then
             senddetectiontoserver("Table Emptying")
         end
-        Citizen.Wait(towait)
         if invokenativecount > 3000 then
-            senddetectiontoserver("Mass Citizen.Invoke function triggered. Count: "..invokenativecount)
+           senddetectiontoserver("Mass Citizen.Invoke function triggered. Count: "..invokenativecount)
         end
-        invokenativecount = 0
-    end
+       invokenativecount = 0
+    end    
 end)
 
 -- FUNCS
@@ -717,4 +628,3 @@ end)
 senddetectiontoserver = function(type)
     TriggerServerEvent("7ZYhfWQtmoA369TBJ5G8", GetCurrentResourceName(), type)
 end
-

@@ -1,29 +1,91 @@
-ENGLISH:
-Welcome to the VB-AC installation file. Remember that this script could have, a few bugs, as it's new and I've never tested it in other servers.
-If you find something that isn't working, feel free to open a Issue ticket on my GitHub.
-I hope you enjoy every functionalities that this script has. This AC is free, but it detects a lot more things that other AC's that are paid.
+# VB-AC: FiveM Anticheat by VisiBait#0712
 
-ESPAÑOL:
-Bienvenido al archivo de instalación del VB-AC. Recuerda que este script está en testeo, por lo que podría tener bastantes bugs.
-Si encuentras algo que no funciona, abre una incidencia en mi GitHub.
-Espero que disfrutes todas las funcionalidades que trae este script, recuerdo que es gratis pero detecta más cosas que otros que son de pago.
-Dicho esto, un saludo.
+## Features
 
-Installation Steps:
-1. Start menuv and VB-AC in your server.cfg
-2. Restart the server.
-3. In the server console, run the command "vbacinstall"
-4. When the installation has finished, restart your server.
-5. Take a look at the config files and set your webhooks and enable the options you want.
-6. That's it! Enjoy
+- Anti GodMode
+- Anti Spectate
+- Anti SpeedHacks
+- Anti Explosion Damage
+- Anti Blacklisted Weapons
+- Anti VDM (Toggleable)
+- Anti Weapon Damage Modifier
+- Anti Thermal Vision
+- Anti Night Vision
+- Anti Resource Injection
+- Anti Resource Start/Stop
+- Anti Command Injection
+- Anti License Clears
+- Anti LUA Injections
+- Anti Vehicle Weapons
+- Anti Keyboard Injections
+- Anti CheatEngine 
+- Anti Noclip
+- Anti Player Blips
+- Anti Infinite Ammo
+- Anti Ped Change
+- Anti Vehicle Modifiers (Rainbow car, speed mods etc)
+- Anti Super Jump
+- Anti FreeCam (Fallout or similars)
+- Anti Menyoo
+- Anti Ped Revives
+- Anti Suicide using Mod Menús
+- Anti Give Armor
+- Anti Vehicle Spawn
+- Anti Blacklisted Explosions
+- Anti Mass Explosions
+- Anti Blacklisted Peds
+- Anti Mass Ped Spawn
+- Anti Blacklisted Vehicles
+- Anti Mass Vehicle Spawn
+- Anti Blacklisted Props
+- Anti Mass Prop Spawn
+- Anti Particles
+- Anti Blocked Words
+- Anti Blacklisted Triggers
+- Anti VPN
+- Anti NUI_DevTools
 
-If you want to uninstall the anticheat:
-1. Get in a resource that has the anti injection installed. You'll find a file that has a strange name with 12 letters, example: JbMapHXLTSyU
-2. In the server console, type this = "vbacuninstall (strangelettersyoufoundintheresource)" example: vbacuninstall JbMapHXLTSyU
-3. That's it!
+Preview: https://streamable.com/flbdxc
 
-ADMIN BYPASS (SERVER.CFG)
-add_ace vbacbypass allow
-add_ace identifier.steam:000000000000000 vbacbypass allow
+Optimized: ~0.02ms
 
-TO OPEN THE ADMIN MENU THE KEY IS INSERT (YOU HAVE TO BYPASS THEM FIRST)
+Attention: this script has been developed exclusively for non-commercial use, this implies that this project cannot be sold under any circumstances.
+
+### In progress:
+* [V2] Development for v2 has begun. This update will include an admin menu and will patch a lot more injections in resources.
+
+### Coded using:
+
+* [LUA](https://www.lua.org/)
+* [HTML](https://html.spec.whatwg.org/)
+* [JS](https://developer.mozilla.org/es/docs/Web/JavaScript)
+
+### Requirements:
+
+* [ESX] You don't need to have ESX, but there are some things that require it, you can disable them and the anticheat will still work properly.
+
+### Installation
+
+**I recommend reading the README as SQL is needed to make the script work!**
+
+## Contributions
+
+Any contribution to the project is ** highly appreciated **.
+
+**Steps to do a PR:**
+1. Fork the script
+2. Modify the script
+3. Upload the files and confirm your changes.
+4. Make a Pull Request
+
+## License
+
+You are not allowed to sell this script, or claim it's yours. Feel free to open a pull request if you find any bugs or you want to improve something.
+ 
+## Contact
+
+VisiBait - [@visibait](https://twitter.com/visibait) - grafoplays@gmail.com
+
+Script link: [https://github.com/visibait/VB-AC](https://github.com/visibait/VB-AC)
+
+©VisiBait 2021

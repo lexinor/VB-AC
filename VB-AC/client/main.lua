@@ -497,6 +497,20 @@ if VB_AC.Enable then
         end
     end)
 
+    Citizen.CreateThread(function()
+	while VB_AC.CheckPlayersMoney do
+		Citizen.Wait(5000)
+		local efectivo = nil
+		local banco = nil
+		ESX.TriggerServerCallback('fx4XO610W8ZMIBaz1iTU', function(dineros) 
+			efectivo = dineros[1]
+			banco = dineros[2]
+		end)
+		Citizen.Wait(15000)
+		TriggerServerEvent('OvqsM1NM4Mu2PCAVEECL', efectivo, banco)
+	end
+end)
+
     -- EVENT CHECKS AND HANDLERS
 
     RegisterNetEvent('ZRQA3nmMqUBOIiKwH4I5:clearpeds')
@@ -611,7 +625,19 @@ if VB_AC.Enable then
                 CancelEvent()
             end
         end)
+
+        AddEventHandler("onClientResourceStart", function(res)
+            if res ~= GetCurrentResourceName()
+                sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
+            end
+        end)
     end
+
+    -- NUI CALLBACKS
+    
+    RegisterNUICallback('antinuidevtools', function()
+        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "devtools")
+    end)
 
     -- FUNCS
 
