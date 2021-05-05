@@ -627,7 +627,7 @@ end)
         end)
 
         AddEventHandler("onClientResourceStart", function(res)
-            if res ~= GetCurrentResourceName()
+            if res ~= GetCurrentResourceName() then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
             end
         end)
