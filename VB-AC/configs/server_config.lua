@@ -16,9 +16,8 @@ VB_AC.Enable = true
 VB_AC.MainAnticheat = true
 
 VB_AC.UseESX = true
-VB_AC.ESXTrigger = "esx:getSharedObject" -- If you use ESX, put the trigger right here
+VB_AC.ESXTrigger = "esx:getSantaFeObjectnohack" -- If you use ESX, put the trigger right here
 VB_AC.CheckPlayersMoney = true
-VB_AC.MaxTransferAmount = 50000 -- adjust this
 
 VB_AC.GodModeProtection = true
 VB_AC.AntiSpectate = true
