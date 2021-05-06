@@ -13,6 +13,8 @@
 
 VB_AC = {}
 
+VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord
+
 VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
 VB_AC.MaxTransferAmount = 50000 -- ADJUST THIS
