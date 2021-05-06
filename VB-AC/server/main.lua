@@ -88,7 +88,7 @@ RegisterNetEvent('7ZYhfWQtmoA369TBJ5G8')
 AddEventHandler('7ZYhfWQtmoA369TBJ5G8', function(resource, info)
     local _src = source
     LogDetection(_src, "Injection detected in resource: "..resource.. " Type: "..info, "basic")
-    -- kickandbanuser(" Injection detected", _src)
+    kickandbanuser(" Injection detected", _src)
 end)
 
 RegisterNetEvent('5a1Ltc8fUyH3cPvAKRZ8')
@@ -96,7 +96,7 @@ AddEventHandler('5a1Ltc8fUyH3cPvAKRZ8', function()
     local _src = source
     if IsPlayerUsingSuperJump(_src) then
         LogDetection(_src, "SuperJump Detected.", "basic")
-        -- kickandbanuser(" SuperJump Detected", _src)
+        kickandbanuser(" SuperJump Detected", _src)
     end
 end)
 
@@ -108,7 +108,7 @@ AddEventHandler('pcIRIvXPEWe12SxRepMz', function(targetid, coords)
     if _tjob ~= 'ambulance' then -- Ambulance job name right here
         if not coords then
             LogDetection(_src, "Revive Detected.", "basic")
-            -- kickandbanuser("Revive Detected", _src)
+            kickandbanuser("Revive Detected", _src)
         else
             TriggerClientEvent('ZRQA3nmMqUBOIiKwH4I5:cancelnoclip')
         end
@@ -120,7 +120,7 @@ AddEventHandler('luaVRV3cccsj9q6227jN', function(isneargarage)
     local _src = source
     if not isneargarage then
         LogDetection(_src, "Vehicle Spawn Detected.", "basic")
-        -- kickandbanuser(" Vehicle Spawn Detected", _src)
+        kickandbanuser(" Vehicle Spawn Detected", _src)
     end
 end)
 
@@ -162,7 +162,7 @@ AddEventHandler('tBtysfoC96Vx4JK8p3pW', function(weapon)
     for _,Weapon in ipairs(VB_AC.BlacklistedWeapons) do
         if weapon == Weapon then
             LogDetection(_src, "GiveWeaponToPedDetected: "..weapon, "basic")
-            -- kickandbanuser(" GiveWeaponToPedDetected: "..weapon, _src)
+            kickandbanuser(" GiveWeaponToPedDetected: "..weapon, _src)
         end
     end
 end)
@@ -178,7 +178,7 @@ AddEventHandler('ptFxEvent', function(sender, data)
     particlesSpawned[_src] = (particlesSpawned[_src] or 0) + 1
     if particlesSpawned[_src] > VB_AC.MaxParticlesPerUser then
         LogDetection(_src, "Has tried to spawn "..particlesSpawned[_src].." particles","model")
-        -- kickandbanuser(" Mass Particle Spawn", _src)
+        kickandbanuser(" Mass Particle Spawn", _src)
     end
 end)
 
@@ -237,119 +237,119 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
     if not IsPlayerAceAllowed(_src, "vbacbypass") then
         if (_type == "invisible") then
             LogDetection(_src, "Tried to be Invisible","basic")
-            -- kickandbanuser(" Invisible Player Detected", _src)
+            kickandbanuser(" Invisible Player Detected", _src)
         elseif (_type == "godmode") then
             LogDetection(_src, "Tried to use GodMode. Type: ".._item,"basic")
-            -- kickandbanuser(" GodMode Detected", _src)
+            kickandbanuser(" GodMode Detected", _src)
         elseif (_type == "antiragdoll") then
             LogDetection(_src, "Tried to activate Anti-Ragdoll","basic")
-            -- kickandbanuser(" AntiRagdoll Detected", _src)
+            kickandbanuser(" AntiRagdoll Detected", _src)
         elseif (_type == "displayradar") then
             LogDetection(_src, "Tried to activate Radar","basic")
-            -- kickandbanuser(" Radar Detected", _src)
+            kickandbanuser(" Radar Detected", _src)
         elseif (_type == "explosiveweapon") then
             LogDetection(_src, "Tried to change bullet type","explosion")
-            -- kickandbanuser(" Weapon Explosion Detected", _src)
+            kickandbanuser(" Weapon Explosion Detected", _src)
         elseif (_type == "nocliporfly") then
             LogDetection(_src, "Tried to use NoClip or Fly","basic")
-            -- kickandbanuser(" Noclip/Fly Detected", _src)
+            kickandbanuser(" Noclip/Fly Detected", _src)
         elseif (_type == "spectatormode") then
             LogDetection(_src, "Tried to Spectate a Player","basic")
-            -- kickandbanuser(" Spectate Detected", _src)
+            kickandbanuser(" Spectate Detected", _src)
         elseif (_type == "speedhack") then
             LogDetection(_src, "Tried to SpeedHack","basic")
-            -- kickandbanuser(" SpeedHack Detected", _src)
+            kickandbanuser(" SpeedHack Detected", _src)
         elseif (_type == "blacklistedweapons") then
             LogDetection(_src, "Tried to spawn a Blacklisted Weapon","basic")
-            -- kickandbanuser(" Weapon in Blacklist Detected", _src)
+            kickandbanuser(" Weapon in Blacklist Detected", _src)
         elseif (_type == "thermalvision") then
             LogDetection(_src, "Tried to use Thermal Camera","basic")
-            -- kickandbanuser(" Thermal Camera Detected", _src)
+            kickandbanuser(" Thermal Camera Detected", _src)
         elseif (_type == "nightvision") then
             LogDetection(_src, "Tried to use Night Vision","basic")
-            -- kickandbanuser(" Night Vision Detected", _src)
+            kickandbanuser(" Night Vision Detected", _src)
         elseif (_type == "antiresourcestop") then
             LogDetection(_src, "Tried to stop/start a Resource","basic")
-            -- kickandbanuser(" Resource Stopped", _src)
+            kickandbanuser(" Resource Stopped", _src)
         elseif (_type == "licenseclear") then
             LogDetection(_src, "Tried to Clear His Licenses","basic")
-            -- kickandbanuser(" AntiLicenseClear", _src)
+            kickandbanuser(" AntiLicenseClear", _src)
         elseif (_type == "luainjection") then
             LogDetection(_src, "Tried to Inject a Menu","basic")
-            -- kickandbanuser(" Injection Detected", _src)
+            kickandbanuser(" Injection Detected", _src)
         elseif (_type == "keyboardinjection") then
             LogDetection(_src, "(AntiKeyBoardInjection)","basic")
-            -- kickandbanuser(" Injection Detected", _src)
+            kickandbanuser(" Injection Detected", _src)
         elseif (_type == "cheatengine") then
             LogDetection(_src, "Tried to use CheatEngine to change Vehicle Hash","basic")
-            -- kickandbanuser(" CheatEngine Detected", _src)
+            kickandbanuser(" CheatEngine Detected", _src)
         elseif (_type == "pedchanged") then
             LogDetection(_src, "Tried to change his PED","model")
-            -- kickandbanuser(" Ped Changed", _src)
+            kickandbanuser(" Ped Changed", _src)
         elseif (_type == "freecam") then
             LogDetection(_src, "Tried to use Freecam (Fallout or similar)","basic")
-            -- kickandbanuser(" FreeCam Detected", _src)
+            kickandbanuser(" FreeCam Detected", _src)
         elseif (_type == "noclip") then
             LogDetection(_src, "Tried to use NoClip","basic")
-            -- kickandbanuser(" NoClip Detected", _src)
+            kickandbanuser(" NoClip Detected", _src)
         elseif (_type == "playerblips") then
             LogDetection(_src, "Tried to put Player Blips","basic")
-            -- kickandbanuser(" Blips Detected", _src)
+            kickandbanuser(" Blips Detected", _src)
         elseif (_type == "damagemodifier") then
             LogDetection(_src, "Tried to change Weapon's Bullet Damage. Type: ".._item,"basic")
-            -- kickandbanuser(" Weapon Damage Modifier Detected", _src)
+            kickandbanuser(" Weapon Damage Modifier Detected", _src)
         elseif (_type == "clipmodifier") then
             LogDetection(_src, "Tried to modify a Weapon clip. Type: ".._item,"basic")
-            -- kickandbanuser(" Weapon Clip Modifier Detected", _src)
+            kickandbanuser(" Weapon Clip Modifier Detected", _src)
         elseif (_type == "infiniteammo") then
             LogDetection(_src, "Tried to put Infinite Ammo","basic")
-            -- kickandbanuser(" Infinite Ammo Detected", _src)
+            kickandbanuser(" Infinite Ammo Detected", _src)
         elseif (_type == "vehiclemodifier") then
             if VB_AC.UseESX then
                 local _char = ESX.GetPlayerFromId(_src)
                 local _job = _char.job.name
                 if type == 1 or type == 2 or type == 3 or type == 4 then
                     LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
-                    -- kickandbanuser(" Vehicle Modifier Detected.", _src)
+                    kickandbanuser(" Vehicle Modifier Detected.", _src)
                 else
                     if _job ~= 'mechanic' then -- Mechanic job name right here
                         LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
-                        -- kickandbanuser(" Vehicle Modifier Detected.", _src)
+                        kickandbanuser(" Vehicle Modifier Detected.", _src)
                     end
                 end
             else
                 if type == 1 or type == 2 or type == 3 or type == 4 then
                     LogDetection(_src, "Tried to modify vehicle features. Type: ".._item,"model")
-                    -- kickandbanuser(" Vehicle Modifier Detected.", _src)
+                    kickandbanuser(" Vehicle Modifier Detected.", _src)
                 end
             end
         elseif (_type == "stoppedac") then
             LogDetection(_src, "Tried to stop the Anticheat","basic")
-            -- kickandbanuser(" AntiResourceStop", _src)
+            kickandbanuser(" AntiResourceStop", _src)
         elseif (_type == "stoppedresource") then
             LogDetection(_src, "Tried to stop a resource: ".._item,"basic")
-            -- kickandbanuser(" AntiResourceStop", _src)
+            kickandbanuser(" AntiResourceStop", _src)
         elseif (_type == "resourcestarted") then
             LogDetection(_src, "Tried to start a resource: ".._item,"basic")
-            -- kickandbanuser(" AntiResourceStart", _src)
+            kickandbanuser(" AntiResourceStart", _src)
         elseif (_type == "resourceinjection") then
             LogDetection(_src, "Tried to inject a resource: ".._item,"basic")
-            -- kickandbanuser(" AntiResourceStart", _src)
+            kickandbanuser(" AntiResourceStart", _src)
         elseif (_type == "commandinjection") then
             LogDetection(_src, "Tried to inject a command.","basic")
-            -- kickandbanuser(" AntiCommandInjection", _src)
+            kickandbanuser(" AntiCommandInjection", _src)
         elseif (_type == "menyoo") then
             LogDetection(_src, "Tried to inject Menyoo Menu.","basic")
-            -- kickandbanuser(" Anti Menyoo", _src)
+            kickandbanuser(" Anti Menyoo", _src)
         elseif (_type == "antisuicide") then
             LogDetection(_src, "Tried to SUICIDE using a menu","basic")
-            -- kickandbanuser(" Anti Suicide", _src)
+            kickandbanuser(" Anti Suicide", _src)
         elseif (_type == "givearmour") then
             LogDetection(_src, "Tried to Give Armor.","basic")
-            -- kickandbanuser(" Anti Give Armor", _src)
+            kickandbanuser(" Anti Give Armor", _src)
         elseif (_type == "devtools") then
             LogDetection(_src, "Tried to open NUI_Devtools!","basic")
-            -- kickandbanuser(" Anti NUI_Devtools", _src)
+            kickandbanuser(" Anti NUI_Devtools", _src)
         end
     end
 end)
@@ -362,7 +362,7 @@ AddEventHandler("explosionEvent", function(sender, exp)
             if inTable(BlacklistedExplosionsList, exp.explosionType) ~= false then
                 CancelEvent()
                 LogDetection(sender, "Tried to create an explosion - type : "..exp.explosionType,"explosion")
-                -- kickandbanuser(" Blacklisted Explosion", sender)
+                kickandbanuser(" Blacklisted Explosion", sender)
             else
                 LogDetection(sender, "Explosion Detected.","explosion")
             end
@@ -370,28 +370,28 @@ AddEventHandler("explosionEvent", function(sender, exp)
                 explosionsSpawned[sender] = (explosionsSpawned[sender] or 0) + 1
                 if explosionsSpawned[sender] > 3 then
                     LogDetection(sender, "Tried to spawn mass explosions - type : "..exp.explosionType,"explosion")
-                    -- kickandbanuser(" Mass Explosions", sender)
+                    kickandbanuser(" Mass Explosions", sender)
                     CancelEvent()
                 end
             else
                 explosionsSpawned[sender] = (explosionsSpawned[sender] or 0) + 1
                 if explosionsSpawned[sender] > 3 then
                     LogDetection(sender, "Tried to spawn mass explosions - type: (gas pump)","explosion")
-                    -- kickandbanuser(" Mass Explosions", sender)
+                    kickandbanuser(" Mass Explosions", sender)
                     CancelEvent()
                 end
             end
             if exp.isInvisible == true then
                 LogDetection(sender, "Tried to spawn a invisible explosion - type : "..exp.explosionType,"explosion")
-                -- kickandbanuser(" Invisible Explosion Detected", sender)
+                kickandbanuser(" Invisible Explosion Detected", sender)
             end
             if exp.isAudible == false then
                 LogDetection(sender, "Tried to spawn a silent explosion - type : "..exp.explosionType,"explosion")
-                -- kickandbanuser(" Silent Explosion Detected", sender)
+                kickandbanuser(" Silent Explosion Detected", sender)
             end
             if exp.damageScale > 1.0 then
                 LogDetection(sender, "Tried to spawn a mortal explosion - type : "..exp.explosionType,"explosion")
-                -- kickandbanuser(" Explosión Detected", sender)
+                kickandbanuser(" Explosión Detected", sender)
             end
             CancelEvent()
         end
@@ -416,13 +416,13 @@ AddEventHandler("entityCreating", function(entity)
                 if inTable(WhitelistedPropList, model) == false then
                     if model ~= 0 and model ~= 225514697 then
                         LogDetection(_src, "Tried to spawn a blacklisted prop : " .. model,"model")
-                        -- kickandbanuser(" Blacklisted Prop", _src)
+                        kickandbanuser(" Blacklisted Prop", _src)
                         CancelEvent()
 
                         entitiesSpawned[_src] = (entitiesSpawned[_src] or 0) + 1
                         if entitiesSpawned[_src] > VB_AC.MaxEntitiesPerUser then
                             LogDetection(_src, "Tried to Spawn "..entitiesSpawned[_src].." props","model")
-                            -- kickandbanuser(" Mass Prop Spawn", _src)
+                            kickandbanuser(" Mass Prop Spawn", _src)
                             TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearprops" , -1)
                         end
                     end
@@ -434,13 +434,13 @@ AddEventHandler("entityCreating", function(entity)
                     if inTable(WhitelistedPropList, model) == false then
                         if model ~= 0 then
                             LogDetection(_src, "Tried to spawn a blacklisted prop: " .. model,"model")
-                            -- kickandbanuser(" Blacklisted Prop", _src)
+                            kickandbanuser(" Blacklisted Prop", _src)
                             CancelEvent()
 
                             entitiesSpawned[_src] = (entitiesSpawned[_src] or 0) + 1
                             if entitiesSpawned[_src] > VB_AC.MaxPropsPerUser then
                                 LogDetection(_src, "Ha intentado spawnear "..entitiesSpawned[_src].." props","model")
-                                -- kickandbanuser(" Has Spawneado Muchos Props", _src)
+                                kickandbanuser(" Has Spawneado Muchos Props", _src)
                                 TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearprops" , -1)
                             end
                         end
@@ -452,14 +452,14 @@ AddEventHandler("entityCreating", function(entity)
                         if inTable(BlacklistedPropList, model) ~= false then
                             if model ~= 0 then
                                 LogDetection(_src, "Tried to spawn a blacklisted vehicle : " .. model,"model")
-                                -- kickandbanuser(" Blacklisted Vehicle", _src)
+                                kickandbanuser(" Blacklisted Vehicle", _src)
                                 CancelEvent()
                             end
                         end
                         vehiclesSpawned[_src] = (vehiclesSpawned[_src] or 0) + 1
                         if vehiclesSpawned[_src] > VB_AC.MaxVehiclesPerUser then
                             LogDetection(_src, "Tried to spawn "..vehiclesSpawned[_src].." vehicles","model")
-                            -- kickandbanuser(" Mass Vehicle Spawn", _src)
+                            kickandbanuser(" Mass Vehicle Spawn", _src)
                             TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles" , -1)
                             CancelEvent()
                         end
@@ -472,14 +472,14 @@ AddEventHandler("entityCreating", function(entity)
                         if inTable(BlacklistedPropList, model) ~= false then
                             if model ~= 0 or model ~= 225514697 then
                                 LogDetection(_src, "Tried to spawn a blacklisted ped : " .. model,"model")
-                                -- kickandbanuser(" Blacklisted Ped", _src)
+                                kickandbanuser(" Blacklisted Ped", _src)
                                 CancelEvent()
                             end
                         end
                         pedsSpawned[_src] = (pedsSpawned[_src] or 0) + 1
                         if pedsSpawned[_src] > VB_AC.MaxPedsPerUser then
                             LogDetection(_src, "Tried to spawn "..pedsSpawned[_src].." peds","model")
-                            -- kickandbanuser(" Mass Ped Spawn", _src)
+                            kickandbanuser(" Mass Ped Spawn", _src)
                             TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearpeds" , -1)
                         end
                     end
@@ -487,7 +487,7 @@ AddEventHandler("entityCreating", function(entity)
                     if inTable(BlacklistedPropList, GetHashKey(entity)) ~= false then
                         if model ~= 0 or model ~= 225514697 then
                             LogDetection(_src, "Tried to spawn a blacklisted prop : " .. model,"model")
-                            -- kickandbanuser(" Blacklisted Prop", _src)
+                            kickandbanuser(" Blacklisted Prop", _src)
                             CancelEvent()
                         end
                     end
@@ -501,7 +501,7 @@ AddEventHandler("giveWeaponEvent", function(sender, data)
     if VB_AC.AntiGiveorRemoveWeapons then
         if data.givenAsPickup == false then
             LogDetection(sender, "Tried to give weapons to player","basic")
-            -- kickandbanuser(" GiveWeaponToPed", sender)
+            kickandbanuser(" GiveWeaponToPed", sender)
             CancelEvent()
         end
     end
@@ -509,13 +509,13 @@ end)
 
 AddEventHandler("RemoveWeaponEvent", function(sender, data)
     LogDetection(sender, "Tried to remove weapons from player.","basic")
-    -- kickandbanuser(" Remove Weapons from Player", sender)
+    kickandbanuser(" Remove Weapons from Player", sender)
     CancelEvent()
 end)
 
 AddEventHandler("RemoveAllWeaponsEvent", function(sender, data)
     LogDetection(sender, "Tried to remove all weapons from player.","basic")
-    -- kickandbanuser(" Remove All Weapons", sender)
+    kickandbanuser(" Remove All Weapons", sender)
     CancelEvent()
 end)
 
@@ -525,7 +525,7 @@ AddEventHandler("chatMessage", function(source, name, message)
         for k, word in pairs(VB_AC.BlacklistedWords) do
             if string.match(message:lower(), word:lower()) then
                 LogDetection(_src, "Tried to say a blacklisted word : " .. word,"basic")
-                -- kickandbanuser(" Blacklisted Word", _src)
+                kickandbanuser(" Blacklisted Word", _src)
             end
         end
     end
@@ -533,7 +533,7 @@ AddEventHandler("chatMessage", function(source, name, message)
         local _playername = GetPlayerName(_src);
         if name ~= _playername then
             LogDetection(_src, "Tried to fake a chat message : " .. word,"basic")
-            -- kickandbanuser(" Fake Chat Message", _src)
+            kickandbanuser(" Fake Chat Message", _src)
         end
     end
 end)
@@ -542,7 +542,7 @@ AddEventHandler("clearPedTasksEvent", function(source, data)
     if VB_AC.AntiClearPedTasks then
         if data.immediately then
             LogDetection(source, "Tried to Clear Ped Tasks Inmediately","basic")
-            -- kickandbanuser(" Clear Peds Tasks Inmediately", source)
+            kickandbanuser(" Clear Peds Tasks Inmediately", source)
             CancelEvent()
         else
             LogDetection(source, "Tried to Clear Ped Tasks","basic")
@@ -554,7 +554,7 @@ AddEventHandler("clearPedTasksEvent", function(source, data)
             local owner = NetworkGetEntityOwner(entity)
             if owner ~= sender then
                 LogDetection(source, "Tried to Clear Ped Tasks","basic")
-                -- kickandbanuser(" Clear Peds Tasks", source)
+                kickandbanuser(" Clear Peds Tasks", source)
                 CancelEvent()
             end
         end
@@ -564,7 +564,7 @@ end)
 -- FUNCS
 
 kickandbanuser = function(reason, servertarget)
-    if not IsPlayerAceAllowed(servertarget, "vbacbypass") then
+    if not IsPlayerAceAllowed(servertarget, "vbacbypass") and VB_AC.BanPlayers then
         local target
         local duration     = 0
         local reason    = reason
@@ -730,7 +730,7 @@ AddEventHandler('onResourceStart', function(resourceName)
                 RegisterServerEvent(trigger)
                 AddEventHandler(trigger, function()
                     LogDetection(source, "Tried to execute a blacklisted trigger : " .. trigger,"basic")
-                    -- kickandbanuser(" Blacklisted Trigger", source)
+                    kickandbanuser(" Blacklisted Trigger", source)
                     CancelEvent()
                 end)
             end
