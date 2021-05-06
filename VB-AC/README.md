@@ -43,7 +43,6 @@
 - Anti Blocked Words
 - Anti Blacklisted Triggers
 - Anti VPN
-- Anti NUI_DevTools
 
 Preview: https://streamable.com/flbdxc
 
