@@ -29,14 +29,14 @@ if VB_AC.UseESX then
         local _charbank = _char.getAccount('bank').money
         if tonumber(_charmoney) > tonumber(efectivo) then
             local amount = tonumber(_charmoney) - tonumber(efectivo)
-            if amount > VB_AC.MaxTransferAmount then -- HAY QUE CREAR ESO DE MAXTRANSFER
-                -- mandar baneo aqui
+            if amount > VB_AC.MaxTransferAmount then 
+            LogDetection(_src, "Player spawned/received"..amount.."in cash", "basic")
             end
         end
         if tonumber(_charbank) > tonumber(banco) then
             local amount = tonumber(_charbank) - tonumber(banco)
             if amount > VB_AC.MaxTransferAmount then
-                -- mandar baneo aqui
+            LogDetection(_src, "Player spawned/received"..amount.."in cash", "basic")
             end
         end
     end)
