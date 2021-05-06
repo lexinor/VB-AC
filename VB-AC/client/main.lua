@@ -547,12 +547,56 @@ end)
             for _, obj in ipairs(objs) do
                 if NetworkGetEntityIsNetworked(obj) then
                     DeleteNetworkedEntity(obj)
+		    DeleteEntity(obj)
                 else
                     DeleteEntity(obj)
                 end
             end
+	    for object in EnumerateObjects() do
+		SetEntityAsMissionEntity(object, false, false)
+		DeleteObject(object)
+	        if (DoesEntityExist(object)) then 
+		    DeleteObject(object)
+	        end
+            end
         end
     end)
+    -- entities fix
+	local entityEnumerator = {
+	  __gc = function(enum)
+	    if enum.destructor and enum.handle then
+	      enum.destructor(enum.handle)
+	    end
+	    enum.destructor = nil
+	    enum.handle = nil
+	  end
+	}
+
+	local function EnumerateEntities(initFunc, moveFunc, disposeFunc)
+	  return coroutine.wrap(function()
+	    local iter, id = initFunc()
+	    if not id or id == 0 then
+	      disposeFunc(iter)
+	      return
+	    end
+
+	    local enum = {handle = iter, destructor = disposeFunc}
+	    setmetatable(enum, entityEnumerator)
+
+	    local next = true
+	    repeat
+	      coroutine.yield(id)
+	      next, id = moveFunc(iter)
+	    until not next
+
+	    enum.destructor, enum.handle = nil, nil
+	    disposeFunc(iter)
+	  end)
+	end
+
+	function EnumerateObjects()
+	  return EnumerateEntities(FindFirstObject, FindNextObject, EndFindObject)
+	end
 
     RegisterNetEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles")
     AddEventHandler("ZRQA3nmMqUBOIiKwH4I5:clearvehicles", function()
