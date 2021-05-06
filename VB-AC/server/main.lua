@@ -347,9 +347,6 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
         elseif (_type == "givearmour") then
             LogDetection(_src, "Tried to Give Armor.","basic")
             kickandbanuser(" Anti Give Armor", _src)
-        elseif (_type == "devtools") then
-            LogDetection(_src, "Tried to open NUI_Devtools!","basic")
-            kickandbanuser(" Anti NUI_Devtools", _src)
         end
     end
 end)
