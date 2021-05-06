@@ -52,7 +52,6 @@ Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu
 - Anti Blocked Words
 - Anti Blacklisted Triggers
 - Anti VPN
-- Anti NUI_DevTools
 
 
 
