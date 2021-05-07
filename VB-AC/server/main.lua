@@ -13,7 +13,7 @@ if VB_AC.UseESX then
     ESX.RegisterServerCallback('fx4XO610W8ZMIBaz1iTU', function(source, callback)
         local _src = source
         local _char = ESX.GetPlayerFromId(_src)
-        local _charmoney = _char.getmoney
+        local _charmoney = _char.getmoney()
         local _charbank = _char.getAccount('bank').money
         local tosend = {
             _charmoney,
@@ -25,7 +25,7 @@ if VB_AC.UseESX then
     AddEventHandler('OvqsM1NM4Mu2PCAVEECL', function(efectivo, banco)
         local _src = source
         local _char = ESX.GetPlayerFromId(_src)
-        local _charmoney = _char.getmoney
+        local _charmoney = _char.getmoney()
         local _charbank = _char.getAccount('bank').money
         if tonumber(_charmoney) > tonumber(efectivo) then
             local amount = tonumber(_charmoney) - tonumber(efectivo)
