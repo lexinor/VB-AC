@@ -30,13 +30,13 @@ if VB_AC.UseESX then
         if tonumber(_charmoney) > tonumber(efectivo) then
             local amount = tonumber(_charmoney) - tonumber(efectivo)
             if amount > VB_AC.MaxTransferAmount then 
-            LogDetection(_src, "Player spawned/received"..amount.."in cash", "basic")
+            LogDetection(_src, "Player spawned/received "..amount.." in cash", "basic")
             end
         end
         if tonumber(_charbank) > tonumber(banco) then
             local amount = tonumber(_charbank) - tonumber(banco)
             if amount > VB_AC.MaxTransferAmount then
-            LogDetection(_src, "Player spawned/received"..amount.."in cash", "basic")
+            LogDetection(_src, "Player spawned/deposited "..amount.." in his bank account", "basic")
             end
         end
     end)
