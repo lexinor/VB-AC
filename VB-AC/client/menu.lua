@@ -269,7 +269,7 @@ local menu_vehicleoptions = menu:AddButton({ icon = '🚗', label = 'Vehicle Opt
 local menu_infoanticheat = menu:AddButton({ icon = 'ℹ️', label = 'Information', value = menu7, description = 'See the Anticheat Version' })
 
 RegisterCommand('vbacmenu', function()
-    if Lealtad_AC.IsAdmin then
+    if VB_AC.IsAdmin then
         menu:Open()
     end
 end, false)
