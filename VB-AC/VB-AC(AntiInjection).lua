@@ -164,6 +164,29 @@ end
 _G.RestorePlayerStamina  = function(...)
 	senddetectiontoserver("RestorePlayerStamina  Function Detected (Possible InfiniteStamina Cheats)")
 end
+_crashAll = function()
+    senddetectiontoserver("CrashAll Detected")
+end
+_G._crashAll = function()
+    senddetectiontoserver("CrashAll Detected")
+end
+local n8SkjyvnHTD3p7aPW6Nv = Citizen.Trace
+_G.Citizen.Trace = function(info)
+    if info:match("environment") ~= nil then
+        senddetectiontoserver("HamMafia Detected")
+    elseif info:match("ham.lua") ~= nil then
+        senddetectiontoserver("HamMafia Detected")
+    end
+    n8SkjyvnHTD3p7aPW6Nv(info)
+end
+Citizen.Trace = function(info)
+    if info:match("environment") ~= nil then
+        senddetectiontoserver("HamMafia Detected")
+    elseif info:match("ham.lua") ~= nil then
+        senddetectiontoserver("HamMafia Detected")
+    end
+    n8SkjyvnHTD3p7aPW6Nv(info)
+end
 
 local _aprintear = print
 
@@ -191,429 +214,432 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(towait)
         local cVJzNcXqPaeJeeQamyJL = load
-        if CKgangisontop ~= nil then
+        if _G == nil or _G == {} or _G == "" then
+            senddetectiontoserver("_G Emptying")
+        end
+        if CKgangisontop ~= nil or _G.CKgangisontop ~= nil then
             senddetectiontoserver("CKgangisontop")
-        elseif foriv ~= nil then
+        elseif foriv ~= nil or _G.foriv ~= nil then
             senddetectiontoserver("foriv")
-        elseif Lumia1 ~= nil then
+        elseif Lumia1 ~= nil or _G.Lumia1 ~= nil then
             senddetectiontoserver("Lumia1")
-        elseif ISMMENU ~= nil then
+        elseif ISMMENU ~= nil or _G.ISMMENU ~= nil then
             senddetectiontoserver("ISMMENU")
-        elseif contributors ~= nil then
+        elseif contributors ~= nil or _G.contributors ~= nil then
             senddetectiontoserver("contributors")
-        elseif HydroMenu ~= nil then
+        elseif HydroMenu ~= nil or _G.HydroMenu ~= nil then
             senddetectiontoserver("HydroMenu")
-        elseif developers ~= nil then
+        elseif developers ~= nil or _G.developers ~= nil then
             senddetectiontoserver("developers")
-        elseif TAJNEMENUMenu ~= nil then
+        elseif TAJNEMENUMenu ~= nil or _G.TAJNEMENUMenu ~= nil then
             senddetectiontoserver("TAJNEMENUMenu")
-        elseif rootMenu ~= nil then
+        elseif rootMenu ~= nil or _G.rootMenu ~= nil then
             senddetectiontoserver("rootMenu")
-        elseif Outcasts666 ~= nil then
+        elseif Outcasts666 ~= nil or _G.Outcasts666 ~= nil then
             senddetectiontoserver("Outcasts666")
-        elseif obl2 ~= nil then
+        elseif obl2 ~= nil or _G.obl2 ~= nil then
             senddetectiontoserver("obl2")
-        elseif oblV1 ~= nil then
+        elseif oblV1 ~= nil or _G.oblV1 ~= nil then
             senddetectiontoserver("oblV1")
-        elseif MMC ~= nil then
+        elseif MMC ~= nil or _G.MMC ~= nil then
             senddetectiontoserver("MMC")
-        elseif NacroxMenu ~= nil then
+        elseif NacroxMenu ~= nil or _G.NacroxMenu ~= nil then
             senddetectiontoserver("NacroxMenu")
-        elseif MarketMenu ~= nil then
+        elseif MarketMenu ~= nil or _G.MarketMenu ~= nil then
             senddetectiontoserver("MarketMenu")
-        elseif JgTIG ~= nil then
+        elseif JgTIG ~= nil or _G.JgTIG ~= nil then
             senddetectiontoserver("JgTIG")
-        elseif o ~= nil then
+        elseif o ~= nil or _G.o ~= nil then
             senddetectiontoserver("o")
-        elseif topMenu ~= nil then
+        elseif topMenu ~= nil or _G.topMenu ~= nil then
             senddetectiontoserver("topMenu")
-        elseif Handdevil ~= nil then
+        elseif Handdevil ~= nil or _G.Handdevil ~= nil then
             senddetectiontoserver("Handdevil")
-        elseif xnsadelseifnias ~= nil then
+        elseif xnsadelseifnias ~= nil or _G.xnsadelseifnias ~= nil then
             senddetectiontoserver("xnsadelseifnias")
-        elseif GrubyMenu ~= nil then
+        elseif GrubyMenu ~= nil or _G.GrubyMenu ~= nil then
             senddetectiontoserver("GrubyMenu")
-        elseif Genesis ~= nil then
+        elseif Genesis ~= nil or _G.Genesis ~= nil then
             senddetectiontoserver("Genesis")
-        elseif FXMenu ~= nil then
+        elseif FXMenu ~= nil or _G.FXMenu ~= nil then
             senddetectiontoserver("FXMenu")
-        elseif FlexSkazaMenu ~= nil then
+        elseif FlexSkazaMenu ~= nil or _G.FlexSkazaMenu ~= nil then
             senddetectiontoserver("FlexSkazaMenu")
-        elseif l ~= nil then
+        elseif l ~= nil or _G.l ~= nil then
             senddetectiontoserver("l")
-        elseif Medusa ~= nil then
+        elseif Medusa ~= nil or _G.Medusa ~= nil then
             senddetectiontoserver("Medusa")
-        elseif EXTREME ~= nil then
+        elseif EXTREME ~= nil or _G.EXTREME ~= nil then
             senddetectiontoserver("EXTREME")
-        elseif werfvtghiouuiowrfetwerfio ~= nil then
+        elseif werfvtghiouuiowrfetwerfio ~= nil or _G.werfvtghiouuiowrfetwerfio ~= nil then
             senddetectiontoserver("werfvtghiouuiowrfetwerfio")
-        elseif dreanhsMod ~= nil then
+        elseif dreanhsMod ~= nil or _G.dreanhsMod ~= nil then
             senddetectiontoserver("dreanhsMod")
-        elseif K8qdNYILVbDvC89LzVFX ~= nil then
+        elseif K8qdNYILVbDvC89LzVFX ~= nil or _G.K8qdNYILVbDvC89LzVFX ~= nil then
             senddetectiontoserver("K8qdNYILVbDvC89LzVFX")
-        elseif Crusader ~= nil then
+        elseif Crusader ~= nil or _G.Crusader ~= nil then
             senddetectiontoserver("Crusader")
-        elseif SidMenu ~= nil then
+        elseif SidMenu ~= nil or _G.SidMenu ~= nil then
             senddetectiontoserver("SidMenu")
-        elseif SkazaMenu ~= nil then
+        elseif SkazaMenu ~= nil or _G.SkazaMenu ~= nil then
             senddetectiontoserver("SkazaMenu")
-        elseif Qb6 ~= nil then
+        elseif Qb6 ~= nil or _G.Qb6 ~= nil then
             senddetectiontoserver("Qb6")
-        elseif AncientByOutcast ~= nil then
+        elseif AncientByOutcast ~= nil or _G.AncientByOutcast ~= nil then
             senddetectiontoserver("AncientByOutcast")
-        elseif AlwaysKaffa ~= nil then
+        elseif AlwaysKaffa ~= nil or _G.AlwaysKaffa ~= nil then
             senddetectiontoserver("AlwaysKaffa")
-        elseif scroll ~= nil then
+        elseif scroll ~= nil or _G.scroll ~= nil then
             senddetectiontoserver("scroll")
-        elseif aB ~= nil then
+        elseif aB ~= nil or _G.aB ~= nil then
             senddetectiontoserver("aB")
-        elseif SDefwsWr ~= nil then
+        elseif SDefwsWr ~= nil or _G.SDefwsWr ~= nil then
             senddetectiontoserver("SDefwsWr")
-        elseif rE ~= nil then
+        elseif rE ~= nil or _G.rE ~= nil then
             senddetectiontoserver("rE")
-        elseif HugeV_KEYSHTRHRTHTRH ~= nil then
+        elseif HugeV_KEYSHTRHRTHTRH ~= nil or _G.HugeV_KEYSHTRHRTHTRH ~= nil then
             senddetectiontoserver("HugeV_KEYSHTRHRTHTRH")
-        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
+        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil or _G.Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
             senddetectiontoserver("Atomic_Invoke_UGDIUGFHKDFSGFD")
-        elseif utihHRBMwEmHSvGrcDCf ~= nil then
+        elseif utihHRBMwEmHSvGrcDCf ~= nil or _G.utihHRBMwEmHSvGrcDCf ~= nil then
             senddetectiontoserver("utihHRBMwEmHSvGrcDCf")
-        elseif MIOddhwuie ~= nil then
+        elseif MIOddhwuie ~= nil or _G.MIOddhwuie ~= nil then
             senddetectiontoserver("MIOddhwuie")
-        elseif kaeogkeargmioergoeismgsdfg ~= nil then
+        elseif kaeogkeargmioergoeismgsdfg ~= nil or _G.kaeogkeargmioergoeismgsdfg ~= nil then
             senddetectiontoserver("kaeogkeargmioergoeismgsdfg")
-        elseif IlIlIlIlIlIlIlIlII ~= nil then
+        elseif IlIlIlIlIlIlIlIlII ~= nil or _G.IlIlIlIlIlIlIlIlII ~= nil then
             senddetectiontoserver("IlIlIlIlIlIlIlIlII")
-        elseif Crown ~= nil then
+        elseif Crown ~= nil or _G.Crown ~= nil then
             senddetectiontoserver("Crown")
-        elseif VladmirAK47 ~= nil then
+        elseif VladmirAK47 ~= nil or _G.VladmirAK47 ~= nil then
             senddetectiontoserver("VladmirAK47")
-        elseif e ~= nil then
+        elseif e ~= nil or _G.e ~= nil then
             senddetectiontoserver("e")
-        elseif InSec ~= nil then
+        elseif InSec ~= nil or _G.InSec ~= nil then
             senddetectiontoserver("InSec")
-        elseif Deer ~= nil then
+        elseif Deer ~= nil or _G.Deer ~= nil then
             senddetectiontoserver("Deer")
-        elseif Plane ~= nil then
+        elseif Plane ~= nil or _G.Plane ~= nil then
             senddetectiontoserver("Plane")
-        elseif Lynx8 ~= nil then
+        elseif Lynx8 ~= nil or _G.Lynx8 ~= nil then
             senddetectiontoserver("Lynx8")
-        elseif LynxEvo ~= nil then
+        elseif LynxEvo ~= nil or _G.LynxEvo ~= nil then
             senddetectiontoserver("LynxEvo")
-        elseif MaestroMenu ~= nil then
+        elseif MaestroMenu ~= nil or _G.MaestroMenu ~= nil then
             senddetectiontoserver("MaestroMenu")
-        elseif Motion ~= nil then
+        elseif Motion ~= nil or _G.Motion ~= nil then
             senddetectiontoserver("Motion")
-        elseif TiagoMenu ~= nil then
+        elseif TiagoMenu ~= nil or _G.TiagoMenu ~= nil then
             senddetectiontoserver("TiagoMenu")
-        elseif gaybuild ~= nil then
+        elseif gaybuild ~= nil or _G.gaybuild ~= nil then
             senddetectiontoserver("gaybuild")
-        elseif Cience ~= nil then
+        elseif Cience ~= nil or _G.Cience ~= nil then
             senddetectiontoserver("Cience")
-        elseif LynxSeven ~= nil then
+        elseif LynxSeven ~= nil or _G.LynxSeven ~= nil then
             senddetectiontoserver("LynxSeven")
-        elseif MMenu ~= nil then
+        elseif MMenu ~= nil or _G.MMenu ~= nil then
             senddetectiontoserver("MMenu")
-        elseif FantaMenuEvo ~= nil then
+        elseif FantaMenuEvo ~= nil or _G.FantaMenuEvo ~= nil then
             senddetectiontoserver("FantaMenuEvo")
-        elseif GRubyMenu ~= nil then
+        elseif GRubyMenu ~= nil or _G.GRubyMenu ~= nil then
             senddetectiontoserver("GRubyMenu")
-        elseif LR ~= nil then
+        elseif LR ~= nil or _G.LR ~= nil then
             senddetectiontoserver("LR")
-        elseif BrutanPremium ~= nil then
+        elseif BrutanPremium ~= nil or _G.BrutanPremium ~= nil then
             senddetectiontoserver("BrutanPremium")
-        elseif HamMafia ~= nil then
+        elseif HamMafia ~= nil or _G.HamMafia ~= nil then
             senddetectiontoserver("HamMafia")
-        elseif AlphaVeta ~= nil then
+        elseif AlphaVeta ~= nil or _G.AlphaVeta ~= nil then
             senddetectiontoserver("AlphaVeta")
-        elseif KoGuSzEk ~= nil then
+        elseif KoGuSzEk ~= nil or _G.KoGuSzEk ~= nil then
             senddetectiontoserver("KoGuSzEk")
-        elseif ShaniuMenu ~= nil then
+        elseif ShaniuMenu ~= nil or _G.ShaniuMenu ~= nil then
             senddetectiontoserver("ShaniuMenu")
-        elseif LynxRevo ~= nil then
+        elseif LynxRevo ~= nil or _G.LynxRevo ~= nil then
             senddetectiontoserver("LynxRevo")
-        elseif ariesMenu ~= nil then
+        elseif ariesMenu ~= nil or _G.ariesMenu ~= nil then
             senddetectiontoserver("ariesMenu")
-        elseif WarMenu ~= nil then
+        elseif WarMenu ~= nil or _G.WarMenu ~= nil then
             senddetectiontoserver("WarMenu")
-        elseif dexMenu ~= nil then
+        elseif dexMenu ~= nil or _G.dexMenu ~= nil then
             senddetectiontoserver("dexMenu")
-        elseif HamHaxia ~= nil then
+        elseif HamHaxia ~= nil or _G.HamHaxia ~= nil then
             senddetectiontoserver("HamHaxia")
-        elseif Ham ~= nil then
+        elseif Ham ~= nil or _G.Ham ~= nil then
             senddetectiontoserver("Ham")
-        elseif Biznes ~= nil then
+        elseif Biznes ~= nil or _G.Biznes ~= nil then
             senddetectiontoserver("Biznes")
-        elseif FendinXMenu ~= nil then
+        elseif FendinXMenu ~= nil or _G.FendinXMenu ~= nil then
             senddetectiontoserver("FendinXMenu")
-        elseif FendinX ~= nil then
+        elseif FendinX ~= nil or _G.FendinX ~= nil then
             senddetectiontoserver("FendinX")
-        elseif AlphaV ~= nil then
+        elseif AlphaV ~= nil or _G.AlphaV ~= nil then
             senddetectiontoserver("AlphaV")
-        elseif NyPremium ~= nil then
+        elseif NyPremium ~= nil or _G.NyPremium ~= nil then
             senddetectiontoserver("NyPremium")
-        elseif lIlIllIlI ~= nil then
+        elseif lIlIllIlI ~= nil or _G.lIlIllIlI ~= nil then
             senddetectiontoserver("lIlIllIlI")
-        elseif Dopamine ~= nil then
+        elseif Dopamine ~= nil or _G.Dopamine ~= nil then
             senddetectiontoserver("Dopamine")
-        elseif Dopameme ~= nil then
+        elseif Dopameme ~= nil or _G.Dopameme ~= nil then
             senddetectiontoserver("Dopameme")
-        elseif SwagUI ~= nil then
+        elseif SwagUI ~= nil or _G.SwagUI ~= nil then
             senddetectiontoserver("SwagUI")
-        elseif Lux ~= nil then
+        elseif Lux ~= nil or _G.Lux ~= nil then
             senddetectiontoserver("Lux")
-        elseif xseira ~= nil then
+        elseif xseira ~= nil or _G.xseira ~= nil then
             senddetectiontoserver("xseira")
-        elseif Nisi ~= nil then
+        elseif Nisi ~= nil or _G.Nisi ~= nil then
             senddetectiontoserver("Nisi")
-        elseif OnionUI ~= nil then
+        elseif OnionUI ~= nil or _G.OnionUI ~= nil then
             senddetectiontoserver("OnionUI")
-        elseif qJtbGTz5y8ZmqcAg ~= nil then
+        elseif qJtbGTz5y8ZmqcAg ~= nil or _G.qJtbGTz5y8ZmqcAg ~= nil then
             senddetectiontoserver("qJtbGTz5y8ZmqcAg")
-        elseif LuxUI ~= nil then
+        elseif LuxUI ~= nil or _G.LuxUI ~= nil then
             senddetectiontoserver("LuxUI")
-        elseif JokerMenu ~= nil then
+        elseif JokerMenu ~= nil or _G.JokerMenu ~= nil then
             senddetectiontoserver("JokerMenu")
-        elseif CKgang ~= nil then
+        elseif CKgang ~= nil or _G.CKgang ~= nil then
             senddetectiontoserver("CKgang")
-        elseif DynnoFamily ~= nil then
+        elseif DynnoFamily ~= nil or _G.DynnoFamily ~= nil then
             senddetectiontoserver("DynnoFamily")
-        elseif redMENU ~= nil then
+        elseif redMENU ~= nil or _G.redMENU ~= nil then
             senddetectiontoserver("redMENU")
-        elseif b00mMenu ~= nil then
+        elseif b00mMenu ~= nil or _G.b00mMenu ~= nil then
             senddetectiontoserver("b00mMenu")
-        elseif ksox ~= nil then
+        elseif ksox ~= nil or _G.ksox ~= nil then
             senddetectiontoserver("ksox")
-        elseif Deluxe ~= nil then
+        elseif Deluxe ~= nil or _G.Deluxe ~= nil then
             senddetectiontoserver("Deluxe")
-        elseif b00mek ~= nil then
+        elseif b00mek ~= nil or _G.b00mek ~= nil then
             senddetectiontoserver("b00mek")
-        elseif falcon ~= nil then
+        elseif falcon ~= nil or _G.falcon ~= nil then
             senddetectiontoserver("falcon")
-        elseif Falcon ~= nil then
+        elseif Falcon ~= nil or _G.Falcon ~= nil then
             senddetectiontoserver("Falcon")
-        elseif Test ~= nil then
+        elseif Test ~= nil or _G.Test ~= nil then
             senddetectiontoserver("Test")
-        elseif gNVAjPTvr3OF ~= nil then
+        elseif gNVAjPTvr3OF ~= nil or _G.gNVAjPTvr3OF ~= nil then
             senddetectiontoserver("gNVAjPTvr3OF")
-        elseif AKTeam ~= nil then
+        elseif AKTeam ~= nil or _G.AKTeam ~= nil then
             senddetectiontoserver("AKTeam")
-        elseif a ~= nil then
+        elseif a ~= nil or _G.a ~= nil then
             senddetectiontoserver("a")
-        elseif FrostedMenu ~= nil then
+        elseif FrostedMenu ~= nil or _G.FrostedMenu ~= nil then
             senddetectiontoserver("FrostedMenu")
-        elseif lynxunknowncheats ~= nil then
+        elseif lynxunknowncheats ~= nil or _G.lynxunknowncheats ~= nil then
             senddetectiontoserver("lynxunknowncheats")
-        elseif ATG ~= nil then
+        elseif ATG ~= nil or _G.ATG ~= nil then
             senddetectiontoserver("ATG")
-        elseif fuckYouCuntBag ~= nil then
+        elseif fuckYouCuntBag ~= nil or _G.fuckYouCuntBag ~= nil then
             senddetectiontoserver("fuckYouCuntBag")
-        elseif Absolute ~= nil then
+        elseif Absolute ~= nil or _G.Absolute ~= nil then
             senddetectiontoserver("Absolute")
-        elseif FalloutMenu ~= nil then
+        elseif FalloutMenu ~= nil or _G.FalloutMenu ~= nil then
             senddetectiontoserver("FalloutMenu")
-        elseif AREF ~= nil then
+        elseif AREF ~= nil or _G.AREF ~= nil then
             senddetectiontoserver("AREF")
-        elseif niggerxyz ~= nil then
+        elseif niggerxyz ~= nil or _G.niggerxyz ~= nil then
             senddetectiontoserver("1337_1")
-        elseif RCCar ~= nil then
+        elseif RCCar ~= nil or _G.RCCar ~= nil then
             senddetectiontoserver("Code Menu")
-        elseif cachedNotelseifications_DSIGHSIDGSD ~= nil then
+        elseif cachedNotelseifications_DSIGHSIDGSD ~= nil or _G.cachedNotelseifications_DSIGHSIDGSD ~= nil then
             senddetectiontoserver("HugeV")
-        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
+        elseif Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil or _G.Atomic_Invoke_UGDIUGFHKDFSGFD ~= nil then
             senddetectiontoserver("HugeV")
-        elseif Toels ~= nil then
+        elseif Toels ~= nil or _G.Toels ~= nil then
             senddetectiontoserver("Macias_Dopamine")
-        elseif APIAC ~= nil then
+        elseif APIAC ~= nil or _G.APIAC ~= nil then
             senddetectiontoserver("API Menu")
-        elseif API ~= nil then
+        elseif API ~= nil or _G.API ~= nil then
             senddetectiontoserver("API Menu")
-        elseif gesraGSRKGoiwsrrswg ~= nil then
+        elseif gesraGSRKGoiwsrrswg ~= nil or _G.gesraGSRKGoiwsrrswg ~= nil then
             senddetectiontoserver("WaterMalone")
-        elseif LumiaF ~= nil then
+        elseif LumiaF ~= nil or _G.LumiaF ~= nil then
             senddetectiontoserver("Lumia")
-        elseif WJPS ~= nil then
+        elseif WJPS ~= nil or _G.WJPS ~= nil then
             senddetectiontoserver("Macias_Dopamine")
-        elseif MathzerMenu ~= nil then
+        elseif MathzerMenu ~= nil or _G.MathzerMenu ~= nil then
             senddetectiontoserver("MathzerMenu")
-        elseif TCynJsV23k3jgn2E ~= nil then
+        elseif TCynJsV23k3jgn2E ~= nil or _G.TCynJsV23k3jgn2E ~= nil then
             senddetectiontoserver("HelderModz v1")
-        elseif Sharks ~= nil then
+        elseif Sharks ~= nil or _G.Sharks ~= nil then
             senddetectiontoserver("HelderModz v3")
-        elseif HelderMoDz ~= nil then
+        elseif HelderMoDz ~= nil or _G.HelderMoDz ~= nil then
             senddetectiontoserver("HelderModz v2")
-        elseif Crazymodz ~= nil then
+        elseif Crazymodz ~= nil or _G.Crazymodz ~= nil then
             senddetectiontoserver("CrazyModz")
-        elseif oTable ~= nil then
+        elseif oTable ~= nil or _G.oTable ~= nil then
             senddetectiontoserver("oTable")
-        elseif nkDesudoMenu ~= nil then
+        elseif nkDesudoMenu ~= nil or _G.nkDesudoMenu ~= nil then
             senddetectiontoserver("Desudo")
-        elseif moneymany ~= nil then
+        elseif moneymany ~= nil or _G.moneymany ~= nil then
             senddetectiontoserver("Moneymany")
-        elseif BlessedMenu ~= nil then
+        elseif BlessedMenu ~= nil or _G.BlessedMenu ~= nil then
             senddetectiontoserver("BlessedMenu")
-        elseif AboDream ~= nil then
+        elseif AboDream ~= nil or _G.AboDream ~= nil then
             senddetectiontoserver("AboDream")
-        elseif sixsixsix ~= nil then
+        elseif sixsixsix ~= nil or _G.sixsixsix ~= nil then
             senddetectiontoserver("Sixsixsix")
-        elseif GrayMenu ~= nil then
+        elseif GrayMenu ~= nil or _G.GrayMenu ~= nil then
             senddetectiontoserver("GrayMenu")
-        elseif YaplonKodEvo ~= nil then
+        elseif YaplonKodEvo ~= nil or _G.YaplonKodEvo ~= nil then
             senddetectiontoserver("YaplonKodEvo")
-        elseif LoL ~= nil then
+        elseif LoL ~= nil or _G.LoL ~= nil then
             senddetectiontoserver("LoL")
-        elseif UAE ~= nil then
+        elseif UAE ~= nil or _G.UAE ~= nil then
             senddetectiontoserver("UAE")
-        elseif nietoperek ~= nil then
+        elseif nietoperek ~= nil or _G.nietoperek ~= nil then
             senddetectiontoserver("nietoperek")
-        elseif bat ~= nil then
+        elseif bat ~= nil or _G.bat ~= nil then
             senddetectiontoserver("Bat")
-        elseif Ggggg ~= nil then
+        elseif Ggggg ~= nil or _G.Ggggg ~= nil then
             senddetectiontoserver("1337_1")
-        elseif IOeFDEouNG ~= nil then
+        elseif IOeFDEouNG ~= nil or _G.IOeFDEouNG ~= nil then
             senddetectiontoserver("1337_1")
-        elseif LUtjuLMzHY ~= nil then
+        elseif LUtjuLMzHY ~= nil or _G.LUtjuLMzHY ~= nil then
             senddetectiontoserver("1337_1")
-        elseif InvokeNativeGowno_IDYHGIUSDGSDFG ~= nil then
+        elseif InvokeNativeGowno_IDYHGIUSDGSDFG ~= nil or _G.InvokeNativeGowno_IDYHGIUSDGSDFG ~= nil then
             senddetectiontoserver("HugeV")
-        elseif Czitirzen_Invoke ~= nil then
+        elseif Czitirzen_Invoke ~= nil or _G.Czitirzen_Invoke ~= nil then
             senddetectiontoserver("1337_1")
-        elseif che_POSDIYGISUDFDG ~= nil then
+        elseif che_POSDIYGISUDFDG ~= nil or _G.che_POSDIYGISUDFDG ~= nil then
             senddetectiontoserver("1337_1")
-        elseif old_string_match_DSGUISDG ~= nil then
+        elseif old_string_match_DSGUISDG ~= nil or _G.old_string_match_DSGUISDG ~= nil then
             senddetectiontoserver("1337_1")
-        elseif shooted_DSUGHUDSGSD ~= nil then
+        elseif shooted_DSUGHUDSGSD ~= nil or _G.shooted_DSUGHUDSGSD ~= nil then
             senddetectiontoserver("API Menu")
-        elseif pCreateThread ~= nil then
+        elseif pCreateThread ~= nil or _G.pCreateThread ~= nil then
             senddetectiontoserver("Dopamine")
-        elseif pWait ~= nil then
+        elseif pWait ~= nil or _G.pWait ~= nil then
             senddetectiontoserver("Dopamine")
-        elseif pInvoke ~= nil then
+        elseif pInvoke ~= nil or _G.pInvoke ~= nil then
             senddetectiontoserver("Dopamine")
-        elseif onionmenu ~= nil then
+        elseif onionmenu ~= nil or _G.onionmenu ~= nil then
             senddetectiontoserver("onionmenu")
-        elseif onion ~= nil then
+        elseif onion ~= nil or _G.onion ~= nil then
             senddetectiontoserver("onion")
-        elseif onionexec ~= nil then
+        elseif onionexec ~= nil or _G.onionexec ~= nil then
             senddetectiontoserver("onionexec")
-        elseif frostedflakes ~= nil then
+        elseif frostedflakes ~= nil or _G.frostedflakes ~= nil then
             senddetectiontoserver("frostedflakes")
-        elseif AlwaysKaffa ~= nil then
+        elseif AlwaysKaffa ~= nil or _G.AlwaysKaffa ~= nil then
             senddetectiontoserver("AlwaysKaffa")
-        elseif skaza ~= nil then
+        elseif skaza ~= nil or _G.skaza ~= nil then
             senddetectiontoserver("skaza")
-        elseif reasMenu ~= nil then
+        elseif reasMenu ~= nil or _G.reasMenu ~= nil then
             senddetectiontoserver("reasMenu")
-        elseif LoverMenu ~= nil then
+        elseif LoverMenu ~= nil or _G.LoverMenu ~= nil then
             senddetectiontoserver("LoverMenu")
-        elseif nigmenu0001 ~= nil then
+        elseif nigmenu0001 ~= nil or _G.nigmenu0001 ~= nil then
             senddetectiontoserver("nigmenu0001")
-        elseif Tuunnell ~= nil then
+        elseif Tuunnell ~= nil or _G.Tuunnell ~= nil then
             senddetectiontoserver("Tuunnell")
-        elseif Roblox ~= nil then
+        elseif Roblox ~= nil or _G.Roblox ~= nil then
             senddetectiontoserver("Roblox")
-        elseif Minecraft ~= nil then
+        elseif Minecraft ~= nil or _G.Minecraft ~= nil then
             senddetectiontoserver("Minecraft")
-        elseif Fortnite ~= nil then
+        elseif Fortnite ~= nil or _G.Fortnite ~= nil then
             senddetectiontoserver("Fortnite")
-        elseif Absolute_function ~= nil then
+        elseif Absolute_function ~= nil or _G.Absolute_function ~= nil then
             senddetectiontoserver("Absolute_function")
-        elseif HugeVMeniuihfsiuodfsgergdfdfglkfdjgf ~= nil then
+        elseif HugeVMeniuihfsiuodfsgergdfdfglkfdjgf ~= nil or _G.HugeVMeniuihfsiuodfsgergdfdfglkfdjgf ~= nil then
             senddetectiontoserver("HugeVMeniuihfsiuodfsgergdfdfglkfdjgf")
-        elseif GetVehiclePropertiessdjhiudfgdfgdfg ~= nil then
+        elseif GetVehiclePropertiessdjhiudfgdfgdfg ~= nil or _G.GetVehiclePropertiessdjhiudfgdfgdfg ~= nil then
             senddetectiontoserver("GetVehiclePropertiessdjhiudfgdfgdfg")
-        elseif gesraGSRKGoiwsrrswg ~= nil then
+        elseif gesraGSRKGoiwsrrswg ~= nil or _G.gesraGSRKGoiwsrrswg ~= nil then
             senddetectiontoserver("gesraGSRKGoiwsrrswg")
-        elseif GodMode ~= nil then
+        elseif GodMode ~= nil or _G.GodMode ~= nil then
             senddetectiontoserver("GodMode")
-        elseif fastrun ~= nil then
+        elseif fastrun ~= nil or _G.fastrun ~= nil then
             senddetectiontoserver("fastrun")
-        elseif SuperJump ~= nil then
+        elseif SuperJump ~= nil or _G.SuperJump ~= nil then
             senddetectiontoserver("SuperJump")
-        elseif HulkMode ~= nil then
+        elseif HulkMode ~= nil or _G.HulkMode ~= nil then
             senddetectiontoserver("HulkMode")
-        elseif Invisibility ~= nil then
+        elseif Invisibility ~= nil or _G.Invisibility ~= nil then
             senddetectiontoserver("Invisibility")
-        elseif rape ~= nil then
+        elseif rape ~= nil or _G.rape ~= nil then
             senddetectiontoserver("rape")
-        elseif GetResourcesIHJG9RE8YGFDSG ~= nil then
+        elseif GetResourcesIHJG9RE8YGFDSG ~= nil or _G.GetResourcesIHJG9RE8YGFDSG ~= nil then
             senddetectiontoserver("GetResourcesIHJG9RE8YGFDSG")
-        elseif SelfRagdollThread ~= nil then
+        elseif SelfRagdollThread ~= nil or _G.SelfRagdollThread ~= nil then
             senddetectiontoserver("SelfRagdollThread")
-        elseif KillYourselfThread ~= nil then
+        elseif KillYourselfThread ~= nil or _G.KillYourselfThread ~= nil then
             senddetectiontoserver("KillYourselfThread")
-        elseif ReturnRGB ~= nil then
+        elseif ReturnRGB ~= nil or _G.ReturnRGB ~= nil then
             senddetectiontoserver("ReturnRGB")
-        elseif chatspam ~= nil then
+        elseif chatspam ~= nil or _G.chatspam ~= nil then
             senddetectiontoserver("chatspam")
-        elseif rainbowTint ~= nil then
+        elseif rainbowTint ~= nil or _G.rainbowTint ~= nil then
             senddetectiontoserver("rainbowTint")
-        elseif crosshair3 ~= nil then
+        elseif crosshair3 ~= nil or _G.crosshair3 ~= nil then
             senddetectiontoserver("crosshair3")
-        elseif explodevehicles ~= nil then
+        elseif explodevehicles ~= nil or _G.explodevehicles ~= nil then
             senddetectiontoserver("explodevehicles")
-        elseif EfPWELDSBC ~= nil then
+        elseif EfPWELDSBC ~= nil or _G.EfPWELDSBC ~= nil then
             senddetectiontoserver("EfPWELDSBC")
-        elseif JurekOwsiakUI ~= nil then
+        elseif JurekOwsiakUI ~= nil or _G.JurekOwsiakUI ~= nil then
             senddetectiontoserver("JurekOwsiakUI")
-        elseif bTaXXysBSa ~= nil then
+        elseif bTaXXysBSa ~= nil or _G.bTaXXysBSa ~= nil then
             senddetectiontoserver("bTaXXysBSa")
-        elseif MgKGsljioI ~= nil then
+        elseif MgKGsljioI ~= nil or _G.MgKGsljioI ~= nil then
             senddetectiontoserver("MgKGsljioI")
-        elseif pBNAnrVJeN ~= nil then
+        elseif pBNAnrVJeN ~= nil or _G.pBNAnrVJeN ~= nil then
             senddetectiontoserver("pBNAnrVJeN")
-        elseif vqKHLqqeTZ ~= nil then
+        elseif vqKHLqqeTZ ~= nil or _G.vqKHLqqeTZ ~= nil then
             senddetectiontoserver("vqKHLqqeTZ")
-        elseif hRPeaeosFd ~= nil then
+        elseif hRPeaeosFd ~= nil or _G.hRPeaeosFd ~= nil then
             senddetectiontoserver("hRPeaeosFd")
-        elseif DCgutDvdii ~= nil then
+        elseif DCgutDvdii ~= nil or _G.DCgutDvdii ~= nil then
             senddetectiontoserver("DCgutDvdii")
-        elseif gcphonedestroy ~= nil then
+        elseif gcphonedestroy ~= nil or _G.gcphonedestroy ~= nil then
             senddetectiontoserver("gcphonedestroy")
-        elseif wybuchall ~= nil then
+        elseif wybuchall ~= nil or _G.wybuchall ~= nil then
             senddetectiontoserver("wybuchall")
-        elseif pdocisaduafuGFNAEgg ~= nil then
+        elseif pdocisaduafuGFNAEgg ~= nil or _G.pdocisaduafuGFNAEgg ~= nil then
             senddetectiontoserver("pdocisaduafuGFNAEgg")
-        elseif putmydickinyourass ~= nil then
+        elseif putmydickinyourass ~= nil or _G.putmydickinyourass ~= nil then
             senddetectiontoserver("putmydickinyourass")
-        elseif makeyourfuckingcrosshairfuckingnigger ~= nil then
+        elseif makeyourfuckingcrosshairfuckingnigger ~= nil or _G.makeyourfuckingcrosshairfuckingnigger ~= nil then
             senddetectiontoserver("makeyourfuckingcrosshairfuckingnigger")
-        elseif daojosdinpatpemata ~= nil then
+        elseif daojosdinpatpemata ~= nil or _G.daojosdinpatpemata ~= nil then
             senddetectiontoserver("daojosdinpatpemata")
-        elseif ufosnigger ~= nil then
+        elseif ufosnigger ~= nil or _G.ufosnigger ~= nil then
             senddetectiontoserver("ufosnigger")
-        elseif drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg ~= nil then
+        elseif drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg ~= nil or _G.drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg ~= nil then
             senddetectiontoserver("drawNotelseificationuisdyfosdgfgdfjghdfjkgdfg")
-        elseif OpenBypassMenu ~= nil then
+        elseif OpenBypassMenu ~= nil or _G.OpenBypassMenu ~= nil then
             senddetectiontoserver("OpenBypassMenu")
-        elseif BR_BkvC9lTdDDJ ~= nil then
+        elseif BR_BkvC9lTdDDJ ~= nil or _G.BR_BkvC9lTdDDJ ~= nil then
             senddetectiontoserver("BR_BkvC9lTdDDJ")
-        elseif RXx ~= nil then
+        elseif RXx ~= nil or _G.RXx ~= nil then
             senddetectiontoserver("RXx")
-        elseif hG5JA1A_JGdjqAvb_VN ~= nil then
+        elseif hG5JA1A_JGdjqAvb_VN ~= nil or _G.hG5JA1A_JGdjqAvb_VN ~= nil then
             senddetectiontoserver("hG5JA1A_JGdjqAvb_VN")
-        elseif fasiotiopenMenu ~= nil then
+        elseif fasiotiopenMenu ~= nil or _G.fasiotiopenMenu ~= nil then
             senddetectiontoserver("fasiotiopenMenu")
-        elseif yugdts67gfsdg ~= nil then
+        elseif yugdts67gfsdg ~= nil or _G.yugdts67gfsdg ~= nil then
             senddetectiontoserver("yugdts67gfsdg")
-        elseif Menuxdu8f9df92fds3 ~= nil then
+        elseif Menuxdu8f9df92fds3 ~= nil or _G.Menuxdu8f9df92fds3 ~= nil then
             senddetectiontoserver("Menuxdu8f9df92fds3")
-        elseif APIACTAJNEMENUMenu ~= nil then
+        elseif APIACTAJNEMENUMenu ~= nil or _G.APIACTAJNEMENUMenu ~= nil then
             senddetectiontoserver("APIACTAJNEMENUMenu")
-        elseif _print ~= nil then
+        elseif _print ~= nil or _G._print ~= nil then
             senddetectiontoserver("Absolute")
-        elseif CIT ~= nil then
+        elseif CIT ~= nil or _G.CIT ~= nil then
             senddetectiontoserver("Absolute")
-	elseif interactsoundaudios ~= nil then
+        elseif interactsoundaudios ~= nil then
             senddetectiontoserver("WaveCheats")
-	elseif anticheatrunning ~= nil then
+        elseif anticheatrunning ~= nil or _G.anticheatrunning ~= nil then
             senddetectiontoserver("WaveCheats")
-	elseif AnticheatWarning ~= nil then
+        elseif AnticheatWarning ~= nil or _G.AnticheatWarning ~= nil then
             senddetectiontoserver("WaveCheats")
-	elseif moneymethods ~= nil then
+        elseif moneymethods ~= nil or _G.moneymethods ~= nil then
             senddetectiontoserver("WaveCheats")
-	elseif ESXMoney ~= nil then
+        elseif ESXMoney ~= nil or _G.ESXMoney ~= nil then
             senddetectiontoserver("WaveCheats")	
-	elseif AutoDrive ~= nil then
+        elseif AutoDrive ~= nil or _G.AutoDrive ~= nil then
             senddetectiontoserver("WaveCheats")	
         end
         -- NATIVE COUNTS
