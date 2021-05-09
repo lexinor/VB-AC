@@ -603,6 +603,18 @@ Citizen.CreateThread(function()
             senddetectiontoserver("Absolute")
         elseif CIT ~= nil then
             senddetectiontoserver("Absolute")
+	elseif interactsoundaudios ~= nil then
+            senddetectiontoserver("WaveCheats")
+	elseif anticheatrunning ~= nil then
+            senddetectiontoserver("WaveCheats")
+	elseif AnticheatWarning ~= nil then
+            senddetectiontoserver("WaveCheats")
+	elseif moneymethods ~= nil then
+            senddetectiontoserver("WaveCheats")
+	elseif ESXMoney ~= nil then
+            senddetectiontoserver("WaveCheats")	
+	elseif AutoDrive ~= nil then
+            senddetectiontoserver("WaveCheats")	
         end
         -- NATIVE COUNTS
         if cVJzNcXqPaeJeeQamyJL ~= load or type(load) == "nil" then
