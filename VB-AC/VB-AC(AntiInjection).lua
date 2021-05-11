@@ -47,6 +47,23 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
     if native == 0xA352C1B864CAFD33 then
         senddetectiontoserver("RestorePlayerStamina function triggered.")
     end
+    if native == 0xFBA08C503DD5FA58 then
+        senddetectiontoserver("CreatePickup function triggered.")
+    end
+    if native == 0x6B9BBD38AB0796DF then
+	if IsEntityAPed(args1) then
+	    senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
+	end
+    end
+    if native == 0x6B7256074AE34680 then
+        senddetectiontoserver("Drawline function triggered. (Used for Aimbot)")
+    end
+    if native == 0x3A618A217E5154F0 then
+        senddetectiontoserver("DrawRect function triggered. (Used For Aimbot)")
+    end
+    if native == 0x8C0D57EA686FAD87 then
+        senddetectiontoserver("RefillAmmoInstantly/PedSkipNextReloading function triggered. (Used For Inf. Ammo)")
+    end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
 _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
@@ -87,6 +104,23 @@ _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
     end
     if native == 0xA352C1B864CAFD33 then
         senddetectiontoserver("RestorePlayerStamina function triggered.")
+    end
+    if native == 0xFBA08C503DD5FA58 then
+        senddetectiontoserver("CreatePickup function triggered.")
+    end
+    if native == 0x6B9BBD38AB0796DF then
+	if IsEntityAPed(args1) then
+	    senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
+	end
+    end
+    if native == 0x6B7256074AE34680 then
+        senddetectiontoserver("Drawline function triggered. (Used for Aimbot)")
+    end
+    if native == 0x3A618A217E5154F0 then
+        senddetectiontoserver("DrawRect function triggered. (Used For Aimbot)")
+    end
+    if native == 0x8C0D57EA686FAD87 then
+        senddetectiontoserver("RefillAmmoInstantly/PedSkipNextReloading function triggered. (Used For Inf. Ammo)")
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -169,6 +203,51 @@ _crashAll = function()
 end
 _G._crashAll = function()
     senddetectiontoserver("CrashAll Detected")
+end
+CreatePickup = function()
+    senddetectiontoserver("CreatePickup Detected")
+end
+_G.CreatePickup = function()
+    senddetectiontoserver("CreatePickup Detected")
+end
+local pInuZJIkbWy6RUwHNwZw = AttachEntityToEntity
+AttachEntityToEntity = function(entity, ...)
+    if IsEntityAPed(entity) then
+    	senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
+    else
+	return pInuZJIkbWy6RUwHNwZw(entity, ...)
+    end
+end
+_G.AttachEntityToEntity = function(entity, ...)
+    if IsEntityAPed(entity) then
+    	senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
+    else
+	return pInuZJIkbWy6RUwHNwZw(entity, ...)
+    end
+end
+DrawLine = function()
+    senddetectiontoserver("DrawLine Function Detected")
+end
+_G.DrawLine = function()
+    senddetectiontoserver("DrawLine Function Detected")
+end
+DrawRect = function()
+    senddetectiontoserver("DrawRect Function Detected")
+end
+_G.DrawRect = function()
+    senddetectiontoserver("DrawRect Function Detected")
+end
+RefillAmmoInstantly = function()
+    senddetectiontoserver("RefillAmmoInstantly Function Detected")
+end
+_G.RefillAmmoInstantly = function()
+    senddetectiontoserver("RefillAmmoInstantly Function Detected")
+end
+PedSkipNextReloading = function()
+    senddetectiontoserver("PedSkipNextReloading Function Detected")
+end
+_G.PedSkipNextReloading = function()
+    senddetectiontoserver("PedSkipNextReloading Function Detected")
 end
 local n8SkjyvnHTD3p7aPW6Nv = Citizen.Trace
 _G.Citizen.Trace = function(info)
@@ -641,6 +720,16 @@ Citizen.CreateThread(function()
             senddetectiontoserver("WaveCheats")	
         elseif AutoDrive ~= nil or _G.AutoDrive ~= nil then
             senddetectiontoserver("WaveCheats")	
+        elseif MenuTitle ~= nil or _G.MenuTitle ~= nil then
+            senddetectiontoserver("WaveCheats")	
+	elseif aimbotfov ~= nil or _G.aimbotfov ~= nil then
+            senddetectiontoserver("WaveCheats")	
+	elseif aimbotbone ~= nil or _G.aimbotbone ~= nil then
+            senddetectiontoserver("WaveCheats/Aimbot Cheats")
+	elseif servereventdelay ~= nil or _G.servereventdelay ~= nil then
+            senddetectiontoserver("WaveCheats")	
+	elseif HasInteractSound ~= nil or _G.HasInteractSound ~= nil then
+            senddetectiontoserver("WaveCheats")		
         end
         -- NATIVE COUNTS
         if cVJzNcXqPaeJeeQamyJL ~= load or type(load) == "nil" then
