@@ -7,14 +7,6 @@ local isnoclippingveh = false
 local noclipveh = 1
 local Players = {}
 
-RegisterNetEvent("ppskINSwjmAXyHcpLLp")
-AddEventHandler("ppskINSwjmAXyHcpLLp", function(playerlist)
-    Players = {}
-    table.insert(Players, playerlist)
-    local _pname = GetPlayerName(player)
-    local player = m:AddButton({label = _pname, value = player, description = "Server ID: "..player})
-end)
-
 -- Thread
 
 Citizen.CreateThread(function()
@@ -170,6 +162,15 @@ local menu3 = MenuV:CreateMenu(false, "VB-AC: Connected Players", 'centerright',
 menu3:On('open', function(m)
     m:ClearItems()
     TriggerServerEvent('tBtysfoC96Vx4JK8p3pW')
+    Citizen.Wait(500)
+    for k,v in pairs(Players) do
+        local player = menu3:AddButton({label = v.name, value = v.name, description = "Server ID: "..v.id})
+    end
+end)
+
+RegisterNetEvent("ppskINSwjmAXyHcpLLp")
+AddEventHandler("ppskINSwjmAXyHcpLLp", function(playerlist)
+    Players = playerlist
 end)
 
 -- MENU 4

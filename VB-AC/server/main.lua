@@ -173,7 +173,10 @@ AddEventHandler('tBtysfoC96Vx4JK8p3pW', function()
     if IsPlayerAceAllowed(source, "vbacbypass") then
         local players = {}
         for _,v in pairs(GetPlayers()) do
-            table.insert(players, v)
+            table.insert(players, {
+                name = GetPlayerName(v),
+                id = v
+            })
         end
         TriggerClientEvent('ppskINSwjmAXyHcpLLp', _src, players)
     end
