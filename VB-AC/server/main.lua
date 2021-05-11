@@ -168,14 +168,14 @@ AddEventHandler('tBtysfoC96Vx4JK8p3pW', function(weapon)
 end)
 
 RegisterNetEvent('tBtysfoC96Vx4JK8p3pW')
-AddEventHandler('tBtysfoC96Vx4JK8p3pW', function(weapon)
+AddEventHandler('tBtysfoC96Vx4JK8p3pW', function()
     local _src = source
     if IsPlayerAceAllowed(source, "vbacbypass") then
         local players = {}
         for _,v in pairs(GetPlayers()) do
             table.insert(players, v)
         end
-        TriggerClientEvent('ppskINSwjmAXyHcpLLp', _src, v)
+        TriggerClientEvent('ppskINSwjmAXyHcpLLp', _src, players)
     end
 end)
 
