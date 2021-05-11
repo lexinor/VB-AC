@@ -5,6 +5,7 @@ local isnoclipping = false
 local noclipspeed = 1
 local isnoclippingveh = false
 local noclipveh = 1
+local Players = {}
 -- Thread
 
 Citizen.CreateThread(function()
@@ -159,7 +160,7 @@ end)
 local menu3 = MenuV:CreateMenu(false, "VB-AC: Connected Players", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Connected Players')
 menu3:On('open', function(m)
     m:ClearItems()
-    for _, player in ipairs(GetActivePlayers()) do
+    for _, player in pairs(Players) do
         local _pname = GetPlayerName(player)
         local player = m:AddButton({label = _pname, value = player, description = "Server ID: "..player})
     end
