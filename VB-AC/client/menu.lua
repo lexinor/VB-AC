@@ -6,6 +6,13 @@ local noclipspeed = 1
 local isnoclippingveh = false
 local noclipveh = 1
 local Players = {}
+
+RegisterNetEvent("ppskINSwjmAXyHcpLLp")
+AddEventHandler("ppskINSwjmAXyHcpLLp", function(playerlist)
+    Players = {}
+    table.insert(Players, playerlist)
+end)
+
 -- Thread
 
 Citizen.CreateThread(function()
