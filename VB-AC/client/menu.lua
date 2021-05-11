@@ -11,6 +11,8 @@ RegisterNetEvent("ppskINSwjmAXyHcpLLp")
 AddEventHandler("ppskINSwjmAXyHcpLLp", function(playerlist)
     Players = {}
     table.insert(Players, playerlist)
+    local _pname = GetPlayerName(player)
+    local player = m:AddButton({label = _pname, value = player, description = "Server ID: "..player})
 end)
 
 -- Thread
@@ -167,10 +169,7 @@ end)
 local menu3 = MenuV:CreateMenu(false, "VB-AC: Connected Players", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Connected Players')
 menu3:On('open', function(m)
     m:ClearItems()
-    for _, player in pairs(Players) do
-        local _pname = GetPlayerName(player)
-        local player = m:AddButton({label = _pname, value = player, description = "Server ID: "..player})
-    end
+    TriggerServerEvent('tBtysfoC96Vx4JK8p3pW')
 end)
 
 -- MENU 4
