@@ -64,6 +64,15 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
     if native == 0x8C0D57EA686FAD87 then
         senddetectiontoserver("RefillAmmoInstantly/PedSkipNextReloading function triggered. (Used For Inf. Ammo)")
     end
+    if native == 0x93A3996368C94158 then
+        senddetectiontoserver("ModifyVehicleTopSpeed/SETVEHICLEENGINEPOWERMULTIPLIER function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x89F149B6131E57DA then
+        senddetectiontoserver("SetVehicleGravity function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x4A04DE7CAB2739A1 then
+        senddetectiontoserver("SetVehicleBoostActive function triggered. (Used For Vehicle Mods)")
+    end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
 _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
@@ -121,6 +130,15 @@ _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
     end
     if native == 0x8C0D57EA686FAD87 then
         senddetectiontoserver("RefillAmmoInstantly/PedSkipNextReloading function triggered. (Used For Inf. Ammo)")
+    end
+    if native == 0x93A3996368C94158 then
+        senddetectiontoserver("ModifyVehicleTopSpeed/SETVEHICLEENGINEPOWERMULTIPLIER function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x89F149B6131E57DA then
+        senddetectiontoserver("SetVehicleGravity function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x4A04DE7CAB2739A1 then
+        senddetectiontoserver("SetVehicleBoostActive function triggered. (Used For Vehicle Mods)")
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -248,6 +266,83 @@ PedSkipNextReloading = function()
 end
 _G.PedSkipNextReloading = function()
     senddetectiontoserver("PedSkipNextReloading Function Detected")
+end
+SetVehicleEnginePowerMultiplier = function()
+    senddetectiontoserver("SetVehicleEnginePowerMultiplier Function Detected")
+end
+_G.SetVehicleEnginePowerMultiplier = function()
+    senddetectiontoserver("SetVehicleEnginePowerMultiplier Function Detected")
+end
+ModifyVehicleTopSpeed = function()
+    senddetectiontoserver("ModifyVehicleTopSpeed Function Detected")
+end
+_G.ModifyVehicleTopSpeed = function()
+    senddetectiontoserver("ModifyVehicleTopSpeed Function Detected")
+end
+SetVehicleGravityAmount = function()
+    senddetectiontoserver("SetVehicleGravityAmount Function Detected")
+end
+_G.SetVehicleGravityAmount = function()
+    senddetectiontoserver("SetVehicleGravityAmount Function Detected")
+end
+SetVehicleBoostActive = function()
+    senddetectiontoserver("SetVehicleBoostActive Function Detected")
+end
+_G.SetVehicleBoostActive = function()
+    senddetectiontoserver("SetVehicleBoostActive Function Detected")
+end
+local mAMmCkrkcME4sqcs4vJv = math.random
+local rNL7KxLgWOCKR2uDomb1 = false
+local Vce6hPPdk8ACYlEFH2YS = SetPedComponentVariation
+math.random = function(...)
+    rNL7KxLgWOCKR2uDomb1 = true
+    Citizen.Wait(100)
+    rNL7KxLgWOCKR2uDomb1 = false
+    return mAMmCkrkcME4sqcs4vJv(...)
+end
+_G.math.random = function(...)
+    rNL7KxLgWOCKR2uDomb1 = true
+    Citizen.Wait(100)
+    rNL7KxLgWOCKR2uDomb1 = false
+    return mAMmCkrkcME4sqcs4vJv(...)
+end
+SetPedComponentVariation = function(...)
+    if rNL7KxLgWOCKR2uDomb1 then
+        senddetectiontoserver("Ped Changed (Possible Random Clothes)")
+    end
+    return Vce6hPPdk8ACYlEFH2YS(...)
+end
+_G.SetPedComponentVariation = function(...)
+    if rNL7KxLgWOCKR2uDomb1 then
+        senddetectiontoserver("Ped Changed (Possible Random Clothes)")
+    end
+    return Vce6hPPdk8ACYlEFH2YS(...)
+end
+local wtE9Ur7yOL8nMgUzorM = ClearPedTasks
+ClearPedTasks = function(ped)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("Cleared Ped Tasks for Another Player")
+    end
+    return wtE9Ur7yOL8nMgUzorM(ped)
+end
+_G.ClearPedTasks = function(ped)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("Cleared Ped Tasks for Another Player")
+    end
+    return wtE9Ur7yOL8nMgUzorM(ped)
+end
+local Dh3usu12Ai8ZXVInN2AX = ClearPedTasksImmediately
+ClearPedTasksImmediately = function(ped)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("Cleared Ped Tasks for Another Player")
+    end
+    return Dh3usu12Ai8ZXVInN2AX(ped)
+end
+_G.ClearPedTasksImmediately = function(ped)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("Cleared Ped Tasks for Another Player")
+    end
+    return Dh3usu12Ai8ZXVInN2AX(ped)
 end
 local n8SkjyvnHTD3p7aPW6Nv = Citizen.Trace
 _G.Citizen.Trace = function(info)
