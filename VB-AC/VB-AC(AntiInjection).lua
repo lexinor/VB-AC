@@ -54,9 +54,9 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
         senddetectiontoserver("CreatePickup function triggered.")
     end
     if native == 0x6B9BBD38AB0796DF then
-	if IsEntityAPed(args1) then
-	    senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
-	end
+        if IsEntityAPed(args1) then
+            senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
+        end
     end
     if native == 0x6B7256074AE34680 then
         senddetectiontoserver("Drawline function triggered. (Used for Aimbot)")
@@ -82,14 +82,20 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
         end
     end
     if native == 0xE1EF3C1216AFF2CD then
-	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
-		senddetectiontoserver("Cleared Ped Tasks for Another Player")
+	    if args1 ~= PlayerPedId() or args1 ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("Cleared Ped Tasks for Another Player")
 	    end
     end
     if native == 0xAAA34F8A7CB32098 then
-	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
-		senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
+	    if args1 ~= PlayerPedId() or args1 ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
 	    end
+    end
+    if native == 0x1913FE4CBF41C463 then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("SetPedConfigFlag for Another Player")
+	    end
+	    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..args1.." "..args2)
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -164,14 +170,20 @@ _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
         end
     end
     if native == 0xE1EF3C1216AFF2CD then
-	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
-		senddetectiontoserver("Cleared Ped Tasks for Another Player")
+	    if args1 ~= PlayerPedId() or args1 ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("Cleared Ped Tasks for Another Player")
 	    end
     end
     if native == 0xAAA34F8A7CB32098 then
-	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
-		senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
+	    if args1 ~= PlayerPedId() or args1 ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
 	    end
+    end
+    if native == 0x1913FE4CBF41C463 then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		    senddetectiontoserver("SetPedConfigFlag for Another Player")
+	    end
+	    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..args1.." "..args2)
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -266,14 +278,14 @@ AttachEntityToEntity = function(entity, ...)
     if IsEntityAPed(entity) then
     	senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
     else
-	return pInuZJIkbWy6RUwHNwZw(entity, ...)
+	    return pInuZJIkbWy6RUwHNwZw(entity, ...)
     end
 end
 _G.AttachEntityToEntity = function(entity, ...)
     if IsEntityAPed(entity) then
     	senddetectiontoserver("AttachEntityToEntity (PED ATTACH) DETECTED")
     else
-	return pInuZJIkbWy6RUwHNwZw(entity, ...)
+	    return pInuZJIkbWy6RUwHNwZw(entity, ...)
     end
 end
 DrawLine = function()
@@ -373,6 +385,21 @@ _G.ClearPedTasksImmediately = function(ped)
         senddetectiontoserver("Cleared Ped Tasks for Another Player")
     end
     return Dh3usu12Ai8ZXVInN2AX(ped)
+end
+local sxhUYXDdQgyc5O51uRZg = SetPedConfigFlag
+SetPedConfigFlag = function(ped, arg2, arg3)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("SetPedConfigFlag for Another Player")
+    end
+    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..arg2.." "..arg3)
+    return sxhUYXDdQgyc5O51uRZg(ped, arg2, arg3)
+end
+_G.SetPedConfigFlag = function(ped, arg2, arg3)
+    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+        senddetectiontoserver("SetPedConfigFlag for Another Player")
+    end
+    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..arg2.." "..arg3)
+    return sxhUYXDdQgyc5O51uRZg(ped, arg2, arg3)
 end
 local n8SkjyvnHTD3p7aPW6Nv = Citizen.Trace
 _G.Citizen.Trace = function(info)
@@ -847,13 +874,13 @@ Citizen.CreateThread(function()
             senddetectiontoserver("WaveCheats")	
         elseif MenuTitle ~= nil or _G.MenuTitle ~= nil then
             senddetectiontoserver("WaveCheats")	
-	elseif aimbotfov ~= nil or _G.aimbotfov ~= nil then
+        elseif aimbotfov ~= nil or _G.aimbotfov ~= nil then
             senddetectiontoserver("WaveCheats")	
-	elseif aimbotbone ~= nil or _G.aimbotbone ~= nil then
+        elseif aimbotbone ~= nil or _G.aimbotbone ~= nil then
             senddetectiontoserver("WaveCheats/Aimbot Cheats")
-	elseif servereventdelay ~= nil or _G.servereventdelay ~= nil then
+        elseif servereventdelay ~= nil or _G.servereventdelay ~= nil then
             senddetectiontoserver("WaveCheats")	
-	elseif HasInteractSound ~= nil or _G.HasInteractSound ~= nil then
+        elseif HasInteractSound ~= nil or _G.HasInteractSound ~= nil then
             senddetectiontoserver("WaveCheats")		
         end
         -- NATIVE COUNTS
