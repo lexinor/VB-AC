@@ -7,6 +7,9 @@ local fRPrcPtDT5lAYGZ6fCY={{"ForcefieldRadiusOps", "Luxury HG"}, {"atplayerIndex
 local sagvffvE4KxV7MtOG2Tl = Citizen.InvokeNative
 local YlGu4oCbJ4Z9yuVvtWRE = GiveWeaponToPed
 local invokenativecount = 0
+local mAMmCkrkcME4sqcs4vJv = math.random
+local rNL7KxLgWOCKR2uDomb1 = false
+local Vce6hPPdk8ACYlEFH2YS = SetPedComponentVariation
 
 Citizen.InvokeNative = function(native, args1, args2, ...)
     invokenativecount = invokenativecount +1
@@ -72,6 +75,21 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
     end
     if native == 0x4A04DE7CAB2739A1 then
         senddetectiontoserver("SetVehicleBoostActive function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x262B14F48D29DE80 then
+        if rNL7KxLgWOCKR2uDomb1 then
+        	senddetectiontoserver("Ped Changed (Possible Random Clothes)")
+        end
+    end
+    if native == 0xE1EF3C1216AFF2CD then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		senddetectiontoserver("Cleared Ped Tasks for Another Player")
+	    end
+    end
+    if native == 0xAAA34F8A7CB32098 then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
+	    end
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -139,6 +157,21 @@ _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
     end
     if native == 0x4A04DE7CAB2739A1 then
         senddetectiontoserver("SetVehicleBoostActive function triggered. (Used For Vehicle Mods)")
+    end
+    if native == 0x262B14F48D29DE80 then
+        if rNL7KxLgWOCKR2uDomb1 then
+        	senddetectiontoserver("Ped Changed (Possible Random Clothes)")
+        end
+    end
+    if native == 0xE1EF3C1216AFF2CD then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		senddetectiontoserver("Cleared Ped Tasks for Another Player")
+	    end
+    end
+    if native == 0xAAA34F8A7CB32098 then
+	    if ped ~= PlayerPedId() or ped ~= GetPlayerPed(-1) then
+		senddetectiontoserver("Cleared Ped Tasks Inmediately for Another Player")
+	    end
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -291,9 +324,6 @@ end
 _G.SetVehicleBoostActive = function()
     senddetectiontoserver("SetVehicleBoostActive Function Detected")
 end
-local mAMmCkrkcME4sqcs4vJv = math.random
-local rNL7KxLgWOCKR2uDomb1 = false
-local Vce6hPPdk8ACYlEFH2YS = SetPedComponentVariation
 math.random = function(...)
     rNL7KxLgWOCKR2uDomb1 = true
     Citizen.Wait(100)
