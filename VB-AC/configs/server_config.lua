@@ -13,16 +13,16 @@
 
 VB_AC = {}
 
-VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord
+VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord ACTIVAR LUEGOOOOOOOOOOOOOOOOOOOOOOO
 
 VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
 VB_AC.MaxTransferAmount = 50000 -- ADJUST THIS
 
 -- Discord Webhooks right here :)
-VB_AC.GeneralBanWebhook = ""
-VB_AC.EntitiesWebhookLog = ""
-VB_AC.ExplosionWebhookLog = ""
+VB_AC.GeneralBanWebhook = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
+VB_AC.EntitiesWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
+VB_AC.ExplosionWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
 
 -- Misc Protections
 VB_AC.ExplosionProtection = true
@@ -193,9 +193,11 @@ VB_AC.BlacklistedTriggers = {
 	"antilynxr6:detection",
 	"antilynx8r4a:anticheat",
 	"antilynxr4:detect",
+	"antilynxr4:crashuser1",
 	"js:jailuser", 
 	"ynx8:anticheat",
 	"lynx8:anticheat",
+	"shilling=yet7",
 	"adminmenu:allowall",
 	"h:xd",
 	"esx_skin:responseSaveSkin",

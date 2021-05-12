@@ -3,11 +3,12 @@
 local firstSpawn = true
 local commands
 local resources
+local resources2
 local luainjections
 local model1 = nil
 local model2 = nil
 local canbanfornoclip = true
-local enableac = false
+local enableac = true -- DEACTIVAR LUEGO
 local bypassweapon = false
 
 ESX = nil
@@ -81,9 +82,9 @@ end)
 -- THREAD
 if VB_AC.Enable then
     Citizen.CreateThread(function()
+        resources2 = GetNumResources()
         Citizen.Wait(30000)
         commands = #GetRegisteredCommands()
-        resources = GetNumResources()-1
         local _originalped = GetEntityModel(PlayerPedId())
         TriggerServerEvent('SBmQ5ucMg4WGbpPHoSTl')
         while true do
@@ -106,9 +107,11 @@ if VB_AC.Enable then
                         SetEntityHealth(_ped, GetEntityHealth(_ped) + 2)
                     end
                 end
+                Citizen.Wait(10)
                 if GetEntityHealth(_ped) > 200 then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "godmode", "2") -- BAN (GODMODE (TYPE:2))
                 end
+                Citizen.Wait(10)
                 local retval, bulletProof, fireProof , explosionProof , collisionProof , meleeProof, steamProof, p7, drownProof = GetEntityProofs(_ped)
                 if bulletProof == 1 or collisionProof == 1 or meleeProof == 1 or steamProof == 1 or drownProof == 1 then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "godmode", "3") -- BAN (GODMODE (TYPE:3))
@@ -158,19 +161,6 @@ if VB_AC.Enable then
                     if tonumber(aboveground) > 25 then
                         if not IsPedInAnyVehicle(_ped, false) and not IsPedInParachuteFreeFall(_ped) and not IsPedFalling(_ped) then
                             sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "nocliporfly") -- BAN (NOCLIP/FLY)
-                        else
-                            for height = 1, 1000 do -- Code Inspired in Qalle-TPM (https://github.com/qalle-git/esx_marker)
-                                local _pcoords = GetEntityCoords(_ped)
-                                SetPedCoordsKeepVehicle(_ped, _pcoords.x, _pcoords.y, height + 0.0)
-            
-                                local foundGround, zPos = GetGroundZFor_3dCoord(_pcoords.x, _pcoords.y, height + 0.0)
-            
-                                if foundGround then
-                                    SetPedCoordsKeepVehicle(_ped, _pcoords.x, _pcoords.y, height + 0.0)
-                                    break
-                                end
-                                Citizen.Wait(5)
-                            end
                         end
                     end
                 end
@@ -228,7 +218,7 @@ if VB_AC.Enable then
             end
             Citizen.Wait(200)
             if VB_AC.AntiResourceStartorStop then -- if you get banned when activating this, delete this lines
-                if resources ~= GetNumResources()-1 then
+                if resources ~= GetNumResources()-1 or resources2 ~= GetNumResources() then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "antiresourcestop") -- BAN (RESOURCE INJECTION/RESOURCE STOP)
                 end
             end
@@ -284,13 +274,14 @@ if VB_AC.Enable then
             end
             Citizen.Wait(200)
             if VB_AC.AntiPedChange then
-                if _originalped ~= GetEntityModel(PlayerPedId()) then
+                if _originalped ~= GetEntityModel(_ped) then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "pedchanged") -- BAN (PED CHANGED)
                 end
             end
             Citizen.Wait(200)
             if VB_AC.AntiFreeCam then
-                if not IsGameplayCamRendering() then
+                local camcoords = (GetEntityCoords(_ped) - GetFinalRenderedCamCoord())
+                if (camcoords.x > 9) or (camcoords.y > 9) or (camcoords.z > 9) or (camcoords.x < -9) or (camcoords.y < -9) or (camcoords.z < -9) then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "freecam") -- BAN (FREECAM)
                 end
             end
@@ -324,6 +315,10 @@ if VB_AC.Enable then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "givearmour") -- BAN (GIVEARMOR)
                 end
             end
+            Citizen.Wait(50)
+            if VB_AC == nil then
+                sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "stoppedac") -- BAN (AC STOPPED)
+            end
         end
     end)
 
@@ -331,15 +326,16 @@ if VB_AC.Enable then
         while VB_AC.AntiNoclip do
             Citizen.Wait(0)
             local _ped = PlayerPedId()
-            local _pos = GetEntityCoords(_ped)
             if not IsPedInAnyVehicle(_ped, false) then
+                local _pos = GetEntityCoords(_ped)
                 Citizen.Wait(3000)
-                
                 local _newPed = PlayerPedId()
                 local _pos2 = GetEntityCoords(_newPed)
                 local _distance = #(vector3(_pos) - vector3(_pos2))
-                if _distance > 30 and not IsPedInParachuteFreeFall(_ped) and not IsEntityDead(_ped) and canbanfornoclip and _ped == _newPed then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "noclip") -- BAN (NOCLIP)
+                if _distance > 30 then
+                    if not IsPedInParachuteFreeFall(_ped) and not IsEntityDead(_ped) and canbanfornoclip and _ped == _newPed then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "noclip") -- BAN (NOCLIP)
+                    end
                 end
             end
         end
@@ -347,7 +343,7 @@ if VB_AC.Enable then
 
     Citizen.CreateThread(function()
         while VB_AC.AntiBlips do
-            Citizen.Wait(1000)
+            Citizen.Wait(6191)
             local _pid = PlayerId()
             local _activeplayers = GetActivePlayers()
             for i = 1, #_activeplayers do
@@ -356,6 +352,7 @@ if VB_AC.Enable then
                         sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "playerblips") -- BAN (PLAYER BLIPS)
                     end
                 end
+                Citizen.Wait(50)
             end
         end
     end)
@@ -372,11 +369,21 @@ if VB_AC.Enable then
                     if GetWeaponDamageModifier(weaponselected) > 1.0 then
                         sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "1") -- BAN (WEAPON DAMAGE MODIFIER)
                     end
-
                     if GetPlayerWeaponDamageModifier(PlayerId()) > 1.0 then
                         sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "2") -- BAN (WEAPON DAMAGE MODIFIER)
                     end
-
+                    if GetPlayerMeleeWeaponDamageModifier(PlayerId()) > 1.0 then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "3") -- BAN (WEAPON DAMAGE MODIFIER)
+                    end
+                    if GetPlayerMeleeWeaponDefenseModifier(PlayerId()) > 1.0 then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "4") -- BAN (WEAPON DAMAGE MODIFIER)
+                    end
+                    if GetPlayerWeaponDefenseModifier(PlayerId()) > 1.0 then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "5") -- BAN (WEAPON DAMAGE MODIFIER)
+                    end
+                    if GetPlayerWeaponDefenseModifier_2(PlayerId()) > 1.0 then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "damagemodifier", "5") -- BAN (WEAPON DAMAGE MODIFIER)
+                    end
                     local clip, ammo = GetAmmoInClip(_ped, weaponselected)
                     local clip3, ammo2 = GetMaxAmmo(_ped, weaponselected)
                     local _weaponammo = GetAmmoInPedWeapon(_ped, weaponselected)
@@ -424,29 +431,15 @@ if VB_AC.Enable then
                 if not GetVehicleTyresCanBurst(_vehiclein) then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "4") -- BAN (VEHICLE MODIFIER(TYPE: 4))
                 end
-                if GetVehicleTopSpeedModifier(_vehiclein) > -1.0 then
+                if GetVehicleTopSpeedModifier(_vehiclein) > 1.0 then
                     sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "5") -- BAN (VEHICLE MODIFIER(TYPE: 5))
+                end
+                if GetPlayerVehicleDefenseModifier(_vehiclein) > 1.0 then
+                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "vehiclemodifier", "6") -- BAN (VEHICLE MODIFIER(TYPE:6))
                 end
                 SetVehicleTyresCanBurst(_vehiclein, true)
                 if VB_AC.AntiVDM then
                     N_0x4757f00bc6323cfe(-1553120962, 0.0)
-                end
-                if VB_AC.AntiFlyandVehicleBelowLimits then
-                    local _vehicle = GetVehiclePedIsIn(_ped, false)
-                    local _vehcoords = GetEntityCoords(_vehicle)
-                    if tonumber(_vehcoords.z) < 10 then
-                        for height = 1, 1000 do -- Code Inspired in Qalle-TPM (https://github.com/qalle-git/esx_marker)
-                            SetPedCoordsKeepVehicle(_ped, _vehcoords.x, _vehcoords.y, height + 0.0)
-        
-                            local foundGround, zPos = GetGroundZFor_3dCoord(_vehcoords.x, _vehcoords.y, height + 0.0)
-        
-                            if foundGround then
-                                SetPedCoordsKeepVehicle(_ped, _vehcoords.x, _vehcoords.y, height + 0.0)
-                                break
-                            end
-                            Citizen.Wait(5)
-                        end
-                    end
                 end
             end
             if _sleep then Citizen.Wait(710) end
@@ -483,35 +476,57 @@ if VB_AC.Enable then
                     end
                 end
             end
-            if _sleep then Citizen.Wait(780) end
+            if _sleep then Citizen.Wait(1200) end
         end
     end)
 
     Citizen.CreateThread(function()
         while VB_AC.AntiSuperJump do
             Citizen.Wait(810)
-            local _ped = PlayerPedId()
-            if IsPedJumping(_ped) then
+            if IsPedJumping(PlayerPedId()) then
                 TriggerServerEvent('5a1Ltc8fUyH3cPvAKRZ8')
             end
         end
     end)
 
     Citizen.CreateThread(function()
-	while VB_AC.CheckPlayersMoney do
-		Citizen.Wait(5000)
-		local efectivo = nil
-		local banco = nil
-		ESX.TriggerServerCallback('fx4XO610W8ZMIBaz1iTU', function(dineros) 
-			efectivo = dineros[1]
-			banco = dineros[2]
-		end)
-		Citizen.Wait(15000)
-		TriggerServerEvent('OvqsM1NM4Mu2PCAVEECL', efectivo, banco)
-	end
-end)
+        while VB_AC.CheckPlayersMoney do
+            Citizen.Wait(5000)
+            local efectivo = nil
+            local banco = nil
+            ESX.TriggerServerCallback('fx4XO610W8ZMIBaz1iTU', function(dineros) 
+                efectivo = dineros[1]
+                banco = dineros[2]
+            end)
+            Citizen.Wait(15000)
+            TriggerServerEvent('OvqsM1NM4Mu2PCAVEECL', efectivo, banco)
+        end
+    end)
 
     -- EVENT CHECKS AND HANDLERS
+
+    AddEventHandler("gameEventTriggered", function(name, args)
+        if VB_AC.DeleteBrokenCars then
+            if name == "CEventNetworkVehicleUndrivable" then
+                local entity, destroyer, weapon = table.unpack(args)
+                if not IsPedAPlayer(GetPedInVehicleSeat(entity, -1)) then
+                    if NetworkGetEntityIsNetworked(entity) then
+                        DeleteNetworkedEntity(entity)
+                    else
+                        SetEntityAsMissionEntity(entity, false, false)
+                        DeleteEntity(entity)
+                    end
+                end
+            end
+        end
+        if VB_AC.AntiSuicide then
+            if name == 'CEventNetworkEntityDamage' then
+                if args[2] == -1 and args[5] == tonumber(-842959696) then
+                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "antisuicide") -- BAN (KILLED HIMSELF USING A MENU)
+                end
+            end
+        end
+    end)
 
     RegisterNetEvent('ZRQA3nmMqUBOIiKwH4I5:clearpeds')
     AddEventHandler('ZRQA3nmMqUBOIiKwH4I5:clearpeds', function()
@@ -529,16 +544,6 @@ end)
             end
         end
     end)
-
-    AddEventHandler('gameEventTriggered', function (name, args)
-        if VB_AC.AntiSuicide then
-            if name == 'CEventNetworkEntityDamage' then
-                if args[2] == -1 and args[5] == tonumber(-842959696) then
-                    sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "antisuicide") -- BAN (KILLED HIMSELF USING A MENU)
-                end
-            end
-        end
-    end)
     
     RegisterNetEvent("ZRQA3nmMqUBOIiKwH4I5:clearprops")
     AddEventHandler("ZRQA3nmMqUBOIiKwH4I5:clearprops", function()
@@ -547,37 +552,38 @@ end)
             for _, obj in ipairs(objs) do
                 if NetworkGetEntityIsNetworked(obj) then
                     DeleteNetworkedEntity(obj)
-		    DeleteEntity(obj)
+                    DeleteEntity(obj)
                 else
                     DeleteEntity(obj)
                 end
             end
-	    for object in EnumerateObjects() do
-		SetEntityAsMissionEntity(object, false, false)
-		DeleteObject(object)
-	        if (DoesEntityExist(object)) then 
-		    DeleteObject(object)
-	        end
+            for object in EnumerateObjects() do
+                SetEntityAsMissionEntity(object, false, false)
+                DeleteObject(object)
+                if (DoesEntityExist(object)) then 
+                    DeleteObject(object)
+                end
             end
         end
     end)
+
     -- entities fix
 	local entityEnumerator = {
-	  __gc = function(enum)
+	    __gc = function(enum)
 	    if enum.destructor and enum.handle then
 	      enum.destructor(enum.handle)
 	    end
 	    enum.destructor = nil
 	    enum.handle = nil
 	  end
-	}
+    }
 
 	local function EnumerateEntities(initFunc, moveFunc, disposeFunc)
 	  return coroutine.wrap(function()
 	    local iter, id = initFunc()
 	    if not id or id == 0 then
-	      disposeFunc(iter)
-	      return
+            disposeFunc(iter)
+            return
 	    end
 
 	    local enum = {handle = iter, destructor = disposeFunc}
@@ -585,8 +591,8 @@ end)
 
 	    local next = true
 	    repeat
-	      coroutine.yield(id)
-	      next, id = moveFunc(iter)
+            coroutine.yield(id)
+            next, id = moveFunc(iter)
 	    until not next
 
 	    enum.destructor, enum.handle = nil, nil
@@ -594,8 +600,8 @@ end)
 	  end)
 	end
 
-	function EnumerateObjects()
-	  return EnumerateEntities(FindFirstObject, FindNextObject, EndFindObject)
+	EnumerateObjects = function()
+	    return EnumerateEntities(FindFirstObject, FindNextObject, EndFindObject)
 	end
 
     RegisterNetEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles")
@@ -610,23 +616,6 @@ end)
                         SetVehicleHasBeenOwnedByPlayer(vehicle, false)
                         SetEntityAsMissionEntity(vehicle, true, true)
                         DeleteEntity(vehicle)
-                    end
-                end
-            end
-        end
-    end)
-
-
-    AddEventHandler("gameEventTriggered", function(name, args)
-        if VB_AC.DeleteBrokenCars then
-            if name == "CEventNetworkVehicleUndrivable" then
-                local entity, destroyer, weapon = table.unpack(args)
-                if not IsPedAPlayer(GetPedInVehicleSeat(entity, -1)) then
-                    if NetworkGetEntityIsNetworked(entity) then
-                        DeleteNetworkedEntity(entity)
-                    else
-                        SetEntityAsMissionEntity(entity, false, false)
-                        DeleteEntity(entity)
                     end
                 end
             end
@@ -673,6 +662,36 @@ end)
         AddEventHandler("onClientResourceStart", function(res)
             if res ~= GetCurrentResourceName() then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
+            end
+        end)
+
+        Citizen.CreateThread(function()
+            local nr = (GetNumResources() or Citizen.InvokeNative(0x863F27B)) - 1
+            local rlist = {}
+            for i = 0, nr do
+                local R = GetResourceByFindIndex(i)
+                rlist[R] = true
+            end
+            while VB_AC.AntiResourceStartorStop do
+                Citizen.Wait(30000)
+                for i = 0, nr do
+                    local R2 = GetResourceByFindIndex(i)
+                    if rlist[R2] ~= true then
+                        sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "stoppedresource", A) -- BAN (RESOURCE STOP)
+                    end
+                    Citizen.Wait(50)
+                end
+                Citizen.Wait(1000)
+                for i = 0, nr + 1 do
+                    local R3 = GetResourceByFindIndex(i)
+                    if R3 ~= "nil" and R3 ~= nil then
+                        if rlist[R3] ~= true then
+                            sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "stoppedresource", A) -- BAN (RESOURCE STOP)
+                        end
+                    end
+                    Citizen.Wait(50)
+                end
+                Citizen.Wait(1500)
             end
         end)
     end
@@ -725,29 +744,7 @@ end)
         return closestVehicle, closestDistance
     end
 
-    local function EnumerateEntities(initFunc, moveFunc, disposeFunc)
-        return coroutine.wrap(function()
-          local iter, id = initFunc()
-          if not id or id == 0 then
-            disposeFunc(iter)
-            return
-          end
-          
-          local enum = {handle = iter, destructor = disposeFunc}
-          setmetatable(enum, entityEnumerator)
-          
-          local next = true
-          repeat
-            coroutine.yield(id)
-            next, id = moveFunc(iter)
-          until not next
-          
-          enum.destructor, enum.handle = nil, nil
-          disposeFunc(iter)
-        end)
-      end
-
-    function EnumerateVehicles()
+    EnumerateVehicles = function()
         return EnumerateEntities(FindFirstVehicle, FindNextVehicle, EndFindVehicle)
     end
 

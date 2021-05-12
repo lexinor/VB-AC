@@ -64,7 +64,6 @@ VB_AC.AntiPedChange = true
 VB_AC.AntiVehicleModifiers = true
 VB_AC.AntiSuperJump = true
 VB_AC.AntiFreeCam = true
-VB_AC.AntiFlyandVehicleBelowLimits = true
 VB_AC.DeleteBrokenCars = true
 VB_AC.ClearPedsAfterDetection = true
 VB_AC.ClearObjectsAfterDetection = true

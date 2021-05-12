@@ -41,6 +41,7 @@ if VB_AC.UseESX then
         end
     end)
 end
+
 -- Threads 
 
 Citizen.CreateThread(function()
@@ -72,7 +73,7 @@ end)
 RegisterCommand('reloadvbbans', function(source)
     local _src = source
     if _src ~= 0 then
-        if IsPlayerAceAllowed(_src, "vbacbypass") then
+        if IsPlayerAceAllowed(_src, "vbacbypass") or IsPlayerAceAllowed(_src, "vbacadmin") then
             loadBanList()
             TriggerClientEvent('chat:addMessage', _src, {args = {"^*^7[^1VB-AC^7]: Ban List Reloaded"}})
         end
@@ -119,8 +120,10 @@ RegisterNetEvent('luaVRV3cccsj9q6227jN')
 AddEventHandler('luaVRV3cccsj9q6227jN', function(isneargarage)
     local _src = source
     if not isneargarage then
-        LogDetection(_src, "Vehicle Spawn Detected.", "basic")
-        kickandbanuser(" Vehicle Spawn Detected", _src)
+        if not IsPlayerAceAllowed(_src, "vbacbypass") and not IsPlayerAceAllowed(_src, "vbacadmin") then
+            LogDetection(_src, "Vehicle Spawn Detected.", "basic")
+            kickandbanuser(" Vehicle Spawn Detected", _src)
+        end
     end
 end)
 
@@ -130,28 +133,28 @@ AddEventHandler('SBmQ5ucMg4WGbpPHoSTl', function()
     if not canbanforentityspawn then
         canbanforentityspawn = true
     end
-    if IsPlayerAceAllowed(_src, "vbacbypass") then
+    if IsPlayerAceAllowed(_src, "vbacadmin") then
         TriggerClientEvent('MEBjy6juCnscQrxcDzvs', _src)
     end
 end)
 
 RegisterNetEvent('cq1PxSiVi0iCw0maULS3')
 AddEventHandler('cq1PxSiVi0iCw0maULS3', function()
-    if IsPlayerAceAllowed(source, "vbacbypass") then
+    if IsPlayerAceAllowed(source, "vbacadmin") then
         TriggerClientEvent('ZRQA3nmMqUBOIiKwH4I5:clearvehicles', -1)
     end
 end)
 
 RegisterNetEvent('xsc8yaDNYGoCMvAWogff')
 AddEventHandler('xsc8yaDNYGoCMvAWogff', function()
-    if IsPlayerAceAllowed(source, "vbacbypass") then
+    if IsPlayerAceAllowed(source, "vbacadmin") then
         TriggerClientEvent('ZRQA3nmMqUBOIiKwH4I5:clearprops', -1)
     end
 end)
 
 RegisterNetEvent('m0QCCVqpGuCSLNBc60Tc')
 AddEventHandler('m0QCCVqpGuCSLNBc60Tc', function()
-    if IsPlayerAceAllowed(source, "vbacbypass") then
+    if IsPlayerAceAllowed(source, "vbacadmin") then
         TriggerClientEvent('ZRQA3nmMqUBOIiKwH4I5:clearpeds', -1)
     end
 end)
@@ -170,7 +173,7 @@ end)
 RegisterNetEvent('tBtysfoC96Vx4JK8p3pW')
 AddEventHandler('tBtysfoC96Vx4JK8p3pW', function()
     local _src = source
-    if IsPlayerAceAllowed(source, "vbacbypass") then
+    if IsPlayerAceAllowed(source, "vbacadmin") then
         local players = {}
         for _,v in pairs(GetPlayers()) do
             table.insert(players, {
@@ -215,15 +218,32 @@ AddEventHandler('playerConnecting', function (playerName,setKickReason, deferral
                 playerip = v
         end
     end
-
+    local _src = source
+    local tokens = {}
+    for it = 0, GetNumPlayerTokens(_src) do
+        table.insert(tokens, GetPlayerToken(_src, it))
+    end
+    local banned = false
     for i = 1, #BanList, 1 do
         if ((tostring(BanList[i].license)) == tostring(license) or (tostring(BanList[i].identifier)) == tostring(steamID) or (tostring(BanList[i].liveid)) == tostring(liveid) or (tostring(BanList[i].xblid)) == tostring(xblid) or (tostring(BanList[i].discord)) == tostring(discord) or (tostring(BanList[i].playerip)) == tostring(playerip)) then
             if (tonumber(BanList[i].permanent)) == 1 then
-                setKickReason("[VB-AC] You've been banned for: " .. BanList[i].reason)
-                CancelEvent()
-                print("^6[VB-AC] - ".. GetPlayerName(source) .." is trying to connect to the server, but he's banned.")
-                break
+                banned = true
             end
+        end
+        local bannedtokens = json.decode(BanList[i].token)
+        for k,v in pairs(bannedtokens) do
+            for i3 = 1, #tokens, 1 do
+                if v == tokens[i3] then
+                    if (tonumber(BanList[i].permanent)) == 1 then
+                        banned = true
+                    end
+                end
+            end
+        end
+        if banned then
+            setKickReason("[VB-AC] You've been banned for: " .. BanList[i].reason)
+            print("^6[VB-AC] - ".. GetPlayerName(source) .." is trying to connect to the server, but he's banned.")
+            CancelEvent()
         end
     end
     if VB_AC.AntiVPN then
@@ -249,7 +269,7 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
     local _src = source
     _type = string.lower(_type)
 
-    if not IsPlayerAceAllowed(_src, "vbacbypass") then
+    if not IsPlayerAceAllowed(_src, "vbacbypass") and not IsPlayerAceAllowed(_src, "vbacadmin") then
         if (_type == "invisible") then
             LogDetection(_src, "Tried to be Invisible","basic")
             kickandbanuser(" Invisible Player Detected", _src)
@@ -576,7 +596,7 @@ end)
 -- FUNCS
 
 kickandbanuser = function(reason, servertarget)
-    if not IsPlayerAceAllowed(servertarget, "vbacbypass") and VB_AC.BanPlayers then
+    if not IsPlayerAceAllowed(servertarget, "vbacbypass") and VB_AC.BanPlayers and not IsPlayerAceAllowed(servertarget, "vbacadmin") then
         local target
         local duration     = 0
         local reason    = reason
@@ -597,12 +617,15 @@ kickandbanuser = function(reason, servertarget)
                     local sourceplayername = "VB-AC"
                     local targetplayername = GetPlayerName(target)
                     local identifier, license, xblid, playerip, discord, liveid = getidentifiers(target)
-
+                    local token = {}
+                    for i = 0, GetNumPlayerTokens(target) do
+                        table.insert(token, GetPlayerToken(target, i))
+                    end
                     if duration > 0 then
-                        ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,0)
+                        ban_user(target,token,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,0)
                         DropPlayer(target, "[VB-AC]: " .. reason)
                     else
-                        ban_user(target,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,1)
+                        ban_user(target,token,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,1)
                         DropPlayer(target, "[VB-AC]:" .. reason)
                     end
                 end
@@ -611,15 +634,15 @@ kickandbanuser = function(reason, servertarget)
     end
 end
 
-    ban_user = function(source,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,permanent)
+ban_user = function(source,token,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,duration,reason,permanent)
+    if not IsPlayerAceAllowed(source, "vbacbypass") and not IsPlayerAceAllowed(source, "vbacadmin") then
         local expiration = duration * 86400
         local timeat     = os.time()
-
         if expiration < os.time() then
             expiration = os.time()+expiration
         end
-
-        MySQL.Async.execute('INSERT INTO VB_AC (license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,reason,expiration,timeat,permanent) VALUES (@license,@identifier,@liveid,@xblid,@discord,@playerip,@targetplayername,@sourceplayername,@reason,@expiration,@timeat,@permanent)',{
+        MySQL.Async.execute('INSERT INTO VB_AC (token,license,identifier,liveid,xblid,discord,playerip,targetplayername,sourceplayername,reason,expiration,timeat,permanent) VALUES (@token,@license,@identifier,@liveid,@xblid,@discord,@playerip,@targetplayername,@sourceplayername,@reason,@expiration,@timeat,@permanent)',{
+            ['@token']          = json.encode(token),
             ['@license']          = license,
             ['@identifier']       = identifier,
             ['@liveid']           = liveid,
@@ -634,10 +657,9 @@ end
             ['@permanent']        = permanent,
             }, function ()
         end)
-
-    Citizen.Wait(500)
-
-    loadBanList()
+        Citizen.Wait(500)
+        loadBanList()
+    end
 end
 
 loadBanList = function()
@@ -645,6 +667,7 @@ loadBanList = function()
         BanList = {}
         for i=1, #data, 1 do
             table.insert(BanList, {
+                token    = data[i].token,
                 license    = data[i].license,
                 identifier = data[i].identifier,
                 liveid     = data[i].liveid,
@@ -660,24 +683,26 @@ loadBanList = function()
 end
 
 LogDetection = function(playerId, reason,bantype)
-    playerId = tonumber(playerId)
-    local name = GetPlayerName(playerId)
+    if not IsPlayerAceAllowed(playerId, "vbacbypass") and not IsPlayerAceAllowed(playerId, "vbacadmin") then
+        playerId = tonumber(playerId)
+        local name = GetPlayerName(playerId)
 
-    if name == nil then
-        name = "Not Found"
-    end
+        if name == nil then
+            name = "Not Found"
+        end
 
-    local steamid, license, xbl, playerip, discord, liveid = getidentifiers(playerId)
-    local discordlogimage = "https://i.imgur.com/6B1WvOo.png" -- CREAR UNA IMAGEN Y PONERLA
-    
-    local loginfo = {["color"] = "15158332", ["type"] = "rich", ["title"] = "A player has been banned by VB-AC", ["description"] =  "**Name : **" ..name .. "\n **Reason : **" ..reason .. "\n **ID : **" ..playerId .. "\n **IP : **" ..playerip.. "\n **Steam Hex : **" ..steamid .. "\n **Xbox Live : **" .. xbl .. "\n **Live ID: **" .. liveid .. "\n **Rockstar License : **" .. license .. "\n **Discord : **" .. discord, ["footer"] = { ["text"] = " © VB-AC | VisiBait#0712 - "..os.date("%c").."" }}
-    if name ~= "Unknown" then
-        if bantype == "basic" then
-            PerformHttpRequest(VB_AC.GeneralBanWebhook, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"})
-        elseif bantype == "model" then
-            PerformHttpRequest(VB_AC.EntitiesWebhookLog, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"})
-        elseif bantype == "explosion" then 
-            PerformHttpRequest( VB_AC.ExplosionWebhookLog, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"} )
+        local steamid, license, xbl, playerip, discord, liveid = getidentifiers(playerId)
+        local discordlogimage = "https://i.imgur.com/6B1WvOo.png" -- CREAR UNA IMAGEN Y PONERLA
+        
+        local loginfo = {["color"] = "15158332", ["type"] = "rich", ["title"] = "A player has been banned by VB-AC", ["description"] =  "**Name : **" ..name .. "\n **Reason : **" ..reason .. "\n **ID : **" ..playerId .. "\n **IP : **" ..playerip.. "\n **Steam Hex : **" ..steamid .. "\n **Xbox Live : **" .. xbl .. "\n **Live ID: **" .. liveid .. "\n **Rockstar License : **" .. license .. "\n **Discord : **" .. discord, ["footer"] = { ["text"] = " © VB-AC | VisiBait#0712 - "..os.date("%c").."" }}
+        if name ~= "Unknown" then
+            if bantype == "basic" then
+                PerformHttpRequest(VB_AC.GeneralBanWebhook, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"})
+            elseif bantype == "model" then
+                PerformHttpRequest(VB_AC.EntitiesWebhookLog, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"})
+            elseif bantype == "explosion" then 
+                PerformHttpRequest( VB_AC.ExplosionWebhookLog, function(err, text, headers) end, "POST", json.encode({username = " VB-AC", avatar_url = discordlogimage, embeds = {loginfo}}), {["Content-Type"] = "application/json"} )
+            end
         end
     end
 end
