@@ -13,16 +13,16 @@
 
 VB_AC = {}
 
-VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord ACTIVAR LUEGOOOOOOOOOOOOOOOOOOOOOOO
+VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord
 
 VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
 VB_AC.MaxTransferAmount = 50000 -- ADJUST THIS
 
 -- Discord Webhooks right here :)
-VB_AC.GeneralBanWebhook = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
-VB_AC.EntitiesWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
-VB_AC.ExplosionWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
+VB_AC.GeneralBanWebhook = ""
+VB_AC.EntitiesWebhookLog = ""
+VB_AC.ExplosionWebhookLog = ""
 
 -- Misc Protections
 VB_AC.ExplosionProtection = true
