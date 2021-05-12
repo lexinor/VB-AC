@@ -8,7 +8,7 @@ local luainjections
 local model1 = nil
 local model2 = nil
 local canbanfornoclip = true
-local enableac = true -- DEACTIVAR LUEGO
+local enableac = false
 local bypassweapon = false
 
 ESX = nil
