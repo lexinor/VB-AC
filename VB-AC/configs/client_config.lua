@@ -19,6 +19,8 @@ VB_AC.UseESX = true
 VB_AC.ESXTrigger = "esx:getSharedObject" -- If you use ESX, put the trigger right here
 VB_AC.CheckPlayersMoney = true
 
+VB_AC.MaxResourceNameLength = 16 -- Augment this if you get banned while entering the server, you can also change the resources that have a long name...
+
 VB_AC.GodModeProtection = true
 VB_AC.AntiSpectate = true
 VB_AC.AntiSpeedHacks = true
@@ -64,7 +66,6 @@ VB_AC.AntiPedChange = true
 VB_AC.AntiVehicleModifiers = true
 VB_AC.AntiSuperJump = true
 VB_AC.AntiFreeCam = true
-VB_AC.AntiFlyandVehicleBelowLimits = true
 VB_AC.DeleteBrokenCars = true
 VB_AC.ClearPedsAfterDetection = true
 VB_AC.ClearObjectsAfterDetection = true

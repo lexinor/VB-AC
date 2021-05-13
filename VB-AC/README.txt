@@ -10,5 +10,11 @@ Espero que disfrutes todas las funcionalidades que trae este script, recuerdo qu
 Dicho esto, un saludo.
 
 ADMIN BYPASS (SERVER.CFG)
-add_ace vbacbypass allow
+
+ADMIN BYPASS (INCLUDES ADMIN MENU):
+add_ace vbacadmin allow 
+add_ace identifier.steam:000000000000000 vbacadmin allow
+
+ADMIN BYPASS (DOES NOT INCLUDE ADMIN MENU):
+add_ace vbacbypass allow 
 add_ace identifier.steam:000000000000000 vbacbypass allow
