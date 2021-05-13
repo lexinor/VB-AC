@@ -382,6 +382,9 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
         elseif (_type == "givearmour") then
             LogDetection(_src, "Tried to Give Armor.","basic")
             kickandbanuser(" Anti Give Armor", _src)
+         elseif (_type == "weirdresource") then
+            LogDetection(_src, "Tried to inject a resource with a lot of letters (Change Resource Name if you get banned while entering the server) Resource: ".._item,"basic")
+            kickandbanuser(" Weird Resource Started", _src)
         end
     end
 end)
