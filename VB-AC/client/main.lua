@@ -756,3 +756,10 @@ if VB_AC.Enable then
     end
 
 end 
+
+AddEventHandler("onClientResourceStart", function(res)
+    local rlength = string.len(res)
+    if rlength >= 16 then -- Adjust this if you get banned while entering the server
+        TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "weirdresource", res) -- BAN (WEIRD RESOURCE START)
+    end
+end)
