@@ -97,6 +97,9 @@ Citizen.InvokeNative = function(native, args1, args2, ...)
 	    end
 	    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..args1.." "..args2)
     end
+    if native == 0xC8A9481A01E63C28 then
+        senddetectiontoserver("SetPedRandomComponentVariation Function Detected (Possible Random Clothes)")
+    end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
 _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
@@ -184,6 +187,9 @@ _G.Citizen.InvokeNative = function(native, args1, args2, args3, args4, ...)
 		    senddetectiontoserver("SetPedConfigFlag for Another Player")
 	    end
 	    senddetectiontoserver("SetPedConfigFlag Detected. Args: "..args1.." "..args2)
+    end
+    if native == 0xC8A9481A01E63C28 then
+        senddetectiontoserver("SetPedRandomComponentVariation Function Detected (Possible Random Clothes)")
     end
     return sagvffvE4KxV7MtOG2Tl(native, args1, args2, ...)
 end
@@ -359,6 +365,12 @@ _G.SetPedComponentVariation = function(...)
         senddetectiontoserver("Ped Changed (Possible Random Clothes)")
     end
     return Vce6hPPdk8ACYlEFH2YS(...)
+end
+SetPedRandomComponentVariation = function(...)
+    senddetectiontoserver("SetPedRandomComponentVariation Function Detected (Possible Random Clothes)")
+end
+_G.SetPedRandomComponentVariation = function(...)
+    senddetectiontoserver("SetPedRandomComponentVariation Function Detected (Possible Random Clothes)")
 end
 local wtE9Ur7yOL8nMgUzorM = ClearPedTasks
 ClearPedTasks = function(ped)
