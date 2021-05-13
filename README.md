@@ -10,7 +10,7 @@
 Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu (https://github.com/Project-Entity/pe-adminmenu)
 
 ## Support
-[Discord]: https://discord.gg/AB9aSU7Thc
+[Discord] Join My Discord if you need any help, or open a Issue in this repository : https://discord.gg/AB9aSU7Thc
 
 ## Features
 
