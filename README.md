@@ -1,8 +1,8 @@
-# VB-AC v2.0: FiveM Anticheat by VisiBait#0712
+# VB-AC v3.0: FiveM Anticheat by VisiBait#0712
 
 ## READ README.TXT BEFORE EXECUTING THE SCRIPT IN YOUR SERVER! OTHERWISE THE ANTICHEAT WON'T WORK!
 
-### VB-AC [v2.0]:
+### VB-AC [v3.0]:
 [NEW] Admin Menu (Using MenuV): https://github.com/ThymonA/menuv
 
 [NEW] Anti Injection System (Type vbacinstall in server console)
