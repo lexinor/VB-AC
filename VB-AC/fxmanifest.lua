@@ -1,8 +1,10 @@
 fx_version 'adamant'
 
-game 'gta5'
+author 'VisiBait (VB-SCRIPTS: https://discord.gg/YrbBzwu59q)'
+description 'VB-AC: FiveM AntiCheat (Free) by VB-SCRIPTS (VisiBait#0712) https://discord.gg/YrbBzwu59q'
+version '3.0'
 
-ui_page "html/index.html"
+game 'gta5'
 
 client_scripts {
     '@menuv/menuv.lua',
@@ -15,8 +17,3 @@ server_scripts {
     'configs/server_config.lua',
     'server/main.lua'
 }
-
-files {
-    'html/*.html',
-    'html/*.js',
-} 
