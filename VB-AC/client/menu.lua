@@ -264,8 +264,8 @@ end)
 
 -- MENU 7
 local menu7 = MenuV:CreateMenu(false, "VB-AC Admin Tools", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: TP Tools Tools')
-local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 2.0', description = 'VisiBait#0712' })
-local menu7_creatorac = menu7:AddButton({ icon = 'ℹ️', label = 'VB-AC by VisiBait#0712', description = 'VisiBait#0712' })
+local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 3.0', description = 'discord.com/invite/EAU2DM4hdn' })
+local menu7_creatorac = menu7:AddButton({ icon = 'ℹ️', label = 'VB-AC by VisiBait#0712', description = 'discord.com/invite/EAU2DM4hdn' })
 
 -- PRINCIPAL MENU
 local menu = MenuV:CreateMenu(false, "Welcome to VB-AC's Admin Menu", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Main Menu')
