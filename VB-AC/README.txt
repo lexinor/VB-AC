@@ -9,7 +9,7 @@ Si encuentras algo que no funciona, abre una incidencia en mi GitHub.
 Espero que disfrutes todas las funcionalidades que trae este script, recuerdo que es gratis pero detecta más cosas que otros que son de pago.
 Dicho esto, un saludo.
 
-ADMIN BYPASS (SERVER.CFG)
+ADMIN BYPASSES (SERVER.CFG):
 
 ADMIN BYPASS (INCLUDES ADMIN MENU):
 add_ace vbacadmin allow 
