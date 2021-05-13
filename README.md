@@ -75,9 +75,6 @@ Attention: this script has been developed exclusively for non-commercial use, th
 
 **I recommend reading the README as SQL is needed to make the script work!**
 
-## Support
-[Discord] Join My Discord if you need any help, or open a Issue in this repository : https://discord.gg/AB9aSU7Thc
-
 ## Contributions
 
 Any contribution to the project is ** highly appreciated **.
