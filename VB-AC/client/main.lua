@@ -605,8 +605,8 @@ if VB_AC.Enable then
 	end
 
     RegisterNetEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles")
-    AddEventHandler("ZRQA3nmMqUBOIiKwH4I5:clearvehicles", function()
-        if VB_AC.ClearVehiclesAfterDetection then
+    AddEventHandler("ZRQA3nmMqUBOIiKwH4I5:clearvehicles", function(vehicles)
+        if vehicles == nil then
             local vehs = GetGamePool('CVehicle')
             for _, vehicle in ipairs(vehs) do
                 if not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1)) then
@@ -616,6 +616,27 @@ if VB_AC.Enable then
                         SetVehicleHasBeenOwnedByPlayer(vehicle, false)
                         SetEntityAsMissionEntity(vehicle, true, true)
                         DeleteEntity(vehicle)
+                    end
+                end
+            end
+        else
+            if VB_AC.ClearVehiclesAfterDetection then
+                local vehs = GetGamePool('CVehicle')
+                for _, vehicle in ipairs(vehs) do
+                    local owner = NetworkGetEntityOwner(vehicle)
+                    if owner ~= nil then
+                        local _pid = GetPlayerServerId(owner)
+                        if _pid == vehicles then
+                            if not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1)) then
+                                if NetworkGetEntityIsNetworked(vehicle) then
+                                    DeleteNetworkedEntity(vehicle)
+                                else
+                                    SetVehicleHasBeenOwnedByPlayer(vehicle, false)
+                                    SetEntityAsMissionEntity(vehicle, true, true)
+                                    DeleteEntity(vehicle)
+                                end
+                            end
+                        end
                     end
                 end
             end
