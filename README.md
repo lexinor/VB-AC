@@ -9,6 +9,9 @@
 
 Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu (https://github.com/Project-Entity/pe-adminmenu)
 
+## Support
+[Discord]: https://discord.gg/AB9aSU7Thc
+
 ## Features
 
 - Anti GodMode
