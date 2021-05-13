@@ -9,9 +9,6 @@
 
 Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu (https://github.com/Project-Entity/pe-adminmenu)
 
-## Support
-[Discord] Join My Discord if you need any help, or open a Issue in this repository : https://discord.gg/AB9aSU7Thc
-
 ## Features
 
 - Anti GodMode
@@ -77,6 +74,9 @@ Attention: this script has been developed exclusively for non-commercial use, th
 ### Installation
 
 **I recommend reading the README as SQL is needed to make the script work!**
+
+## Support
+[Discord] Join My Discord if you need any help, or open a Issue in this repository : https://discord.gg/AB9aSU7Thc
 
 ## Contributions
 
