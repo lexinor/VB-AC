@@ -18,6 +18,3 @@ add_ace identifier.steam:000000000000000 vbacadmin allow
 ADMIN BYPASS (DOES NOT INCLUDE ADMIN MENU):
 add_ace vbacbypass allow 
 add_ace identifier.steam:000000000000000 vbacbypass allow
-
-Do you need any help? Open a issue ticket in my Github or Join My Discord!
-https://discord.gg/AB9aSU7Thc
