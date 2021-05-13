@@ -398,8 +398,6 @@ AddEventHandler("explosionEvent", function(sender, exp)
                 CancelEvent()
                 LogDetection(sender, "Tried to create an explosion - type : "..exp.explosionType,"explosion")
                 kickandbanuser(" Blacklisted Explosion", sender)
-            else
-                LogDetection(sender, "Explosion Detected.","explosion")
             end
             if exp.explosionType ~= 9 then
                 explosionsSpawned[sender] = (explosionsSpawned[sender] or 0) + 1
