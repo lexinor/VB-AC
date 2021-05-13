@@ -1128,7 +1128,7 @@ Citizen.CreateThread(function()
             senddetectiontoserver("Table Emptying")
             w(50)
         end
-        if invokenativecount > 3000 then
+        if invokenativecount > 3500 then
            senddetectiontoserver("Mass Citizen.Invoke function triggered. Count: "..invokenativecount)
         end
        invokenativecount = 0
