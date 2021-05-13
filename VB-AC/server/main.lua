@@ -493,7 +493,7 @@ AddEventHandler("entityCreating", function(entity)
                         if vehiclesSpawned[_src] > VB_AC.MaxVehiclesPerUser then
                             LogDetection(_src, "Tried to spawn "..vehiclesSpawned[_src].." vehicles","model")
                             kickandbanuser(" Mass Vehicle Spawn", _src)
-                            TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles" , -1)
+                            TriggerClientEvent("ZRQA3nmMqUBOIiKwH4I5:clearvehicles" , -1, _src)
                             CancelEvent()
                         end
 
