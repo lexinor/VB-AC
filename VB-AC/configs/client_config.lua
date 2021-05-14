@@ -74,6 +74,7 @@ VB_AC.AntiMenyoo = true
 VB_AC.AntiPedRevive = true
 VB_AC.AntiSuicide = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
 VB_AC.AntiGiveArmour = true
+VB_AC.AntiFlyandVehicleBelowLimits = true 
 
 VB_AC.AntiVehicleSpawn = true
 VB_AC.GarageList = { -- Place all of the garage coordinates right here.
