@@ -88,11 +88,8 @@ end, false)
 RegisterNetEvent('7ZYhfWQtmoA369TBJ5G8')
 AddEventHandler('7ZYhfWQtmoA369TBJ5G8', function(resource, info)
     local _src = source
-    if info ~= nil then
+    if resource ~= nil and info ~= nil then
         LogDetection(_src, "Injection detected in resource: "..resource.. " Type: "..info, "basic")
-        kickandbanuser(" Injection detected", _src)
-     else
-        LogDetection(_src, "Injection detected in resource: "..resource, "basic")
         kickandbanuser(" Injection detected", _src)
      end
 end)
