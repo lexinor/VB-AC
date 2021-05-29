@@ -14,7 +14,7 @@
 VB_AC = {}
 
 VB_AC.UseESX = true -- Do you use ESX? Set this in true.
-VB_AC.ESXTrigger = "esx:getSantaFeObjectnohack" -- If you've changed the esx:getSharedObject trigger for another one, change it. Otherwise you'll get a lot of errors.
+VB_AC.ESXTrigger = "esx:getSharedObject" -- If you've changed the esx:getSharedObject trigger for another one, change it. Otherwise you'll get a lot of errors.
 VB_AC.CheckPlayersMoney = true -- This function checks every 15 sec if player's money has changed in a large quantity. You can adjust that in the server config.
 
 VB_AC.Enable = true -- This must be set in true do the Anticheat works as intended.
