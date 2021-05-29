@@ -17,14 +17,14 @@ VB_AC.BanPlayers = false -- If false, Anticheat only logs in Discord
 
 -- ESX OPTIONS
 VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
-VB_AC.ESXTrigger = "esx:getSantaFeObjectnohack" -- Put your ESX Object Trigger Right Here
+VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
 VB_AC.MechanicJobName = 'mechanic'
 VB_AC.MaxTransferAmount = 50000 -- ADJUST THIS
 
 -- Discord Webhooks right here :)
-VB_AC.GeneralBanWebhook = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
-VB_AC.EntitiesWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
-VB_AC.ExplosionWebhookLog = "https://discord.com/api/webhooks/810817661491347458/JuXwvnDI9fXqFGzrlCI-A4bChWOw5YNUaArwNt16eE7ZsZPawTZ4T3HAwGK4rYuufO4D"
+VB_AC.GeneralBanWebhook = ""
+VB_AC.EntitiesWebhookLog = ""
+VB_AC.ExplosionWebhookLog = ""
 
 -- Misc Protections
 VB_AC.ExplosionProtection = true
@@ -33,7 +33,7 @@ VB_AC.AntiBlacklistedWords = true
 VB_AC.AntiBlacklistedTriggers = true
 VB_AC.AntiClearPedTasks = true
 VB_AC.AntiFakeChatMessages = true
-VB_AC.AntiVPN = false
+VB_AC.AntiVPN = true
 VB_AC.ReloadBanListTime = 600000 -- 10 Mins
 VB_AC.ReloadEntityTime = 10000 -- 10 secs (Recommended to leave this in 10k)
 
