@@ -12,31 +12,51 @@
 --]]
 
 VB_AC = {}
-VB_AC.Enable = true
-VB_AC.MainAnticheat = true
 
-VB_AC.UseESX = true
-VB_AC.ESXTrigger = "esx:getSharedObject" -- If you use ESX, put the trigger right here
-VB_AC.CheckPlayersMoney = true
+VB_AC.UseESX = true -- Do you use ESX? Set this in true.
+VB_AC.ESXTrigger = "esx:getSantaFeObjectnohack" -- If you've changed the esx:getSharedObject trigger for another one, change it. Otherwise you'll get a lot of errors.
+VB_AC.CheckPlayersMoney = true -- This function checks every 15 sec if player's money has changed in a large quantity. You can adjust that in the server config.
 
-VB_AC.MaxResourceNameLength = 16 -- Augment this if you get banned while entering the server, you can also change the resources that have a long name...
-
-VB_AC.GodModeProtection = true
-VB_AC.AntiSpectate = true
-VB_AC.AntiSpeedHacks = true
-VB_AC.AntiBoomDamage = true
-VB_AC.PlayerProtection = true
-VB_AC.AntiBlacklistedWeapons = true
+VB_AC.Enable = true -- This must be set in true do the Anticheat works as intended.
+VB_AC.AntiExplosionDamage = true -- This prevents players from being killed by Explosions.
+VB_AC.AntiGodMode = true -- Detects most of GodMode Cheats and Logs/Bans them.
+VB_AC.AntiRagdoll = true -- Detects Anti-Ragdoll cheats.
+VB_AC.AntiInvisible = true -- Detects if the player is Invisible.
+VB_AC.AntiRadar = true -- Detects if Radar (Minimap) is enabled. If by default in your server you have enabled minimap, disable this option, otherwise you'll get bans.
+VB_AC.AntiExplosiveBullets = true -- Detects if players have Explosive Weapons.
+VB_AC.AntiNoClip = true -- Prevents players from using NoClip. 
+VB_AC.AntiSpectate = true -- Detects if player enters in spectator mode
+VB_AC.AntiSpeedHacks = true -- Prevents players from using Speed Mods
+VB_AC.AntiThermalVision = true -- Detects if player is using Thermal Vision.
+VB_AC.AntiNightVision = true -- Detects if player is using Night Vision.
+VB_AC.AntiLicenseClears = true -- Detects if licenses such as rockstar, steam ones get cleared to skip bans
+VB_AC.AntiCheatEngine = true -- Prevents players from using CheatEngine to change Vehicle Hashes.
+VB_AC.AntiPedChange = true -- Detects if Player has changed it's ped
+VB_AC.AntiFreeCam = true -- Detects if Player is Using Freecam
+VB_AC.AntiMenyoo = true -- Detects if Player Injects Menyoo
+VB_AC.AntiGiveArmor = true -- Detects Give-Armor Cheats 
+VB_AC.AntiBlips = true -- Prevents player from enabling player blips
+VB_AC.AntiWeaponModifiers = true -- Prevents players from Modifying weapon damage (Infinite Ammo,)
+VB_AC.AntiVehicleModifiers = true -- Prevents players from modifying Vehicles (Hashes, Color, Top Speed)
 VB_AC.AntiVDM = true
+VB_AC.SuperJump = true -- Prevents player from using Super-Jump
+VB_AC.AntiSuicide = true -- This isn't perfectly working, if players get banned, disable it.
+VB_AC.AntiResourceStartorStop = true -- Prevents Cheaters from Stopping/Starting new Resource
+VB_AC.DeleteBrokenCars = true -- Deletes cars when they explode
+VB_AC.ClearPedsAfterDetection = true -- Deletes Peds after a cheater is detected
+VB_AC.ClearObjectsAfterDetection = true -- Deletes Props after a cheater is detected
+VB_AC.ClearVehiclesAfterDetection = true -- Deletes Vehices after a cheater is detected
+VB_AC.DisableVehicleWeapons = true -- Disables Vehicle Weapons
 
-VB_AC.AntiDamageModifier = true
-VB_AC.AntiThermalVision = true
-VB_AC.AntiNightVision = true
-VB_AC.AntiResourceStartorStop = true
-VB_AC.AntiCommandInjection = false -- If you can get in the server while this is "true" perfect. Otherwise just disable it.
-VB_AC.AntiLicenseClears = true
+VB_AC.AntiVehicleSpawn = true -- Prevents players from spawning cars outside of garage coordinates (You'll have to list them below.)
+VB_AC.GarageList = { -- Place all of the garage coordinates right here.
+	{x = 217.89, y = -804.99, z = 30.91},
+}
 
-VB_AC.AntiCInjection = true
+VB_AC.AntiPedRevive = true -- Prevents Players from reviving outside Hospitals
+VB_AC.HospitalCoords = vector3(293.11,-582.1,43.19) -- Put here the hospital coords or the coords where the player respawns after dying
+
+VB_AC.AntiCommandInjection = true
 VB_AC.BlackListedCMD = {
 	"killmenu",
 	"chocolate",
@@ -52,37 +72,7 @@ VB_AC.BlackListedCMD = {
 	"purgemenu"
 }
 
-VB_AC.DisableVehicleWeapons = true
-VB_AC.AntiKeyboardNativeInjections = true
-VB_AC.AntiCheatEngine = true
-VB_AC.AntiNoclip = true
-VB_AC.AntiRadar = true
-VB_AC.AntiRagdoll = true
-VB_AC.AntiInvisible = true
-VB_AC.AntiExplosiveBullets = true
-VB_AC.AntiBlips = true
-VB_AC.AntiInfiniteAmmo = true
-VB_AC.AntiPedChange = true
-VB_AC.AntiVehicleModifiers = true
-VB_AC.AntiSuperJump = true
-VB_AC.AntiFreeCam = true
-VB_AC.DeleteBrokenCars = true
-VB_AC.ClearPedsAfterDetection = true
-VB_AC.ClearObjectsAfterDetection = true
-VB_AC.ClearVehiclesAfterDetection = true
-VB_AC.AntiMenyoo = true
-VB_AC.AntiPedRevive = true
-VB_AC.AntiSuicide = true -- This isn't perfectly working, if normal players get banned because of this, disable it.
-VB_AC.AntiGiveArmour = true
-VB_AC.AntiFlyandVehicleBelowLimits = true 
-
-VB_AC.AntiVehicleSpawn = true
-VB_AC.GarageList = { -- Place all of the garage coordinates right here.
-	{x = 217.89, y = -804.99, z = 30.91},
-}
-
-VB_AC.HospitalCoords = vector3(293.11,-582.1,43.19) -- Put here the hospital coords or the coords where the player respawns after dying
-
+VB_AC.AntiBlacklistedWeapons = true
 VB_AC.BlacklistedWeapons = {
 	"WEAPON_HAMMER",
 	"WEAPON_SAWNOFFSHOTGUN",

