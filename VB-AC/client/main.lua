@@ -22,23 +22,27 @@ end)
 --
 
 if VB_AC.Enable then
+    local _evhandler = AddEventHandler
     Citizen.CreateThread(function()
         resources = GetNumResources()
         Citizen.Wait(30000)
         commands = #GetRegisteredCommands()
         local _originalped = GetEntityModel(PlayerPedId())
         DisplayRadar(false)
-        AddEventHandler("onResourceStarting", function(res)
+        local _onresstarting = "onResourceStarting"
+        local _onresstart = "onResourceStart"
+        local _onclresstart = "onClientResourceStart"
+        _evhandler(_onresstarting, function(res)
             if res ~= GetCurrentResourceName() then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
             end
         end)
-        AddEventHandler("onResourceStart", function(res)
+        _evhandler(_onresstart, function(res)
             if res ~= GetCurrentResourceName() then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
             end
         end)
-        AddEventHandler("onClientResourceStart", function(res)
+        _evhandler(_onclresstart, function(res)
             if res ~= GetCurrentResourceName() then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "resourcestarted", res) -- BAN (RESOURCE START)
             end
@@ -212,7 +216,7 @@ if VB_AC.Enable then
                 end
                 _Wait(400)
             end
-            if VB_AC == nil then
+            if VB_AC == nil or _evhandler ~= AddEventHandler or _onresstarting ~= "onResourceStarting" or _onresstart ~= "onResourceStart" or _onclresstart ~= "onClientResourceStart" then
                 sendinfotoserver("Ue53dCG6hctHvrOaJB5Q", "stoppedac") -- BAN (AC STOPPED)
             end
         end
@@ -336,7 +340,7 @@ if VB_AC.Enable then
             local ResourceMetadataToSend = {}
             local ResourceFilesToSend = {}
             for i = 0, GetNumResources()-1, 1 do
-            local resource = GetResourceByFindIndex(i)
+                local resource = GetResourceByFindIndex(i)
                 for i = 0, GetNumResourceMetadata(resource, 'client_script') do
                     local type = GetResourceMetadata(resource, 'client_script', i)
                     local file = LoadResourceFile(tostring(resource), tostring(type))
@@ -362,7 +366,10 @@ if VB_AC.Enable then
                     table.insert(ResourceFilesToSend[resource], file)
                 end
             end
-            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', ResourceMetadataToSend, ResourceFilesToSend)
+            VB_CIT_Wait(2000)
+            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', ResourceMetadataToSend, nil)
+            VB_CIT_Wait(2000)
+            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', nil, ResourceFilesToSend)
             ResourceMetadataToSend = {}
             ResourceFilesToSend = {}
             VB_CIT_Wait(180000)
@@ -587,7 +594,9 @@ if VB_AC.Enable then
     end)
 
     if VB_AC.AntiResourceStartorStop then
-        AddEventHandler("onResourceStop", function(res)
+        local _onresstop = "onResourceStop"
+        local _onclresstop = "onResourceStop"
+        _evhandler(_onresstop, function(res)
             if res == GetCurrentResourceName() then
                 CancelEvent()
                 TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "stoppedac") -- BAN (ANTICHEAT STOPPED)
@@ -597,7 +606,7 @@ if VB_AC.Enable then
             end
         end)
 
-        AddEventHandler("onClientResourceStop", function(res)
+        _evhandler(_onclresstop, function(res)
             if res == GetCurrentResourceName() then
                 CancelEvent()
                 TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "stoppedac") -- BAN (ANTICHEAT STOPPED)
