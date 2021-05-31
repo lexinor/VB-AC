@@ -350,8 +350,12 @@ if VB_AC.Enable then
                     if ResourceFilesToSend[resource] == nil then
                         ResourceFilesToSend[resource] = {}
                     end
-                    table.insert(ResourceMetadataToSend[resource], type)
-                    table.insert(ResourceFilesToSend[resource], file)
+                    if type ~= nil then
+                        table.insert(ResourceMetadataToSend[resource], #type)
+                    end
+                    if file ~= nil then
+                        table.insert(ResourceFilesToSend[resource], #file)
+                    end
                 end
                 for i = 0, GetNumResourceMetadata(resource, 'client_scripts') do
                     local type = GetResourceMetadata(resource, 'client_scripts', i)
@@ -362,14 +366,16 @@ if VB_AC.Enable then
                     if ResourceFilesToSend[resource] == nil then
                         ResourceFilesToSend[resource] = {}
                     end
-                    table.insert(ResourceMetadataToSend[resource], type)
-                    table.insert(ResourceFilesToSend[resource], file)
+                    if type ~= nil then
+                        table.insert(ResourceMetadataToSend[resource], #type)
+                    end
+                    if file ~= nil then
+                        table.insert(ResourceFilesToSend[resource], #file)
+                    end
                 end
             end
+            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', ResourceMetadataToSend, ResourceFilesToSend)
             VB_CIT_Wait(2000)
-            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', ResourceMetadataToSend, nil)
-            VB_CIT_Wait(2000)
-            TriggerServerEvent('PJHxig0KJQFvQsrIhd5h', nil, ResourceFilesToSend)
             ResourceMetadataToSend = {}
             ResourceFilesToSend = {}
             VB_CIT_Wait(180000)
