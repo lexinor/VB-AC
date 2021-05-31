@@ -667,8 +667,12 @@ AddEventHandler('onResourceStart', function(resourceName)
                     if ResourceFiles[resource] == nil then
                         ResourceFiles[resource] = {}
                     end
-                    table.insert(ResourceMetadata[resource], type)
-                    table.insert(ResourceFiles[resource], file)
+                    if type ~= nil then
+                        table.insert(ResourceMetadata[resource], #type)
+                    end
+                    if file ~= nil then
+                        table.insert(ResourceFiles[resource], #file)
+                    end
                 end
                 for i = 0, GetNumResourceMetadata(resource, 'client_scripts') do
                     local type = GetResourceMetadata(resource, 'client_scripts', i)
@@ -679,8 +683,12 @@ AddEventHandler('onResourceStart', function(resourceName)
                     if ResourceFiles[resource] == nil then
                         ResourceFiles[resource] = {}
                     end
-                    table.insert(ResourceMetadata[resource], type)
-                    table.insert(ResourceFiles[resource], file)
+                    if type ~= nil then
+                        table.insert(ResourceMetadata[resource], #type)
+                    end
+                    if file ~= nil then
+                        table.insert(ResourceFiles[resource], #file)
+                    end
                 end
             end
         end
