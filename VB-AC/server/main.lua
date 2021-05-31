@@ -52,22 +52,20 @@ if VB_AC.UseESX then
 end 
 
 RegisterNetEvent('PJHxig0KJQFvQsrIhd5h')
-AddEventHandler('PJHxig0KJQFvQsrIhd5h', function (Metadata, Files)
+AddEventHandler('PJHxig0KJQFvQsrIhd5h', function(Metadata, Files)
     local _src = source
     local _mdata = Metadata
     local _files = Files
     if _mdata ~= nil then
         for k,v in pairs(_mdata) do
-            for k2, v2 in pairs(VB_AC.WhitelistedResources) do
-                if k ~= v2 then
-                    if not ResourceMetadata[k] then
-                        LogDetection(_src, "Abnormal resource injection. Resource: "..k,"basic")
-                        kickandbanuser(" Resource Injection", _src)
-                    end
-                    if json.encode(ResourceMetadata[k]) ~= json.encode(_mdata[k]) then
-                        LogDetection(_src, "Resource metadata not valid in resource: "..k,"basic")
-                        kickandbanuser(" Resource Injection", _src)
-                    end
+            if not VB_AC.WhitelistedResources[k] then
+                if not ResourceMetadata[k] then
+                    LogDetection(_src, "Abnormal resource injection. Resource: "..k,"basic")
+                    kickandbanuser(" Resource Injection", _src)
+                end
+                if json.encode(ResourceMetadata[k]) ~= json.encode(_mdata[k]) then
+                    LogDetection(_src, "Resource metadata not valid in resource: "..k,"basic")
+                    kickandbanuser(" Resource Injection", _src)
                 end
             end
             if k == "unex" or k == "Unex" or k == "rE" or k == "redENGINE" or k == "Eulen" then
@@ -76,25 +74,29 @@ AddEventHandler('PJHxig0KJQFvQsrIhd5h', function (Metadata, Files)
             end
         end
         for k,v in pairs(ResourceMetadata) do
-            for k2, v2 in pairs(VB_AC.WhitelistedResources) do
-                if k ~= v2 then
-                    if not _mdata[k] then
-                        LogDetection(_src, "Injection: Resource stopped: "..k,"basic")
-                        kickandbanuser(" Resource Injection", _src)
-                    end
-                    if json.encode(_mdata[k]) ~= json.encode(ResourceMetadata[k]) then
-                        LogDetection(_src, "Resource metadata not valid in resource: "..k,"basic")
-                        kickandbanuser(" Resource Injection", _src)
-                    end
+            if not VB_AC.WhitelistedResources[k] then
+                if not _mdata[k] then
+                    LogDetection(_src, "Injection: Resource stopped: "..k,"basic")
+                    kickandbanuser(" Resource Injection", _src)
                 end
+                if json.encode(_mdata[k]) ~= json.encode(ResourceMetadata[k]) then
+                    LogDetection(_src, "Resource metadata not valid in resource: "..k,"basic")
+                    kickandbanuser(" Resource Injection", _src)
+                end
+            end
+            if k == "unex" or k == "Unex" or k == "rE" or k == "redENGINE" or k == "Eulen" then
+                LogDetection(_src, "Executor detected: "..k,"basic")
+                kickandbanuser(" Resource Injection", _src)
             end
         end
     end
     if _files ~= nil then
         for k,v in pairs(_files) do
-            if json.encode(ResourceFiles[k]) ~= json.encode(v) then
-                LogDetection(_src, "Client script files modified in resource: "..k,"basic")
-                kickandbanuser(" Resource Injection", _src)
+            if not VB_AC.WhitelistedResources[k] then
+                if json.encode(ResourceFiles[k]) ~= json.encode(v) then
+                    LogDetection(_src, "Client script files modified in resource: "..k,"basic")
+                    kickandbanuser(" Resource Injection", _src)
+                end
             end
         end
     end
@@ -696,6 +698,7 @@ AddEventHandler('onResourceStart', function(resourceName)
 
             ^5VB-AC Initialized. Enjoy!                                          
 ]])   
+        SetConvarServerInfo("AntiCheat:", "Protected by VB-AC v4 [VB-Scripts/VisiBait]")
     end
 end)   
 
