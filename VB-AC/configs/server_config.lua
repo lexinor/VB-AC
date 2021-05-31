@@ -43,10 +43,10 @@ VB_AC.MaxVehiclesPerUser = 5
 VB_AC.MaxEntitiesPerUser = 10
 VB_AC.MaxParticlesPerUser = 3
 
-VB_AC.WhitelistedResources = {
-	"discord-screenshot",
-	"screenshot-basic",
-	"mumble-voip"
+VB_AC.WhitelistedResources = { -- If you get banned and the anticheat logs something like this "Resource metadata not valid in resource: or Abnormal resource injection" put here the resources that are causing that errors and everything should be fixed.
+	["discord-screenshot"] = true,
+	["screenshot-basic"] = true,
+	["mumble-voip"] = true,
 }
 
 VB_AC.BlacklistedWeapons = {
