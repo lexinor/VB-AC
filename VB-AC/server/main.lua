@@ -225,11 +225,11 @@ AddEventHandler('playerConnecting', function (playerName,setKickReason, deferral
     for it = 0, GetNumPlayerTokens(_src) do
         table.insert(tokens, GetPlayerToken(_src, it))
     end
-    local banned = false
     for i = 1, #BanList, 1 do
         if ((tostring(BanList[i].license)) == tostring(license) or (tostring(BanList[i].identifier)) == tostring(steamID) or (tostring(BanList[i].liveid)) == tostring(liveid) or (tostring(BanList[i].xblid)) == tostring(xblid) or (tostring(BanList[i].discord)) == tostring(discord) or (tostring(BanList[i].playerip)) == tostring(playerip)) then
             if (tonumber(BanList[i].permanent)) == 1 then
-                banned = true
+                setKickReason("[VB-AC] You've been banned for: " .. BanList[i].reason)
+            print("^6[VB-AC] - ".. GetPlayerName(source) .." is trying to connect to the server, but he's banned.")
             end
         end
         local bannedtokens = json.decode(BanList[i].token)
@@ -237,15 +237,11 @@ AddEventHandler('playerConnecting', function (playerName,setKickReason, deferral
             for i3 = 1, #tokens, 1 do
                 if v == tokens[i3] then
                     if (tonumber(BanList[i].permanent)) == 1 then
-                        banned = true
+                        setKickReason("[VB-AC] You've been banned for: " .. BanList[i].reason)
+                           print("^6[VB-AC] - ".. GetPlayerName(source) .." is trying to connect to the server, but he's banned.")
                     end
                 end
             end
-        end
-        if banned then
-            setKickReason("[VB-AC] You've been banned for: " .. BanList[i].reason)
-            print("^6[VB-AC] - ".. GetPlayerName(source) .." is trying to connect to the server, but he's banned.")
-            CancelEvent()
         end
     end
     if VB_AC.AntiVPN then
