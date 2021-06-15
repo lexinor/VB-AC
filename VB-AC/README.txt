@@ -10,6 +10,7 @@ Espero que disfrutes todas las funcionalidades que trae este script, recuerdo qu
 Dicho esto, un saludo.
 
 IMPORTANT - SERVER.CFG: THIS SCRIPT MUST BE STARTED AT THE END OF THE CFG!!!!!!!!!!!!!!!!
+ensure menuv
 ensure vbac-module2
 ensure VB-AC
 
