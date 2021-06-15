@@ -264,8 +264,144 @@ end)
 
 -- MENU 7
 local menu7 = MenuV:CreateMenu(false, "VB-AC Admin Tools", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: TP Tools Tools')
-local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 3.0', description = 'discord.com/invite/EAU2DM4hdn' })
+local menu7_acinfo = menu7:AddButton({ icon = 'ℹ️', label = 'AntiCheat Version: 4.0', description = 'discord.com/invite/EAU2DM4hdn' })
 local menu7_creatorac = menu7:AddButton({ icon = 'ℹ️', label = 'VB-AC by VisiBait#0712', description = 'discord.com/invite/EAU2DM4hdn' })
+
+-- NEW MENUS (Augusto/Mopped7)
+
+-- Menu 8 (Skin do PED)
+local menu8 = MenuV:CreateMenu(false, "Change PED Skin", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'Change Characters skin')
+local menu8_padraom = menu8:AddButton({ icon = '👨', label = 'MP Male', description = 'Change skin to MP Male' })
+local menu8_padraof = menu8:AddButton({ icon = '👧', label = 'MP Female', description = 'Change skin to MP Female' })
+local menu8_monkey = menu8:AddButton({ icon = '🐒', label = 'Monkey', description = 'Change skin to Monkey' })
+local menu8_rato = menu8:AddButton({ icon = '🐀 ', label = 'Rat', description = 'Change skin to Rat' })
+local menu8_dog = menu8:AddButton({ icon = '🐶 ', label = 'Dog', description = 'Change skin to Dog' })
+local menu8_cat = menu8:AddButton({ icon = '🐱 ', label = 'Cat', description = 'Change skin to Cat' })
+local menu8_ped1 = menu8:AddButton({ icon = '🚶 ', label = 'NPC Male', description = 'Change skin to NPC Male' })
+local menu8_ped2 = menu8:AddButton({ icon = '💃 ', label = 'NPC Female', description = 'Change skin to NPC Female' })
+menu8_padraom:On('select', function(item)
+    local modelo = GetHashKey('mp_m_freemode_01')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_padraof:On('select', function(item)
+    local modelo = GetHashKey('mp_f_freemode_01')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_monkey:On('select', function(item)
+    local modelo = GetHashKey('a_c_chimp')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_rato:On('select', function(item)
+    local modelo = GetHashKey('a_c_rat')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_dog:On('select', function(item)
+    local modelo = GetHashKey('a_c_poodle')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_cat:On('select', function(item)
+    local modelo = GetHashKey('a_c_cat_01')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_ped1:On('select', function(item)
+    local modelo = GetHashKey('a_m_m_fatlatin_01')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+menu8_ped2:On('select', function(item)
+    local modelo = GetHashKey('a_f_m_fatcult_01')
+    while not HasModelLoaded(modelo) do
+        RequestModel(modelo)
+        Citizen.Wait(10)
+    end
+
+    if HasModelLoaded(modelo) then
+        SetPlayerModel(PlayerId(),modelo)
+        SetModelAsNoLongerNeeded(modelo)
+    end
+end)
+
+-- Menu 9
+
+local menu9 = MenuV:CreateMenu(false, "Vision Functions", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'Activate/Deactivate Vision Functions')
+local menu9_visaonoturna = menu9:AddCheckbox({ icon = '🌒', label = 'Night Vision', description = 'Activate/Deactivate Night Vision', value = 'n' })
+local menu9_visaotermica = menu9:AddCheckbox({ icon = '🔥', label = 'Thermal Vision', description = 'Activate/deactivate Thermal Vision', value = 'n' })
+
+menu9_visaonoturna:On('check', function(item)
+    SetNightvision(1)
+end)
+menu9_visaonoturna:On('uncheck', function(item)
+    SetNightvision(0)
+end)
+
+menu9_visaotermica:On('check', function(item)
+    SetSeethrough(1)
+end)
+menu9_visaotermica:On('uncheck', function(item)
+    SetSeethrough(0)
+end)
 
 -- PRINCIPAL MENU
 local menu = MenuV:CreateMenu(false, "Welcome to VB-AC's Admin Menu", 'centerright', 255, 0, 0, 'size-125', 'example', 'menuv', 'VB-AC: Main Menu')
@@ -273,6 +409,8 @@ local menu_admintools = menu:AddButton({ icon = '🔥', label = 'Admin Tools', v
 local menu_connectedplayers = menu:AddButton({ icon = '⛹️', label = 'Connected Players', value = menu3, description = 'See the Player List' })
 local menu_servertools = menu:AddButton({ icon = '🤖', label = 'Server Tools', value = menu4, description = 'Open Server Tools' })
 local menu_tpoptions = menu:AddButton({ icon = '📍', label = 'Teleport Options', value = menu5, description = 'Open Teleport Options' })
+local menu_skin = menu:AddButton({ icon = '🦺', label = 'Skin Functions', value = menu8, description = 'Change your Ped/Skin' })
+local menu_visaoconfig = menu:AddButton({ icon = '🔭', label = 'Vision Functions', value = menu9, description = 'Activate/Deactivate Vision Mods' })
 local menu_vehicleoptions = menu:AddButton({ icon = '🚗', label = 'Vehicle Options', value = menu6, description = 'Open Vehicle Options' })
 local menu_infoanticheat = menu:AddButton({ icon = 'ℹ️', label = 'Information', value = menu7, description = 'See the Anticheat Version' })
 

@@ -12,17 +12,20 @@
 --]]
 
 VB_AC = {}
+VB_AC.BanPlayers = false -- If false, Anticheat only logs in Discord
+VB_AC.ScreenshotPlayers = true
 
-VB_AC.BanPlayers = true -- If false, Anticheat only logs in Discord
-
+-- ESX OPTIONS
 VB_AC.UseESX = true -- ¿Do you use ESX? Activate this option.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- Put your ESX Object Trigger Right Here
+VB_AC.MechanicJobName = 'mechanic'
 VB_AC.MaxTransferAmount = 50000 -- ADJUST THIS
 
 -- Discord Webhooks right here :)
 VB_AC.GeneralBanWebhook = ""
 VB_AC.EntitiesWebhookLog = ""
 VB_AC.ExplosionWebhookLog = ""
+VB_AC.ScreenShotWebhookLog = ""
 
 -- Misc Protections
 VB_AC.ExplosionProtection = true
@@ -33,12 +36,31 @@ VB_AC.AntiClearPedTasks = true
 VB_AC.AntiFakeChatMessages = true
 VB_AC.AntiVPN = true
 VB_AC.ReloadBanListTime = 600000 -- 10 Mins
+VB_AC.ReloadEntityTime = 10000 -- 10 secs (Recommended to leave this in 10k)
 
 VB_AC.MaxPedsPerUser = 3
 VB_AC.MaxPropsPerUser = 10
 VB_AC.MaxVehiclesPerUser = 5
 VB_AC.MaxEntitiesPerUser = 10
 VB_AC.MaxParticlesPerUser = 3
+
+VB_AC.AntiTazePlayers = true
+VB_AC.WhitelistedJobs = { -- Jobs that can make use of a taser (only works if antitazeplayers is enabled, needs ESX)
+	["police"] = true,
+	["mechanic"] = true,
+}
+
+VB_AC.WhitelistedResources = { -- If you get banned and the anticheat logs something like this "Resource metadata not valid in resource: or Abnormal resource injection" put here the resources that are causing that errors and everything should be fixed.
+	["discord-screenshot"] = true,
+	["screenshot-basic"] = true,
+	["mumble-voip"] = true,
+}
+
+VB_AC.WhitelistedIPS = { -- In case AntiVPN targets your IP as proxy...
+	["IP"] = true,
+	["IP"] = true,
+	["IP"] = true,
+}
 
 VB_AC.BlacklistedWeapons = {
 	"WEAPON_HAMMER",
@@ -123,7 +145,7 @@ VB_AC.BlacklistedWords = {
 	"xaries",
 	"XARIES",
 	"yo many",
-	"youtube.com/c/Aries98/"
+	"youtube.com/c/Aries98/",
 }
 
 VB_AC.BlacklistedTriggers = {
@@ -226,6 +248,9 @@ VB_AC.BlacklistedTriggers = {
 	"esx_vangelico_robbery:robberycomplete",
 	"esx_vangelico_robbery:gioielli",
 	"esx_policejob:requestarrest",
+	"ems:revive",
+	"whoapd:revive",
+	"paramedic:revive",
 }
 
 VB_AC.BlockedExplosions = {

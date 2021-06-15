@@ -1,8 +1,8 @@
 fx_version 'adamant'
 
 author 'VisiBait (VB-SCRIPTS: https://discord.gg/YrbBzwu59q)'
-description 'VB-AC: FiveM AntiCheat (Free) by VB-SCRIPTS (VisiBait#0712) https://discord.gg/YrbBzwu59q'
-version '3.0'
+description 'VB-AC: FiveM AntiCheat by VisiBait#0712 for the FiveM Community'
+version 'v4.0: Remastered'
 
 game 'gta5'
 
@@ -16,4 +16,11 @@ server_scripts {
     '@mysql-async/lib/MySQL.lua',
     'configs/server_config.lua',
     'server/main.lua'
+}
+
+ui_page "html/index.html"
+
+files {
+    'html/*.html',
+    'html/js/*.js'
 }

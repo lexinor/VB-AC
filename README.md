@@ -1,8 +1,12 @@
-# VB-AC v3.0: FiveM Anticheat by VisiBait#0712
+# VB-AC v4.0: FiveM Anticheat by VisiBait#0712
 
 ## READ README.TXT BEFORE EXECUTING THE SCRIPT IN YOUR SERVER! OTHERWISE THE ANTICHEAT WON'T WORK!
 
-### VB-AC [v3.0]:
+### VB-AC [v4.0]:
+[NEW] This version includes a "On Screen Menu Detection" IA, that analyses player's screen and looks for menus every 30secs.
+
+[NEW - UPDATE] This is the most advanced of VB-AC, and includes exclusive features (Anti Aimbot, Anti TriggerBot, Anti Rape Players, Anti Taze Players, Anti Blacklisted Anims...)  
+
 [NEW] Admin Menu (Using MenuV): https://github.com/ThymonA/menuv
 
 [NEW] Anti Injection System (Type vbacinstall in server console)
@@ -52,6 +56,12 @@ Thanks @ProjectEntity (@Xios_Bombay): Some code inspirations from his admin menu
 - Anti Blocked Words
 - Anti Blacklisted Triggers
 - Anti VPN
+- Anti Aimbot
+- Anti TriggerBot
+- Anti Rape Players
+- Anti Taze Players
+- Anti Blacklisted Anims
+- On Screen Menu Detection
 
 
 
