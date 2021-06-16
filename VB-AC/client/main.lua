@@ -128,13 +128,6 @@ if VB_AC.Enable then
                 end
                 _Wait(300)
             end
-            if VB_AC.AntiNoClip then
-                local _heightaboveground = GetEntityHeightAboveGround(_ped)
-                if _heightaboveground > 25 and not IsPedInAnyVehicle(_ped, false) and not IsPedInParachuteFreeFall(_ped) and not IsPedFalling(_ped)then
-                    TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "nocliporfly") -- BAN (NOCLIP/FLY)
-                end
-                _Wait(300)
-            end
             if VB_AC.AntiSpectate then
                 if NetworkIsInSpectatorMode() then
                     TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "spectatormode") -- BAN (SPECTATORMODE)
