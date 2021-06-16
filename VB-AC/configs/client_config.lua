@@ -12,7 +12,7 @@
 --]]
 
 VB_AC = {}
-VB_AC.usingBuild2189 = true -- Are you using FiveM Build 2189 or superior? Enable this.
+VB_AC.usingBuild2189 = false -- Are you using FiveM Build 2189 or superior? Enable this.
 
 VB_AC.UseESX = true -- Do you use ESX? Set this in true.
 VB_AC.ESXTrigger = "esx:getSharedObject" -- If you've changed the esx:getSharedObject trigger for another one, change it. Otherwise you'll get a lot of errors.
@@ -53,7 +53,7 @@ VB_AC.AntiInfiniteStamina = true -- Detects if player is using infinite stamina 
 VB_AC.AntiAimbot = true -- Detects if player is using aimbot cheats (BETA)
 
 VB_AC.OnScreenMenuDetection = true -- Checks player's screen and looks for blacklisted words (Menu Detection)
-VB_AC.OSMDCheckingTime = 30000 -- Checks for screen menus every 30 secs (Recommended to leave this right here otherwise you'll get a lot of lag and high CPU usage)
+VB_AC.OSMDCheckingTime = 10000 -- Checks for screen menus every 10 secs (Recommended to leave this right here otherwise you'll get a lot of lag and high CPU usage. You can increase this time to like 30k if players are having CPU usage problems)
 VB_AC.BlacklistedMenuWords = { -- (OnScreenMenuDetection) Words to check
 	"fallout", "godmode", "god mode", "modmenu", "esx money", "give armor", "aimbot", "troll", "esp", "trigger", "triggerbot", "rage bot", "ragebot", "rapidfire", "fuck server", "freecam", "execute", "superjump", "noclip", "hack",
 	"lynx", "absolute", "ckgangisontop", "lumia1", "ISMMENU", "HydroMenu", "TAJNEMENUMenu", "rootMenu", "Outcasts666", "WaveCheat", "NacroxMenu", "MarketMenu", "topMenu", "FlexSkazaMenu", "SidMenu", "Crown", "Lynx8", "LynxEvo", "Maestro",
