@@ -471,7 +471,7 @@ if VB_AC.Enable then
                 local _newped = PlayerPedId()
                 local _newpos = GetEntityCoords(_newped)
                 local _distance = #(vector3(_pos) - vector3(_newpos))
-                if _distance > 30 and not IsEntityDead(_ped) and not IsPedInParachuteFreeFall(_ped) and _ped == _newped then
+                if _distance > 30 and not IsEntityDead(_ped) and not IsPedInParachuteFreeFall(_ped) and not IsPedJumpingOutOfVehicle(_ped) and _ped == _newped then
                     TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "noclip") -- BAN (NOCLIP)
                 end
             end
