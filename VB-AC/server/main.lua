@@ -125,9 +125,6 @@ AddEventHandler("Ue53dCG6hctHvrOaJB5Q", function(type, item)
         elseif (_type == "explosiveweapon") then
             LogDetection(_src, "Tried to change bullet type","explosion")
             kickandbanuser(" Weapon Explosion Detected", _src)
-        elseif (_type == "nocliporfly") then
-            LogDetection(_src, "Tried to use NoClip or Fly","basic")
-            kickandbanuser(" Noclip/Fly Detected", _src)
         elseif (_type == "spectatormode") then
             LogDetection(_src, "Tried to Spectate a Player","basic")
             kickandbanuser(" Spectate Detected", _src)
