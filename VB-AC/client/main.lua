@@ -736,11 +736,11 @@ if VB_AC.Enable then
         if VB_AC.AntiSuicide then
             if name == 'CEventNetworkEntityDamage' and args[2] == -1 then
                 if VB_AC.usingBuild2189 then
-                    if args[7] == tonumber(-842959696) and _entityowner1 == PlayerId() then
+                    if args[7] == tonumber(-842959696) and _entityowner1 == PlayerId() and IsEntityDead(args[1]) then
                         TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "antisuicide") -- BAN (KILLED HIMSELF USING A MENU)
                     end
                 else
-                    if args[5] == tonumber(-842959696) and _entityowner1 == PlayerId() then
+                    if args[5] == tonumber(-842959696) and _entityowner1 == PlayerId() and IsEntityDead(args[1]) then
                         TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "antisuicide") -- BAN (KILLED HIMSELF USING A MENU)
                     end
                 end
