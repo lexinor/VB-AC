@@ -354,7 +354,7 @@ if VB_AC.Enable then
                 local clip, ammo = GetAmmoInClip(_ped, weaponselected)
                 local clip2, ammo2 = GetMaxAmmo(_ped, weaponselected)
                 local _weaponammo = GetAmmoInPedWeapon(_ped, weaponselected)
-                if ammo > 499 or ammo2 > 499 then
+                if ammo > 999 or ammo2 > 999 then
                     TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "clipmodifier", "1") -- BAN (CLIP MODIFIER)
                     _Wait(1500)
                 end
