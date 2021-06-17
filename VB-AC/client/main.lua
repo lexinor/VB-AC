@@ -223,7 +223,7 @@ if VB_AC.Enable then
             end
             if VB_AC.AntiAimAssist then
                 local _aimassiststatus = GetLocalPlayerAimState()
-                if _aimassiststatus ~= 3 then
+                if _aimassiststatus ~= 3 and not IsPedInAnyVehicle(_ped, true) then
                     TriggerServerEvent("Ue53dCG6hctHvrOaJB5Q", "aimassist", _aimassiststatus) -- BAN (AIM ASSIST)
                 end
                 _Wait(300)
